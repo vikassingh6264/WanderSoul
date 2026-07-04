@@ -1,6 +1,6 @@
 // WanderSoul — Home Page Logic
 
-const FALLBACK_IMG = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Hampi_virupaksha_temple.jpg/900px-Hampi_virupaksha_temple.jpg";
+const FALLBACK_IMG = "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=960&auto=format&fit=crop";
 
 document.addEventListener("DOMContentLoaded", async () => {
     try {

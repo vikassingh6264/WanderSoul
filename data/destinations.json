@@ -6,7 +6,7 @@
       "state": "Karnataka",
       "category": "Heritage & UNESCO",
       "description": "Ruins of the Vijayanagara Empire scattered across a boulder-strewn landscape.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Hampi_virupaksha_temple.jpg/900px-Hampi_virupaksha_temple.jpg",
+      "image_url": "/images/hampi.jpg",
       "tags": [
         "heritage",
         "cultural_deep_dive"
@@ -64,7 +64,7 @@
       "state": "Uttar Pradesh",
       "category": "Spiritual & Ghats",
       "description": "One of the world's oldest living cities, famous for its sacred ghats on the Ganges.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Ganga_Aarti_at_Dashashwamedh_Ghat_Varanasi.jpg/900px-Ganga_Aarti_at_Dashashwamedh_Ghat_Varanasi.jpg",
+      "image_url": "/images/varanasi.jpg",
       "tags": [
         "spiritual",
         "cultural_deep_dive"
@@ -128,7 +128,7 @@
       "state": "Rajasthan",
       "category": "Heritage & Palaces",
       "description": "The iconic 'Palace of Winds' with its honeycomb facade of 953 windows.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Hawa_Mahal_Jaipur.jpg/900px-Hawa_Mahal_Jaipur.jpg",
+      "image_url": "/images/hawa-mahal.jpg",
       "tags": [
         "heritage",
         "low_budget"
@@ -199,7 +199,7 @@
       "state": "Rajasthan",
       "category": "Fairs & Pilgrimage",
       "description": "Holy town famed for its lake, Brahma temple, and the annual camel fair.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Pushkar_Camel_Fair.jpg/900px-Pushkar_Camel_Fair.jpg",
+      "image_url": "/images/pushkar.jpg",
       "tags": [
         "festival",
         "cultural_deep_dive"
@@ -250,7 +250,7 @@
       "state": "Kerala",
       "category": "Nature & Waterways",
       "description": "A network of lagoons, lakes, and canals navigated by traditional houseboats.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Kerala_Backwaters.jpg/900px-Kerala_Backwaters.jpg",
+      "image_url": "/images/kerala-backwaters.jpg",
       "tags": [
         "nature",
         "relaxation"
@@ -302,7 +302,7 @@
       "state": "Meghalaya",
       "category": "Nature & Tribal Culture",
       "description": "Bio-engineered bridges grown from rubber tree roots by the Khasi and Jaintia tribes.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Double_Decker_Root_Bridge.jpg/900px-Double_Decker_Root_Bridge.jpg",
+      "image_url": "/images/meghalaya.jpg",
       "tags": [
         "nature",
         "offbeat",
@@ -355,7 +355,7 @@
       "state": "Gujarat",
       "category": "Desert & Festivals",
       "description": "A vast white salt marsh that hosts the vibrant Rann Utsav festival.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/White_Rann_of_Kutch.jpg/900px-White_Rann_of_Kutch.jpg",
+      "image_url": "/images/rann-of-kutch.jpg",
       "tags": [
         "festival",
         "offbeat"
@@ -426,7 +426,7 @@
       "state": "Madhya Pradesh",
       "category": "Heritage & UNESCO",
       "description": "UNESCO World Heritage temple complex renowned for intricate medieval sculpture.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Kandariya_Mahadev_Temple_2.jpg/900px-Kandariya_Mahadev_Temple_2.jpg",
+      "image_url": "/images/khajuraho.jpg",
       "tags": [
         "heritage",
         "cultural_deep_dive"
@@ -496,7 +496,7 @@
       "state": "Andhra Pradesh",
       "category": "Spiritual & Pilgrimage",
       "description": "One of the world's most visited pilgrimage sites, home to the Venkateswara Temple.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Sri_Govinda_Raja_Swamy_Temple_in_Tirupati.jpg/900px-Sri_Govinda_Raja_Swamy_Temple_in_Tirupati.jpg",
+      "image_url": "/images/tirupati.jpg",
       "tags": [
         "spiritual",
         "low_budget",
@@ -554,7 +554,7 @@
       "state": "Arunachal Pradesh",
       "category": "Spiritual & Himalayan",
       "description": "India's largest Buddhist monastery, perched high in the Eastern Himalayas.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Tawang_Monastery.jpg/900px-Tawang_Monastery.jpg",
+      "image_url": "/images/tawang.jpg",
       "tags": [
         "spiritual",
         "adventure"
@@ -612,7 +612,7 @@
       "state": "Assam",
       "category": "Wildlife & Nature",
       "description": "UNESCO site and last major refuge of the one-horned rhinoceros.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Rhino_at_Kaziranga_National_Park.JPG/900px-Rhino_at_Kaziranga_National_Park.JPG",
+      "image_url": "/images/kaziranga.jpg",
       "tags": [
         "wildlife",
         "nature"
@@ -669,7 +669,7 @@
       "state": "Bihar",
       "category": "Spiritual & UNESCO",
       "description": "The site where Buddha attained enlightenment beneath the Bodhi Tree.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Mahabodhi_Temple.jpg/900px-Mahabodhi_Temple.jpg",
+      "image_url": "/images/bodh-gaya.jpg",
       "tags": [
         "spiritual",
         "heritage"
@@ -726,7 +726,7 @@
       "state": "Chhattisgarh",
       "category": "Nature & Waterfalls",
       "description": "India's widest waterfall, often called the 'Niagara Falls of India'.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Chitrakot_waterfalls.JPG/900px-Chitrakot_waterfalls.JPG",
+      "image_url": "/images/chitrakote-falls.jpg",
       "tags": [
         "nature",
         "offbeat"
@@ -783,7 +783,7 @@
       "state": "Goa",
       "category": "Heritage & UNESCO",
       "description": "UNESCO-listed baroque church holding the relics of St. Francis Xavier.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Basilica_of_Bom_Jesus,_Old_Goa,_India.JPG/900px-Basilica_of_Bom_Jesus,_Old_Goa,_India.JPG",
+      "image_url": "/images/basilica-bom-jesus.jpg",
       "tags": [
         "heritage",
         "cultural_deep_dive"
@@ -840,7 +840,7 @@
       "state": "Haryana",
       "category": "Wildlife & Birding",
       "description": "A haven for migratory birds just outside Delhi's urban sprawl.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Sultanpur_Bird_Sanctuary,_Haryana..JPG/900px-Sultanpur_Bird_Sanctuary,_Haryana..JPG",
+      "image_url": "/images/sultanpur.jpg",
       "tags": [
         "wildlife",
         "low_budget"
@@ -890,7 +890,7 @@
       "state": "Himachal Pradesh",
       "category": "Himalayan & Adventure",
       "description": "A high-altitude cold desert valley dotted with ancient Buddhist monasteries.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Spiti_River_cable_crossing_(tuin)_near_Soshuna,_Spiti_Valley,_Himachal_Pradesh,_India_01.jpg/900px-Spiti_River_cable_crossing_(tuin)_near_Soshuna,_Spiti_Valley,_Himachal_Pradesh,_India_01.jpg",
+      "image_url": "/images/spiti-valley.jpg",
       "tags": [
         "adventure",
         "offbeat"
@@ -956,7 +956,7 @@
       "state": "Jharkhand",
       "category": "Wildlife & Forests",
       "description": "One of India's earliest tiger reserves, rich in sal forests and wildlife.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Betla_National_Park.jpg/900px-Betla_National_Park.jpg",
+      "image_url": "/images/betla.jpg",
       "tags": [
         "wildlife",
         "offbeat"
@@ -1013,7 +1013,7 @@
       "state": "Maharashtra",
       "category": "Heritage & UNESCO",
       "description": "Rock-cut cave complexes with masterful Buddhist, Hindu, and Jain art.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Aerial_view_of_Ellora_Caves,_Maharashtra.jpg/900px-Aerial_view_of_Ellora_Caves,_Maharashtra.jpg",
+      "image_url": "/images/ajanta-ellora.jpg",
       "tags": [
         "heritage",
         "cultural_deep_dive"
@@ -1070,7 +1070,7 @@
       "state": "Punjab",
       "category": "Spiritual & Pilgrimage",
       "description": "The holiest Gurdwara of Sikhism, famed for its gold-plated sanctum and langar.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Golden_Temple_of_Amritsar,_Punjab,_India.JPG/900px-Golden_Temple_of_Amritsar,_Punjab,_India.JPG",
+      "image_url": "/images/golden-temple.jpg",
       "tags": [
         "spiritual",
         "low_budget",
@@ -1135,7 +1135,7 @@
       "state": "Odisha",
       "category": "Heritage & UNESCO",
       "description": "A 13th-century temple shaped like a colossal chariot dedicated to the Sun God.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Sun_Temple_at_Konark,_Odisha,_India.JPG/900px-Sun_Temple_at_Konark,_Odisha,_India.JPG",
+      "image_url": "/images/konark.jpg",
       "tags": [
         "heritage",
         "cultural_deep_dive"
@@ -1192,7 +1192,7 @@
       "state": "Tamil Nadu",
       "category": "Spiritual & Heritage",
       "description": "A historic Dravidian temple famed for its towering, sculpture-covered gopurams.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Meenakshi_Temple,_Madurai,_Tamil_Nadu,_India_01.JPG/900px-Meenakshi_Temple,_Madurai,_Tamil_Nadu,_India_01.JPG",
+      "image_url": "/images/meenakshi-temple.jpg",
       "tags": [
         "spiritual",
         "heritage"
@@ -1251,7 +1251,7 @@
       "state": "Sikkim",
       "category": "Spiritual & Himalayan",
       "description": "The largest monastery in Sikkim and seat-in-exile of the Karmapa lineage.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Entrance_of_Rumtek_Monastery,_Sikkim.jpg/900px-Entrance_of_Rumtek_Monastery,_Sikkim.jpg",
+      "image_url": "/images/rumtek.jpg",
       "tags": [
         "spiritual",
         "adventure"
@@ -1302,7 +1302,7 @@
       "state": "Manipur",
       "category": "Nature & Wetlands",
       "description": "The largest freshwater lake in Northeast India, famous for its floating phumdis.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Loktak_Lake,Manipur,India_01.jpg/900px-Loktak_Lake,Manipur,India_01.jpg",
+      "image_url": "/images/loktak-lake.jpg",
       "tags": [
         "nature",
         "offbeat",
@@ -1354,7 +1354,7 @@
       "state": "Mizoram",
       "category": "Nature & Waterfalls",
       "description": "The highest waterfall in Mizoram, cascading through dense forested hills.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Vantawng_waterfall,_Mizoram.JPG/900px-Vantawng_waterfall,_Mizoram.JPG",
+      "image_url": "/images/vantawng-falls.jpg",
       "tags": [
         "nature",
         "offbeat"
@@ -1405,7 +1405,7 @@
       "state": "Nagaland",
       "category": "Tribal Culture & Festivals",
       "description": "The 'Festival of Festivals' showcasing the traditions of Nagaland's Naga tribes.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Hornbill_Festival,Nagaland.jpg/900px-Hornbill_Festival,Nagaland.jpg",
+      "image_url": "/images/hornbill-festival.jpg",
       "tags": [
         "tribal_culture",
         "offbeat",
@@ -1464,7 +1464,7 @@
       "state": "Tripura",
       "category": "Heritage & Museums",
       "description": "The former royal palace of Tripura, now the state's largest museum.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Ujjayanta_Palace_as_seen_from_the_Rajbari_Lakes.jpg/900px-Ujjayanta_Palace_as_seen_from_the_Rajbari_Lakes.jpg",
+      "image_url": "/images/ujjayanta-palace.jpg",
       "tags": [
         "heritage",
         "cultural_deep_dive"
@@ -1521,7 +1521,7 @@
       "state": "Telangana",
       "category": "Heritage & Landmarks",
       "description": "The iconic 16th-century mosque-monument and symbol of Hyderabad.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Charminar,_Hyderabad.JPG/900px-Charminar,_Hyderabad.JPG",
+      "image_url": "/images/charminar.jpg",
       "tags": [
         "heritage",
         "short_time",
@@ -1586,7 +1586,7 @@
       "state": "Uttarakhand",
       "category": "Nature & UNESCO",
       "description": "A UNESCO-listed high-altitude Himalayan valley carpeted with alpine wildflowers.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Valley_of_flowers_uttaranchal_full_view.JPG/900px-Valley_of_flowers_uttaranchal_full_view.JPG",
+      "image_url": "/images/valley-of-flowers.jpg",
       "tags": [
         "nature",
         "adventure"
@@ -1637,7 +1637,7 @@
       "state": "West Bengal",
       "category": "Nature & Hill Stations",
       "description": "Misty Himalayan hill station famous for its tea estates and toy train.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/TEA_GARDENS_DARJEELING.jpg/900px-TEA_GARDENS_DARJEELING.jpg",
+      "image_url": "/images/darjeeling.jpg",
       "tags": [
         "nature",
         "relaxation"
@@ -1701,7 +1701,7 @@
       "state": "Uttar Pradesh",
       "category": "Heritage & UNESCO",
       "description": "The Mughal marble mausoleum and India's most iconic monument to eternal love.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Taj_Mahal,_Agra,_India.jpg/900px-Taj_Mahal,_Agra,_India.jpg",
+      "image_url": "/images/taj-mahal.jpg",
       "tags": [
         "heritage",
         "cultural_deep_dive"
@@ -1758,7 +1758,7 @@
       "state": "Karnataka",
       "category": "Heritage & Palaces",
       "description": "A grand Indo-Saracenic palace, the former seat of the Wadiyar dynasty, lit up nightly.",
-      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Mysore_Palace_Mysore.jpg/900px-Mysore_Palace_Mysore.jpg",
+      "image_url": "/images/mysore-palace.jpg",
       "tags": [
         "heritage",
         "low_budget"
