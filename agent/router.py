@@ -24,7 +24,7 @@ a single giant prompt string.
 import asyncio
 import logging
 
-from data.loader import get_destinations, filter_by_budget, filter_by_days, score_destination, filter_by_interests
+from data.loader import get_destinations, filter_by_budget, filter_by_days, score_destination, filter_by_interests, filter_by_query
 from models.schemas import TravelRequest, TravelResponse
 from tools.destination_recommender import recommend_destinations
 from tools.hidden_gem_finder import find_hidden_gems
@@ -310,11 +310,12 @@ def _pick_story_destination(destinations_data: list[dict], request: TravelReques
     Returns:
         Best matching destination dict, or None.
     """
-    filtered = filter_by_budget(destinations_data, request.budget)
+    filtered = filter_by_query(destinations_data, request.query)
+    filtered = filter_by_budget(filtered, request.budget)
     filtered = filter_by_days(filtered, request.days)
 
     if not filtered:
-        filtered = destinations_data[:3]
+        filtered = filter_by_query(destinations_data, request.query) or destinations_data[:3]
 
     scored = [
         (d, score_destination(d, request.budget, request.days, request.interests))

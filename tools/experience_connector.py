@@ -10,7 +10,7 @@ recommendations based on the traveler's comfort level and interests.
 
 import logging
 
-from data.loader import filter_by_budget, filter_by_interests, filter_by_accessibility
+from data.loader import filter_by_budget, filter_by_interests, filter_by_accessibility, filter_by_query
 from models.schemas import TravelRequest, ExperienceResult
 from tools.llm_helper import call_llm
 
@@ -44,12 +44,13 @@ async def connect_experiences(
     Returns:
         List of ExperienceResult with personalized activity suggestions.
     """
-    filtered = filter_by_budget(destinations, request.budget)
+    filtered = filter_by_query(destinations, request.query)
+    filtered = filter_by_budget(filtered, request.budget)
     filtered = filter_by_interests(filtered, request.interests)
     filtered = filter_by_accessibility(filtered, request.accessibility)
 
     if not filtered:
-        filtered = destinations[:5]
+        filtered = filter_by_query(destinations, request.query) or destinations[:5]
 
     experiences = []
     for dest in filtered:

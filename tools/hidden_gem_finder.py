@@ -13,6 +13,7 @@ from data.loader import (
     filter_by_budget,
     filter_by_interests,
     filter_by_accessibility,
+    filter_by_query,
 )
 from models.schemas import TravelRequest, HiddenGemResult
 from tools.llm_helper import call_llm
@@ -44,12 +45,13 @@ async def find_hidden_gems(
     Returns:
         List of HiddenGemResult with vivid descriptions.
     """
-    filtered = filter_by_budget(destinations, request.budget)
+    filtered = filter_by_query(destinations, request.query)
+    filtered = filter_by_budget(filtered, request.budget)
     filtered = filter_by_interests(filtered, request.interests)
     filtered = filter_by_accessibility(filtered, request.accessibility)
 
     if not filtered:
-        filtered = destinations[:5]
+        filtered = filter_by_query(destinations, request.query) or destinations[:5]
 
     gems = []
     for dest in filtered:

@@ -10,7 +10,7 @@ engage respectfully with historical and cultural sites.
 
 import logging
 
-from data.loader import filter_by_budget, filter_by_interests
+from data.loader import filter_by_budget, filter_by_interests, filter_by_query
 from models.schemas import TravelRequest, HeritageResult
 from tools.llm_helper import call_llm
 
@@ -43,11 +43,12 @@ async def promote_heritage(
     Returns:
         List of HeritageResult with heritage narratives.
     """
-    filtered = filter_by_budget(destinations, request.budget)
+    filtered = filter_by_query(destinations, request.query)
+    filtered = filter_by_budget(filtered, request.budget)
     filtered = filter_by_interests(filtered, request.interests)
 
     if not filtered:
-        filtered = destinations[:5]
+        filtered = filter_by_query(destinations, request.query) or destinations[:5]
 
     sites = []
     for dest in filtered:

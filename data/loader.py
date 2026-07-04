@@ -171,6 +171,35 @@ def filter_by_accessibility(destinations: list[dict], accessibility: str) -> lis
     ]
 
 
+def filter_by_query(destinations: list[dict], query: str) -> list[dict]:
+    """Pin results to destinations whose name/state/region appears in the query.
+
+    If the user mentions a specific city or region (e.g. 'Varanasi', 'Rajasthan'),
+    only those destinations are returned. If nothing matches, returns the full list
+    so other filters still have data to work with.
+
+    Args:
+        destinations: Full destination list.
+        query: Raw user query string.
+
+    Returns:
+        Matched destinations, or full list if no name match found.
+    """
+    q = query.lower()
+    matched = [
+        d for d in destinations
+        if d.get("name", "").lower() in q
+        or any(word in q for word in d.get("name", "").lower().split())
+        or d.get("region", "").lower() in q
+        or d.get("state", "").lower() in q
+        or d.get("id", "").lower() in q
+    ]
+    # Only apply the pin if we got a confident match (avoid single common words matching)
+    # Require the matched destination name to be at least 4 chars to avoid false positives
+    strong = [d for d in matched if len(d.get("name", "")) >= 4]
+    return strong if strong else destinations
+
+
 def score_destination(destination: dict, budget: str, days: int, interests: list[str]) -> float:
     """Score a destination's relevance to the user's context.
 

@@ -14,6 +14,7 @@ from data.loader import (
     filter_by_days,
     filter_by_interests,
     filter_by_accessibility,
+    filter_by_query,
     score_destination,
 )
 from models.schemas import TravelRequest, DestinationResult
@@ -47,17 +48,19 @@ async def recommend_destinations(
     Returns:
         List of DestinationResult with personalized recommendation text.
     """
-    # Apply filters
-    filtered = filter_by_budget(destinations, request.budget)
+    # Apply filters — query name match first to anchor results to requested destination
+    filtered = filter_by_query(destinations, request.query)
+    filtered = filter_by_budget(filtered, request.budget)
     filtered = filter_by_days(filtered, request.days)
     filtered = filter_by_interests(filtered, request.interests)
     filtered = filter_by_accessibility(filtered, request.accessibility)
 
     if not filtered:
-        # Fallback: relax filters to budget + days only
-        filtered = filter_by_budget(destinations, request.budget)
+        # Fallback: relax to query match + budget + days only
+        filtered = filter_by_query(destinations, request.query)
+        filtered = filter_by_budget(filtered, request.budget)
         filtered = filter_by_days(filtered, request.days)
-        logger.info("Relaxed filters — using budget + days only, got %d results", len(filtered))
+        logger.info("Relaxed filters — using query+budget+days only, got %d results", len(filtered))
 
     # Score and rank
     scored = [
