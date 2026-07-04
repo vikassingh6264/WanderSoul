@@ -20,7 +20,13 @@ from fastapi.staticfiles import StaticFiles
 import config
 from agent.router import handle_request
 from data.loader import load_destinations, get_destinations
-from models.schemas import TravelRequest, TravelResponse, ErrorResponse
+from models.schemas import (
+    TravelRequest,
+    TravelResponse,
+    ErrorResponse,
+    HealthResponse,
+    DestinationsListResponse,
+)
 
 # ─── Logging Setup ───────────────────────────────────────────────
 
@@ -135,22 +141,22 @@ async def global_exception_handler(request: Request, exc: Exception):
 
 # ─── API Endpoints ───────────────────────────────────────────────
 
-@app.get("/api/health")
+@app.get("/api/health", response_model=HealthResponse)
 async def health_check():
     """Health check endpoint — confirms the API is running."""
-    return {"status": "healthy", "service": "WanderSoul"}
+    return HealthResponse(status="healthy", service="WanderSoul", ready=True, version="1.0.0")
 
 
-@app.get("/api/destinations")
+@app.get("/api/destinations", response_model=DestinationsListResponse)
 async def list_destinations():
     """List all destinations in the curated dataset with full details.
 
     Returns the complete dataset for listing, detail, and filter population.
     """
     destinations = get_destinations()
-    return {
-        "count": len(destinations),
-        "destinations": [
+    return DestinationsListResponse(
+        count=len(destinations),
+        destinations=[
             {
                 "id": d["id"],
                 "name": d["name"],
@@ -165,7 +171,7 @@ async def list_destinations():
             }
             for d in destinations
         ],
-    }
+    )
 
 
 

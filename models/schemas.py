@@ -167,3 +167,34 @@ class ErrorResponse(BaseModel):
         default="",
         description="Additional context (never raw exception details).",
     )
+
+
+class HealthResponse(BaseModel):
+    """A simple readiness/health payload for service monitoring."""
+
+    status: str = Field(default="healthy", description="Overall health status.")
+    service: str = Field(default="WanderSoul", description="Service identifier.")
+    ready: bool = Field(default=True, description="Whether the service is ready to serve traffic.")
+    version: str = Field(default="1.0.0", description="Application version.")
+
+
+class DestinationSummary(BaseModel):
+    """Summary payload for a destination returned by the list endpoint."""
+
+    id: str = Field(..., description="Destination identifier.")
+    name: str = Field(..., description="Destination name.")
+    region: str = Field(..., description="Region or state.")
+    category: str = Field(default="General", description="Destination category.")
+    description: str = Field(default="", description="Short destination description.")
+    image_url: str = Field(default="", description="Destination image URL.")
+    tags: list[str] = Field(default_factory=list, description="Associated tags.")
+    budget_level: str = Field(default="medium", description="Budget level.")
+    best_for_days: list[int] = Field(default_factory=list, description="Recommended trip length range.")
+    accessibility: str = Field(default="moderate", description="Accessibility profile.")
+
+
+class DestinationsListResponse(BaseModel):
+    """Pageless list of curated destinations."""
+
+    count: int = Field(..., description="Number of destinations available.")
+    destinations: list[DestinationSummary] = Field(default_factory=list, description="List of destinations.")

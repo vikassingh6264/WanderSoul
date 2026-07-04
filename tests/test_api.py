@@ -25,6 +25,7 @@ class TestHealthCheck:
         data = response.json()
         assert data["status"] == "healthy"
         assert data["service"] == "WanderSoul"
+        assert data["ready"] is True
 
 
 # ─── Destinations List Tests ────────────────────────────────────
