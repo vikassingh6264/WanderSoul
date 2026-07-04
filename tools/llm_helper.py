@@ -43,9 +43,9 @@ def _cache_key(prompt: str) -> str:
         prompt: The full prompt string.
 
     Returns:
-        MD5 hex digest of the prompt.
+        SHA256 hex digest of the prompt.
     """
-    return hashlib.md5(prompt.encode()).hexdigest()
+    return hashlib.sha256(prompt.encode()).hexdigest()
 
 
 async def call_llm(system_prompt: str, user_prompt: str) -> str:

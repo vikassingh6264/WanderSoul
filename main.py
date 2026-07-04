@@ -179,10 +179,13 @@ async def discover(request: TravelRequest, raw_request: Request):
         TravelResponse with results from all invoked tools.
     """
     client_ip = raw_request.client.host if raw_request.client else "unknown"
+    # Sanitize inputs before logging to prevent log injection
+    safe_ip = client_ip.replace("\n", "").replace("\r", "")[:45]
+    safe_query = request.query[:50].replace("\n", " ").replace("\r", " ")
 
     # Rate limiting
     if not rate_limiter.is_allowed(client_ip):
-        logger.warning("Rate limit exceeded for %s", client_ip)
+        logger.warning("Rate limit exceeded for %s", safe_ip)
         return JSONResponse(
             status_code=429,
             content=ErrorResponse(
@@ -191,7 +194,7 @@ async def discover(request: TravelRequest, raw_request: Request):
             ).model_dump(),
         )
 
-    logger.info("Discovery request from %s: query='%s'", client_ip, request.query[:50])
+    logger.info("Discovery request from %s: query='%s'", safe_ip, safe_query)
 
     try:
         response = await handle_request(request)

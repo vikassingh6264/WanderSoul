@@ -176,47 +176,102 @@ function filterAndRender() {
     renderDestinations(filtered);
 }
 
+function escapeHtml(text) {
+    if (!text) return "";
+    const el = document.createElement("div");
+    el.textContent = String(text);
+    return el.innerHTML;
+}
+
+function escapeAttr(text) {
+    if (!text) return "";
+    return String(text)
+        .replace(/&/g, "&amp;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#39;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+}
+
 function renderDestinations(list) {
     resultsCount.textContent = `${list.length} entries found`;
 
     if (list.length === 0) {
-        destinationsGrid.innerHTML = `
-            <div class="empty-state" style="grid-column: 1 / -1;">
-                <div class="empty-state-title">No Stamps Match</div>
-                <p>Try clearing some filters to expand your journal search.</p>
-            </div>
-        `;
+        const empty = document.createElement("div");
+        empty.className = "empty-state";
+        empty.style.gridColumn = "1 / -1";
+        empty.innerHTML = `<div class="empty-state-title">No Stamps Match</div><p>Try clearing some filters to expand your journal search.</p>`;
+        destinationsGrid.innerHTML = "";
+        destinationsGrid.appendChild(empty);
         return;
     }
 
-    destinationsGrid.innerHTML = list.map((d, index) => {
-        const region    = d.region   || "India";
-        const category  = d.category || "General";
-        const stateCode = STATE_CODES[region] || "IND";
+    destinationsGrid.innerHTML = "";
+    list.forEach((d, index) => {
+        const region     = d.region   || "India";
+        const category   = d.category || "General";
+        const stateCode  = STATE_CODES[region] || "IND";
         const budgetLabel = d.budget_level === "low" ? "BUDGET" : (d.budget_level === "medium" ? "MID-RANGE" : "COMFORT");
-        const days = Array.isArray(d.best_for_days) && d.best_for_days.length > 0;
-        const daysLabel = days ? `${Math.min(...d.best_for_days)}\u2013${Math.max(...d.best_for_days)}D` : "1-30D";
-        
-        return `
-            <article class="editorial-card" onclick="window.location.href='detail.html?id=${d.id}'" aria-labelledby="title-${d.id}">
-                <div class="card-img-wrap">
-                    <img 
-                        src="${d.image_url || 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg'}" 
-                        alt="${d.name} in ${region}" 
-                        class="card-img"
-                        loading="lazy"
-                    >
-                    <div class="stamp-badge" aria-hidden="true">
-                        <span class="stamp-text">${stateCode}-${(index + 1).toString().padStart(2, '0')}</span>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <div class="card-meta-row">${region.toUpperCase()} · ${category.toUpperCase()} · ${budgetLabel} · ${daysLabel}</div>
-                    <h3 id="title-${d.id}" class="card-title">${d.name}</h3>
-                    <p class="card-desc">${d.description || 'Discover historic architecture, regional art forms, and rich heritage experiences.'}</p>
-                </div>
-            </article>
-        `;
-    }).join("");
+        const hasDays    = Array.isArray(d.best_for_days) && d.best_for_days.length > 0;
+        const daysLabel  = hasDays ? `${Math.min(...d.best_for_days)}\u2013${Math.max(...d.best_for_days)}D` : "1-30D";
+        const imgSrc     = d.image_url || "https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg";
+
+        const card = document.createElement("article");
+        card.className = "editorial-card";
+        card.setAttribute("aria-labelledby", `title-${escapeAttr(d.id)}`);
+        card.style.cursor = "pointer";
+        card.addEventListener("click", () => {
+            window.location.href = `detail.html?id=${encodeURIComponent(d.id)}`;
+        });
+        card.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                window.location.href = `detail.html?id=${encodeURIComponent(d.id)}`;
+            }
+        });
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("role", "button");
+
+        const wrap = document.createElement("div");
+        wrap.className = "card-img-wrap";
+
+        const img = document.createElement("img");
+        img.src = imgSrc;
+        img.alt = `${d.name} in ${region}`;
+        img.className = "card-img";
+        img.loading = "lazy";
+        img.onerror = () => { img.src = "https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg"; };
+
+        const badge = document.createElement("div");
+        badge.className = "stamp-badge";
+        badge.setAttribute("aria-hidden", "true");
+        badge.innerHTML = `<span class="stamp-text">${escapeHtml(stateCode)}-${String(index + 1).padStart(2, "0")}</span>`;
+
+        wrap.appendChild(img);
+        wrap.appendChild(badge);
+
+        const content = document.createElement("div");
+        content.className = "card-content";
+
+        const meta = document.createElement("div");
+        meta.className = "card-meta-row";
+        meta.textContent = `${region.toUpperCase()} \u00b7 ${category.toUpperCase()} \u00b7 ${budgetLabel} \u00b7 ${daysLabel}`;
+
+        const title = document.createElement("h3");
+        title.id = `title-${escapeAttr(d.id)}`;
+        title.className = "card-title";
+        title.textContent = d.name;
+
+        const desc = document.createElement("p");
+        desc.className = "card-desc";
+        desc.textContent = d.description || "Discover historic architecture, regional art forms, and rich heritage experiences.";
+
+        content.appendChild(meta);
+        content.appendChild(title);
+        content.appendChild(desc);
+        card.appendChild(wrap);
+        card.appendChild(content);
+        destinationsGrid.appendChild(card);
+    });
 }
 

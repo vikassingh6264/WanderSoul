@@ -77,11 +77,13 @@ function setupFormSubmission() {
 
         // 2. Validate
         if (!query || query.length < 3) {
-            alert("Please input a search query (minimum 3 characters).");
+            errorMessage.textContent = "Please input a search query (minimum 3 characters).";
+            errorState.classList.remove("hidden");
             return;
         }
         if (isNaN(days) || days < 1 || days > 30) {
-            alert("Voyage duration must be between 1 and 30 days.");
+            errorMessage.textContent = "Voyage duration must be between 1 and 30 days.";
+            errorState.classList.remove("hidden");
             return;
         }
 

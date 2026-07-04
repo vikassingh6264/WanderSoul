@@ -23,6 +23,7 @@ a single giant prompt string.
 
 import asyncio
 import logging
+import re
 
 from data.loader import get_destinations, filter_by_budget, filter_by_days, score_destination, filter_by_interests, filter_by_query
 from models.schemas import TravelRequest, TravelResponse
@@ -50,6 +51,7 @@ _LIVE_CONDITION_KEYWORDS = [
     "is open", "are open", "currently", "right now", "current price",
     "current weather", "weather", "open now", "still open",
     "how much does it cost", "entry fee", "ticket price",
+    "open", "closed", "hours", "price", "prices", "cost", "fee",
 ]
 
 
@@ -79,9 +81,17 @@ def _needs_live_search(request: TravelRequest, destinations_data: list[dict]) ->
             return True, f"time reference detected ('{kw}') — checking live events"
 
     # Condition (b) — live condition query
+    open_closed_match = re.search(r"\b(open|closed)\b", q)
+    if open_closed_match:
+        return True, f"live-condition query detected ('{open_closed_match.group(1)}') — fetching current info"
+
     for kw in _LIVE_CONDITION_KEYWORDS:
         if kw in q:
             return True, f"live-condition query detected ('{kw}') — fetching current info"
+
+    # Fallback for explicit live-condition phrasing that is not an exact keyword
+    if re.search(r"\b(weather|price|prices|cost|fee|hours|currently|right now)\b", q):
+        return True, "live-condition query detected — fetching current info"
 
     # Condition (c) — curated JSON has no match for interests + region
     if request.interests:
