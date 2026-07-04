@@ -1,6 +1,34 @@
 // WanderSoul — Home Page Logic
 
-const FALLBACK_IMG = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Hampi_virupaksha_temple.jpg/900px-Hampi_virupaksha_temple.jpg";
+function buildFallbackImage(name = "Destination", region = "India") {
+    const safeName = String(name || "Destination")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    const safeRegion = String(region || "India")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+            <rect width="1200" height="800" fill="#f8efe1"/>
+            <rect x="32" y="32" width="1136" height="736" rx="28" fill="#f4e9d7" stroke="#8d6b2f" stroke-width="4"/>
+            <path d="M0 620 C180 540 340 510 520 565 S860 705 1200 610 V800 H0 Z" fill="#d3a65b"/>
+            <circle cx="960" cy="220" r="120" fill="#e9c47b" opacity="0.75"/>
+            <text x="600" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#4b3420">${safeName}</text>
+            <text x="600" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#6b4b2f">${safeRegion}</text>
+            <text x="600" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#6b4b2f">WanderSoul</text>
+        </svg>`;
+    return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+function getImageSrc(destination) {
+    const localUrl = destination?.image_url || destination?.image || destination?.photo_url || "";
+    if (typeof localUrl === "string" && localUrl.trim()) {
+        return localUrl;
+    }
+    return buildFallbackImage(destination?.name, destination?.region || destination?.state);
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
     try {
@@ -18,9 +46,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         // ── Hero image: use first destination with a valid image_url ──
         const heroImg = document.getElementById("hero-img");
         if (heroImg) {
-            const heroSrc = destinations[0].image_url || FALLBACK_IMG;
-            heroImg.src = heroSrc;
+            heroImg.src = getImageSrc(destinations[0]);
             heroImg.alt = `${destinations[0].name} — ${destinations[0].region}`;
+            heroImg.onerror = () => {
+                heroImg.src = buildFallbackImage(destinations[0]?.name, destinations[0]?.region || destinations[0]?.state);
+            };
         }
 
         // ── Editorial grid: pick up to 5 featured destinations ──
@@ -35,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.warn("Home page data load failed:", err.message);
         // Silently fall back — hero stays blank, grid keeps its placeholder
         const heroImg = document.getElementById("hero-img");
-        if (heroImg && !heroImg.src) heroImg.src = FALLBACK_IMG;
+        if (heroImg && !heroImg.src) heroImg.src = buildFallbackImage();
     }
 });
 
@@ -58,7 +88,7 @@ function pickFeatured(list, n) {
  * @returns {string}
  */
 function buildCard(d, index) {
-    const imgSrc = d.image_url || FALLBACK_IMG;
+    const imgSrc = getImageSrc(d);
     const region = (d.region || "India").toUpperCase();
     const category = (d.category || "Culture").toUpperCase();
     const budgetLabel = d.budget_level === "low" ? "BUDGET" : d.budget_level === "high" ? "COMFORT" : "MID-RANGE";
@@ -73,7 +103,7 @@ function buildCard(d, index) {
                     alt="${escapeAttr(d.name)} in ${escapeAttr(d.region || 'India')}"
                     class="card-img"
                     loading="${index === 0 ? 'eager' : 'lazy'}"
-                    onerror="this.src='${FALLBACK_IMG}'"
+                    onerror="this.src='${buildFallbackImage(d.name, d.region || d.state)}'"
                 >
             </div>
             <div class="card-content">

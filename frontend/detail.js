@@ -27,6 +27,36 @@ function getBestSeason(state) {
     return "OCT TO MAR (COOL)";
 }
 
+function buildFallbackImage(name = "Destination", region = "India") {
+    const safeName = String(name || "Destination")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    const safeRegion = String(region || "India")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+            <rect width="1200" height="800" fill="#f7efe3"/>
+            <rect x="32" y="32" width="1136" height="736" rx="28" fill="#f2e4c9" stroke="#8d6b2f" stroke-width="4"/>
+            <path d="M0 620 C220 540 340 510 520 570 S860 710 1200 610 V800 H0 Z" fill="#d8a85a"/>
+            <circle cx="960" cy="220" r="120" fill="#e9c47d" opacity="0.75"/>
+            <text x="600" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#4a321d">${safeName}</text>
+            <text x="600" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#6c4b2e">${safeRegion}</text>
+            <text x="600" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#6c4b2e">WanderSoul</text>
+        </svg>`;
+    return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+function getImageSrc(destination) {
+    const localUrl = destination?.image_url || destination?.image || destination?.photo_url || "";
+    if (typeof localUrl === "string" && localUrl.trim()) {
+        return localUrl;
+    }
+    return buildFallbackImage(destination?.name, destination?.region || destination?.state);
+}
+
 function getNearestAirport(state) {
     const s = state.toLowerCase();
     if (s.includes("rajasthan")) return "JAIPUR (JAI)";
@@ -90,8 +120,12 @@ function renderDetail(d) {
 
     // Main elements
     const stateCode = STATE_CODES[d.region] || "IND";
-    document.getElementById("detail-img").src = d.image_url || "https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg";
-    document.getElementById("detail-img").alt = `${d.name} in ${d.region}`;
+    const detailImg = document.getElementById("detail-img");
+    detailImg.src = getImageSrc(d);
+    detailImg.alt = `${d.name} in ${d.region}`;
+    detailImg.onerror = () => {
+        detailImg.src = buildFallbackImage(d.name, d.region || d.state);
+    };
     document.getElementById("detail-badge-text").textContent = `${stateCode}-DET`;
     document.getElementById("detail-category").textContent = d.category;
     document.getElementById("detail-title").textContent = d.name;
@@ -142,11 +176,14 @@ function renderDetail(d) {
 
     const rotations = ["-1.5deg", "2deg", "-2.5deg", "1.5deg"];
 
+    const fallbackImage = buildFallbackImage(d.name, d.region || d.state);
+
     galleryScroll.innerHTML = galleryPhotos.map((photo, index) => {
         const rot = rotations[index % rotations.length];
+        const photoSrc = photo.url || fallbackImage;
         return `
             <div class="gallery-card" style="--rot: ${rot};">
-                <img src="${photo.url || 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg'}" alt="${photo.title}" class="gallery-img" loading="lazy">
+                <img src="${photoSrc}" alt="${photo.title}" class="gallery-img" loading="lazy" onerror="this.src='${fallbackImage}'">
                 <div class="gallery-title">${photo.title}</div>
             </div>
         `;

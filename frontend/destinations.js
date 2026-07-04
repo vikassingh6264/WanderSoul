@@ -193,6 +193,36 @@ function escapeAttr(text) {
         .replace(/>/g, "&gt;");
 }
 
+function buildFallbackImage(name = "Destination", region = "India") {
+    const safeName = String(name || "Destination")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    const safeRegion = String(region || "India")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    const svg = `
+        <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+            <rect width="1200" height="800" fill="#f7efe0"/>
+            <rect x="32" y="32" width="1136" height="736" rx="28" fill="#f0dfc0" stroke="#8f6b2f" stroke-width="4"/>
+            <path d="M0 640 C220 560 360 525 540 570 S890 710 1200 610 V800 H0 Z" fill="#d8a85a"/>
+            <circle cx="970" cy="225" r="120" fill="#e7c576" opacity="0.75"/>
+            <text x="600" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="42" fill="#4a321d">${safeName}</text>
+            <text x="600" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" fill="#6d4e2d">${safeRegion}</text>
+            <text x="600" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#6d4e2d">WanderSoul</text>
+        </svg>`;
+    return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+}
+
+function getImageSrc(destination) {
+    const localUrl = destination?.image_url || destination?.image || destination?.photo_url || "";
+    if (typeof localUrl === "string" && localUrl.trim()) {
+        return localUrl;
+    }
+    return buildFallbackImage(destination?.name, destination?.region || destination?.state);
+}
+
 function renderDestinations(list) {
     resultsCount.textContent = `${list.length} entries found`;
 
@@ -214,7 +244,7 @@ function renderDestinations(list) {
         const budgetLabel = d.budget_level === "low" ? "BUDGET" : (d.budget_level === "medium" ? "MID-RANGE" : "COMFORT");
         const hasDays    = Array.isArray(d.best_for_days) && d.best_for_days.length > 0;
         const daysLabel  = hasDays ? `${Math.min(...d.best_for_days)}\u2013${Math.max(...d.best_for_days)}D` : "1-30D";
-        const imgSrc     = d.image_url || "https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg";
+        const imgSrc     = getImageSrc(d);
 
         const card = document.createElement("article");
         card.className = "editorial-card";
@@ -240,7 +270,7 @@ function renderDestinations(list) {
         img.alt = `${d.name} in ${region}`;
         img.className = "card-img";
         img.loading = "lazy";
-        img.onerror = () => { img.src = "https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg"; };
+        img.onerror = () => { img.src = buildFallbackImage(d.name, d.region || d.state); };
 
         const badge = document.createElement("div");
         badge.className = "stamp-badge";
