@@ -53,9 +53,9 @@ def load_destinations() -> list[dict]:
             continue
         d = item.copy()
         
-        # Normalize state/region
-        if "region" not in d:
-            d["region"] = d.get("state", "India")
+        # Normalize state/region — handle both missing key and explicit null value
+        if not d.get("region"):
+            d["region"] = d.get("state") or "India"
             
         # Normalize budget_level
         budget = str(d.get("budget_level", "medium")).lower()

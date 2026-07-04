@@ -190,16 +190,19 @@ function renderDestinations(list) {
     }
 
     destinationsGrid.innerHTML = list.map((d, index) => {
-        const stateCode = STATE_CODES[d.region] || "IND";
+        const region    = d.region   || "India";
+        const category  = d.category || "General";
+        const stateCode = STATE_CODES[region] || "IND";
         const budgetLabel = d.budget_level === "low" ? "BUDGET" : (d.budget_level === "medium" ? "MID-RANGE" : "COMFORT");
-        const daysLabel = d.best_for_days.length > 0 ? `${Math.min(...d.best_for_days)}–${Math.max(...d.best_for_days)}D` : "1-30D";
+        const days = Array.isArray(d.best_for_days) && d.best_for_days.length > 0;
+        const daysLabel = days ? `${Math.min(...d.best_for_days)}\u2013${Math.max(...d.best_for_days)}D` : "1-30D";
         
         return `
             <article class="editorial-card" onclick="window.location.href='detail.html?id=${d.id}'" aria-labelledby="title-${d.id}">
                 <div class="card-img-wrap">
                     <img 
                         src="${d.image_url || 'https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg'}" 
-                        alt="${d.name} in ${d.region}" 
+                        alt="${d.name} in ${region}" 
                         class="card-img"
                         loading="lazy"
                     >
@@ -208,7 +211,7 @@ function renderDestinations(list) {
                     </div>
                 </div>
                 <div class="card-content">
-                    <div class="card-meta-row">${d.region.toUpperCase()} · ${d.category.toUpperCase()} · ${budgetLabel} · ${daysLabel}</div>
+                    <div class="card-meta-row">${region.toUpperCase()} · ${category.toUpperCase()} · ${budgetLabel} · ${daysLabel}</div>
                     <h3 id="title-${d.id}" class="card-title">${d.name}</h3>
                     <p class="card-desc">${d.description || 'Discover historic architecture, regional art forms, and rich heritage experiences.'}</p>
                 </div>
@@ -216,3 +219,4 @@ function renderDestinations(list) {
         `;
     }).join("");
 }
+

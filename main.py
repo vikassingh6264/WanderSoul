@@ -149,8 +149,8 @@ async def list_destinations():
             {
                 "id": d["id"],
                 "name": d["name"],
-                "region": d["region"],
-                "category": d.get("category", "General"),
+                "region": d.get("region") or d.get("state") or "India",
+                "category": d.get("category") or "General",
                 "description": d.get("description", ""),
                 "image_url": d.get("image_url", ""),
                 "tags": d.get("tags", []),
