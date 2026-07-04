@@ -121,7 +121,40 @@ project/
 
 ---
 
-## 4. How to Run Locally
+## 4. Live Data (optional)
+
+The app works **fully without a search API key**. The curated JSON dataset (`data/destinations.json`) is always the primary data source and is always available — no network dependency, no rate limits, zero latency.
+
+Adding a `TAVILY_API_KEY` to your `.env` unlocks a second, optional capability: the agent can fetch live information for queries that genuinely need it.
+
+### When live search is triggered (and when it isn't)
+
+The router calls the search API **only** when one of these three conditions is true:
+
+| Condition | Example query |
+|---|---|
+| A specific date or season is mentioned | *"festivals in December in Rajasthan"* |
+| User asks about current conditions | *"is Amber Fort open right now"*, *"current entry fee"* |
+| Curated JSON has no match for the requested interest+budget combination | interests that don't exist in the dataset |
+
+For every other query the router prints `[WanderSoul] Using curated dataset (no live search needed)` and skips the API call entirely.
+
+### Graceful degradation
+
+If the search API is unavailable, rate-limited, or times out (6 s hard limit), `search_current_info()` returns an empty list and the agent continues normally using the curated JSON. The user never sees an error. This is verified by a dedicated unit test (`tests/test_web_search.py::TestRouterFallbackOnSearchFailure`).
+
+### Setup
+
+```bash
+# In your .env file — both keys are optional
+TAVILY_API_KEY=your-tavily-api-key-here   # get free key at https://app.tavily.com
+```
+
+When live results are included in a response, they are prefixed with `Recent update:` in the summary so the user can clearly distinguish freshly fetched data from curated facts.
+
+---
+
+## 5. How to Run Locally
 
 ### Prerequisites
 - Python 3.10+
@@ -156,7 +189,7 @@ python -m pytest tests/ -v
 
 ---
 
-## 5. How the Solution Works — Example User Journey
+## 6. How the Solution Works — Example User Journey
 
 **Scenario:** A solo traveler types: *"I want to explore hidden temples and street food in Rajasthan on a tight budget for 3 days"*
 
@@ -190,7 +223,7 @@ python -m pytest tests/ -v
 
 ---
 
-## 6. Assumptions Made
+## 7. Assumptions Made
 
 - **India focus** — the curated dataset covers 15 Indian destinations. A production version would expand globally.
 - **Static dataset** — destinations and events are in a JSON file, not a live database. Events have seasonal timing info but no real-time calendar integration.
@@ -200,7 +233,7 @@ python -m pytest tests/ -v
 
 ---
 
-## 7. Security Notes
+## 8. Security Notes
 
 - **No secrets in code** — API keys loaded from `.env` via `python-dotenv`. `.env` is in `.gitignore`.
 - **`.env.example`** committed with placeholder values only — no real keys.
@@ -213,7 +246,7 @@ python -m pytest tests/ -v
 
 ---
 
-## 8. Known Limitations / What I'd Add With More Time
+## 9. Known Limitations / What I'd Add With More Time
 
 | Limitation | What I'd Add |
 |---|---|

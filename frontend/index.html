@@ -33,12 +33,13 @@
     <!-- Main Content -->
     <main id="main-content" role="main">
 
-        <!-- Hero Section -->
+        <!-- Hero Section — loaded dynamically from first destination -->
         <section class="hero" aria-labelledby="hero-title">
             <div class="hero-image-wrap">
                 <img 
-                    src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Hawa_Mahal_East_flank_Jaipur_%28crop%29.jpg" 
-                    alt="The intricate pink sandstone facade of the Hawa Mahal in Jaipur, Rajasthan" 
+                    id="hero-img"
+                    src=""
+                    alt="Loading hero image"
                     class="hero-img"
                     width="1200"
                     height="800"
@@ -48,9 +49,9 @@
                 <h1 id="hero-title" class="hero-title">Three weeks. Five states. Zero itinerary regrets.</h1>
                 <p class="hero-desc">
                     WanderSoul is a digital travel journal of authentic, low-crowd cultural discoveries across India. 
-                    No tourist-trap sightseeing loops, just real connections to the heritage, crafts, and kitchens of the subcontinent.
+                    No tourist-trap sightseeing loops — just real connections to the heritage, crafts, and kitchens of the subcontinent.
                 </p>
-                <a href="destinations.html" class="btn btn-primary">See all experiences</a>
+                <a href="destinations.html" class="btn btn-primary">See all destinations</a>
             </div>
         </section>
 
@@ -65,7 +66,7 @@
                     <div class="boarding-divider" aria-hidden="true"></div>
                     <div class="boarding-item">
                         <span class="boarding-label">Curated Database</span>
-                        <span class="boarding-value">31 Destinations</span>
+                        <span class="boarding-value" id="stat-destinations">31 Destinations</span>
                     </div>
                     <div class="boarding-divider" aria-hidden="true"></div>
                     <div class="boarding-item">
@@ -86,81 +87,21 @@
             </div>
         </div>
 
-        <!-- Featured Section -->
+        <!-- Featured Section — dynamically rendered from API -->
         <section class="section" aria-labelledby="featured-title">
             <div class="container">
                 <span class="section-eyebrow">EDITORIAL SELECTION</span>
                 <h2 id="featured-title" class="section-title">Field Notes & Curated Crossings</h2>
                 
-                <div class="editorial-grid">
-                    <!-- Large Card ( कर्नाटक / Karnataka ) -->
-                    <article class="editorial-card large" onclick="window.location.href='detail.html?id=hampi'" aria-labelledby="card-hampi-title">
-                        <div class="card-img-wrap">
-                            <img 
-                                src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg" 
-                                alt="The ancient Virupaksha temple tower standing tall over the boulder-strewn landscape of Hampi" 
-                                class="card-img"
-                                width="800"
-                                height="500"
-                            >
-                            <div class="stamp-badge" aria-hidden="true">
-                                <span class="stamp-text">KA-03</span>
-                            </div>
-                        </div>
+                <div id="editorial-grid" class="editorial-grid">
+                    <!-- Dynamically injected -->
+                    <div class="editorial-card large" style="opacity:0.3; pointer-events:none;">
+                        <div class="card-img-wrap" style="background:var(--line);"></div>
                         <div class="card-content">
-                            <div class="card-meta-row">KARNATAKA · HERITAGE & UNESCO · MID-RANGE</div>
-                            <h3 id="card-hampi-title" class="card-title">The Boulder-Strewn Empire of Hampi</h3>
-                            <p class="card-desc">
-                                Walk the ruins of the Vijayanagara Empire, where ancient stone temples stand amidst massive granite boulders and lush banana plantations along the Tungabhadra River.
-                            </p>
+                            <div class="card-meta-row">LOADING...</div>
+                            <h3 class="card-title">—</h3>
                         </div>
-                    </article>
-
-                    <!-- Card 2 ( उत्तर प्रदेश / Uttar Pradesh ) -->
-                    <article class="editorial-card" onclick="window.location.href='detail.html?id=varanasi'" aria-labelledby="card-varanasi-title">
-                        <div class="card-img-wrap">
-                            <img 
-                                src="https://upload.wikimedia.org/wikipedia/commons/d/da/Varanasi_-_Ghat_on_Ganges.jpg" 
-                                alt="Morning light shining on the ghats of Varanasi along the Ganges river with boats floating" 
-                                class="card-img"
-                                width="400"
-                                height="250"
-                            >
-                            <div class="stamp-badge" aria-hidden="true">
-                                <span class="stamp-text">UP-02</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta-row">UTTAR PRADESH · CULTURAL & SPIRITUAL · BUDGET</div>
-                            <h3 id="card-varanasi-title" class="card-title">Varanasi's Sacred Shores</h3>
-                            <p class="card-desc">
-                                Witness life and death on the historic stone steps along the sacred Ganges river, where music, incense, and chants echo at dawn.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- Card 3 ( मेघालय / Meghalaya ) -->
-                    <article class="editorial-card" onclick="window.location.href='detail.html?id=meghalaya'" aria-labelledby="card-meghalaya-title">
-                        <div class="card-img-wrap">
-                            <img 
-                                src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Double-decker_living_root_bridge_near_Nongriat_village.jpg" 
-                                alt="The famous double-decker living root bridge in Nongriat, Meghalaya, woven from rubber tree roots" 
-                                class="card-img"
-                                width="400"
-                                height="250"
-                            >
-                            <div class="stamp-badge" aria-hidden="true">
-                                <span class="stamp-text">ML-09</span>
-                            </div>
-                        </div>
-                        <div class="card-content">
-                            <div class="card-meta-row">MEGHALAYA · NATURE & TREKKING · MID-RANGE</div>
-                            <h3 id="card-meghalaya-title" class="card-title">The Living Root Bridges</h3>
-                            <p class="card-desc">
-                                Hike down steep valley steps to witness ancient suspension bridges grown organically by the Khasi people from living tree roots.
-                            </p>
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </div>
         </section>
@@ -203,7 +144,6 @@
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
-                <!-- Col 1: Explore -->
                 <div class="footer-col">
                     <h4 class="footer-col-title">Explore</h4>
                     <ul class="footer-links">
@@ -212,7 +152,6 @@
                         <li><a href="about.html" class="footer-link">FIELD NOTES ABOUT</a></li>
                     </ul>
                 </div>
-                <!-- Col 2: Company -->
                 <div class="footer-col">
                     <h4 class="footer-col-title">Journal</h4>
                     <ul class="footer-links">
@@ -221,7 +160,6 @@
                         <li><a href="about.html" class="footer-link">STAMP PERMITS</a></li>
                     </ul>
                 </div>
-                <!-- Col 3: Newsletter -->
                 <div class="footer-col">
                     <h4 class="footer-col-title">Newsletter</h4>
                     <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
@@ -244,5 +182,6 @@
         </div>
     </footer>
 
+    <script src="home.js"></script>
 </body>
 </html>

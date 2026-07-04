@@ -24,7 +24,7 @@ a single giant prompt string.
 import asyncio
 import logging
 
-from data.loader import get_destinations, filter_by_budget, filter_by_days, score_destination
+from data.loader import get_destinations, filter_by_budget, filter_by_days, score_destination, filter_by_interests
 from models.schemas import TravelRequest, TravelResponse
 from tools.destination_recommender import recommend_destinations
 from tools.hidden_gem_finder import find_hidden_gems
@@ -32,8 +32,71 @@ from tools.storytelling_generator import generate_story
 from tools.heritage_promoter import promote_heritage
 from tools.event_suggester import suggest_events
 from tools.experience_connector import connect_experiences
+from tools.web_search_tool import search_current_info
 
 logger = logging.getLogger(__name__)
+
+# ── Live-search trigger keywords ─────────────────────────────────
+# Condition (a): user mentions a specific time/season
+_TIME_KEYWORDS = [
+    "this weekend", "this week", "today", "tonight", "tomorrow",
+    "in january", "in february", "in march", "in april", "in may",
+    "in june", "in july", "in august", "in september", "in october",
+    "in november", "in december", "this month", "next month",
+    "monsoon", "winter", "summer", "spring", "autumn",
+]
+# Condition (b): user asks about current/live conditions
+_LIVE_CONDITION_KEYWORDS = [
+    "is open", "are open", "currently", "right now", "current price",
+    "current weather", "weather", "open now", "still open",
+    "how much does it cost", "entry fee", "ticket price",
+]
+
+
+def _needs_live_search(request: TravelRequest, destinations_data: list[dict]) -> tuple[bool, str]:
+    """Decide whether live web search is warranted for this request.
+
+    Returns (True, reason) only for one of three explicit conditions:
+      a) A specific date/season is mentioned → check live events.
+      b) User asks about current conditions (weather, prices, open/closed).
+      c) The curated JSON has NO matching destination for the requested
+         interest+region combination.
+
+    For everything else returns (False, "") — curated JSON is used alone.
+
+    Args:
+        request: Validated travel request.
+        destinations_data: Already-loaded curated destination list.
+
+    Returns:
+        (should_search: bool, reason: str)
+    """
+    q = request.query.lower()
+
+    # Condition (a) — time/season reference
+    for kw in _TIME_KEYWORDS:
+        if kw in q:
+            return True, f"time reference detected ('{kw}') — checking live events"
+
+    # Condition (b) — live condition query
+    for kw in _LIVE_CONDITION_KEYWORDS:
+        if kw in q:
+            return True, f"live-condition query detected ('{kw}') — fetching current info"
+
+    # Condition (c) — curated JSON has no match for interests + region
+    if request.interests:
+        matched = filter_by_interests(
+            filter_by_budget(destinations_data, request.budget),
+            request.interests,
+        )
+        if not matched:
+            return True, (
+                f"no curated match for interests {request.interests} "
+                f"at budget '{request.budget}' — searching live"
+            )
+
+    return False, ""
+
 
 # Intent keywords — used for rule-based classification
 INTENT_KEYWORDS = {
@@ -172,6 +235,11 @@ async def execute_strategy(strategy: dict, request: TravelRequest) -> TravelResp
     """
     destinations_data = get_destinations()
 
+    # Decide whether live search is needed — runs before tool tasks
+    live_results = await asyncio.get_event_loop().run_in_executor(
+        None, lambda: _maybe_fetch_live_context_sync(request, destinations_data)
+    )
+
     # Build async tasks for concurrent execution
     tasks = {}
     tool_list = strategy["tools"]
@@ -218,7 +286,7 @@ async def execute_strategy(strategy: dict, request: TravelRequest) -> TravelResp
                 logger.error("Storytelling failed: %s", str(exc))
 
     # Build summary
-    summary = _build_summary(strategy["intent"], results, request)
+    summary = _build_summary(strategy["intent"], results, request, live_results)
 
     return TravelResponse(
         intent=strategy["intent"],
@@ -257,7 +325,20 @@ def _pick_story_destination(destinations_data: list[dict], request: TravelReques
     return scored[0][0] if scored else None
 
 
-def _build_summary(intent: str, results: dict, request: TravelRequest) -> str:
+def _maybe_fetch_live_context_sync(request: TravelRequest, destinations_data: list[dict]) -> list[dict]:
+    """Synchronous wrapper for _maybe_fetch_live_context, used with run_in_executor."""
+    should_search, reason = _needs_live_search(request, destinations_data)
+    if not should_search:
+        print("[WanderSoul] Using curated dataset (no live search needed)")
+        logger.info("Live search skipped — using curated dataset")
+        return []
+    search_query = f"{request.query} India travel"
+    print(f"[WanderSoul] Fetching live update for: {search_query} | Reason: {reason}")
+    logger.info("Live search triggered — %s", reason)
+    return search_current_info(search_query)
+
+
+def _build_summary(intent: str, results: dict, request: TravelRequest, live_results: list[dict] | None = None) -> str:
     """Build a human-readable summary of the response.
 
     Args:
@@ -287,13 +368,22 @@ def _build_summary(intent: str, results: dict, request: TravelRequest) -> str:
     if exp_count:
         parts.append(f"{exp_count} cultural experience{'s' if exp_count != 1 else ''}")
 
-    if parts:
-        return (
-            f"Found {', '.join(parts)} matching your "
-            f"{request.days}-day {request.budget}-budget trip. "
-            "Each recommendation is tailored to your interests!"
+    base = (
+        f"Found {', '.join(parts)} matching your "
+        f"{request.days}-day {request.budget}-budget trip. "
+        "Each recommendation is tailored to your interests!"
+    ) if parts else "We're finding the best cultural experiences for you. Try adjusting your preferences for more results."
+
+    if live_results:
+        snippets = " | ".join(
+            f"Recent update: {r['title']} — {r['snippet'][:120]}"
+            for r in live_results[:2]
+            if r.get("title") and r.get("snippet")
         )
-    return "We're finding the best cultural experiences for you. Try adjusting your preferences for more results."
+        if snippets:
+            base = f"{base}\n\n{snippets}"
+
+    return base
 
 
 async def handle_request(request: TravelRequest) -> TravelResponse:
