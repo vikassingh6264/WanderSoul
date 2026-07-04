@@ -75,6 +75,15 @@ class TestInputValidation:
         })
         assert response.status_code == 422
 
+    def test_whitespace_query_returns_422(self):
+        """Whitespace-only input should be rejected instead of slipping through."""
+        response = client.post("/api/discover", json={
+            "query": "   ",
+            "budget": "low",
+            "days": 3,
+        })
+        assert response.status_code == 422
+
     def test_invalid_days_returns_422(self):
         """Days outside 1-30 range should be rejected."""
         response = client.post("/api/discover", json={

@@ -111,6 +111,12 @@ textarea:focus-visible {
     outline-offset: 2px !important;
 }
 
+.btn:disabled,
+button[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
 /* ─── Layout: Container ────────────────────────────────────────── */
 .container {
     width: 100%;

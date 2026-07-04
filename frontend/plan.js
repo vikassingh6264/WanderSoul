@@ -91,9 +91,12 @@ function setupFormSubmission() {
         loadingTitle.textContent = `Routing your ${days}-day itinerary...`;
         loadingDesc.textContent = `Registering tickets and querying regional archives for cultural highlights.`;
         loadingState.classList.remove("hidden");
+        loadingState.setAttribute("aria-busy", "true");
+        form.setAttribute("aria-busy", "true");
         errorState.classList.add("hidden");
         resultsState.classList.add("hidden");
         submitBtn.disabled = true;
+        submitBtn.setAttribute("aria-disabled", "true");
 
         // Scroll to loading area
         loadingState.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -118,7 +121,10 @@ function setupFormSubmission() {
             errorState.classList.remove("hidden");
         } finally {
             loadingState.classList.add("hidden");
+            loadingState.setAttribute("aria-busy", "false");
+            form.setAttribute("aria-busy", "false");
             submitBtn.disabled = false;
+            submitBtn.setAttribute("aria-disabled", "false");
         }
     });
 }

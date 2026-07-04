@@ -5,7 +5,7 @@ All API data contracts are defined here — FastAPI uses these for
 automatic input validation, error messages, and OpenAPI docs.
 """
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 # ─── Request Schemas ─────────────────────────────────────────────
@@ -42,6 +42,49 @@ class TravelRequest(BaseModel):
         description="Mobility/accessibility needs.",
         examples=["wheelchair-friendly"],
     )
+
+    @field_validator("query")
+    @classmethod
+    def validate_query(cls, value: str) -> str:
+        cleaned = value.strip()
+        if len(cleaned) < 3:
+            raise ValueError("query must contain at least 3 non-whitespace characters")
+        if len(cleaned) > 500:
+            raise ValueError("query must be at most 500 characters")
+        return cleaned
+
+    @field_validator("budget")
+    @classmethod
+    def validate_budget(cls, value: str) -> str:
+        normalized = value.strip().lower()
+        if normalized not in {"low", "medium", "high"}:
+            raise ValueError("budget must be one of: low, medium, high")
+        return normalized
+
+    @field_validator("interests", mode="before")
+    @classmethod
+    def validate_interests(cls, value):
+        if value is None:
+            return []
+        if isinstance(value, str):
+            value = [value]
+        cleaned = []
+        for item in value:
+            if item is None:
+                continue
+            if isinstance(item, str):
+                stripped = item.strip()
+                if stripped:
+                    cleaned.append(stripped)
+        return cleaned
+
+    @field_validator("accessibility")
+    @classmethod
+    def validate_accessibility(cls, value: str) -> str:
+        if value is None:
+            return "none"
+        cleaned = value.strip().lower()
+        return cleaned or "none"
 
 
 # ─── Response Schemas ────────────────────────────────────────────

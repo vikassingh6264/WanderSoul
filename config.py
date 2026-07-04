@@ -20,6 +20,7 @@ LLM_TIMEOUT_SECONDS: int = int(os.getenv("LLM_TIMEOUT_SECONDS", "15"))
 # --- Server Settings ---
 HOST: str = os.getenv("HOST", "0.0.0.0")
 PORT: int = int(os.getenv("PORT", "8000"))
+ALLOWED_ORIGINS: str = os.getenv("ALLOWED_ORIGINS", "*")
 
 # --- Data Paths ---
 DATA_DIR: str = os.path.join(os.path.dirname(__file__), "data")

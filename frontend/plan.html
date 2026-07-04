@@ -144,13 +144,13 @@
         </section>
 
         <!-- Loading State -->
-        <div id="itinerary-loading" class="empty-state hidden" style="margin: var(--space-48) 0;">
+        <div id="itinerary-loading" class="empty-state hidden" style="margin: var(--space-48) 0;" role="status" aria-live="polite" aria-busy="true">
             <div class="empty-state-title" id="loading-title">Compiling logs...</div>
             <p id="loading-desc">Assembling your custom route. Please wait while we process coordinates.</p>
         </div>
 
         <!-- Error State -->
-        <div id="itinerary-error" class="empty-state hidden" style="margin: var(--space-48) 0; border-color: var(--seal-red);">
+        <div id="itinerary-error" class="empty-state hidden" style="margin: var(--space-48) 0; border-color: var(--seal-red);" role="alert" aria-live="assertive">
             <div class="empty-state-title" style="color: var(--seal-red);">Voyage Interrupted</div>
             <p id="error-message">Something went wrong during routing.</p>
         </div>

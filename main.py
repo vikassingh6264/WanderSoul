@@ -101,12 +101,17 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# CORS — allow frontend on any origin during development
+# CORS — allow configured frontend origins while keeping a safe default
+allowed_origins = [origin.strip() for origin in config.ALLOWED_ORIGINS.split(",") if origin.strip()]
+if not allowed_origins:
+    allowed_origins = ["*"]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=allowed_origins,
     allow_methods=["*"],
     allow_headers=["*"],
+    allow_credentials=allowed_origins != ["*"],
 )
 
 
