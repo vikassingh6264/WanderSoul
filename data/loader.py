@@ -39,8 +39,46 @@ def load_destinations() -> list[dict]:
         raise FileNotFoundError(f"Destinations file not found: {data_path}")
 
     with open(data_path, "r", encoding="utf-8") as f:
-        _destinations = json.load(f)
+        raw_data = json.load(f)
 
+    if isinstance(raw_data, dict) and "destinations" in raw_data:
+        items = raw_data["destinations"]
+    else:
+        items = raw_data
+
+    # Normalize fields to support varying schemas (like new state/region, budget abbreviation)
+    normalized = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        d = item.copy()
+        
+        # Normalize state/region
+        if "region" not in d:
+            d["region"] = d.get("state", "India")
+            
+        # Normalize budget_level
+        budget = str(d.get("budget_level", "medium")).lower()
+        if budget.startswith("med"):
+            d["budget_level"] = "medium"
+        elif budget.startswith("low"):
+            d["budget_level"] = "low"
+        elif budget.startswith("high"):
+            d["budget_level"] = "high"
+        else:
+            d["budget_level"] = "medium"
+            
+        # Normalize best_for_days (if missing, allow range [1..30] so days filter passes)
+        if "best_for_days" not in d:
+            d["best_for_days"] = list(range(1, 31))
+            
+        # Normalize accessibility
+        if "accessibility" not in d:
+            d["accessibility"] = "moderate"
+            
+        normalized.append(d)
+
+    _destinations = normalized
     logger.info("Loaded %d destinations from %s", len(_destinations), data_path.name)
     return _destinations
 

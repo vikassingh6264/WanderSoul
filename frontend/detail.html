@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View destination details, field notes, local events, and hidden gems.">
+    <title>WanderSoul — Destination Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="index.html" class="logo-link" aria-label="WanderSoul Home">
+                <span class="logo-symbol" aria-hidden="true">✦</span>
+                <span class="logo-text">WanderSoul</span>
+            </a>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                    <li><a href="plan.html" class="nav-link">Plan a Trip</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container" role="main">
+        <div id="detail-loading" class="empty-state" style="margin: var(--space-48) 0;">
+            <div class="empty-state-title">Retrieving Log...</div>
+            <p>Locating the journals and field notes for this coordinate.</p>
+        </div>
+
+        <div id="detail-error" class="empty-state hidden" style="margin: var(--space-48) 0;">
+            <div class="empty-state-title">Stamps Missing</div>
+            <p id="error-text">We couldn't locate any records for this destination ID.</p>
+            <a href="destinations.html" class="btn btn-secondary" style="margin-top: var(--space-16); display: inline-flex;">Back to Listing</a>
+        </div>
+
+        <!-- Detail Layout (hidden by default until loaded) -->
+        <div id="detail-content" class="hidden">
+            
+            <!-- Journal Spread -->
+            <article class="journal-spread" aria-labelledby="detail-title">
+                
+                <!-- Left Page: Main Photo Frame -->
+                <div class="journal-left-page">
+                    <div class="journal-photo-frame">
+                        <img id="detail-img" src="" alt="" class="journal-main-photo">
+                        <div id="detail-caption" class="journal-photo-caption">PLATE 01 — FIELD SHOT</div>
+                        
+                        <!-- Rotated State Stamp Badge in bottom corner -->
+                        <div class="stamp-badge" style="top: auto; bottom: var(--space-8); right: var(--space-8);" aria-hidden="true">
+                            <span id="detail-badge-text" class="stamp-text">IND</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Page: Details & Facts -->
+                <div class="journal-right-page">
+                    <div>
+                        <span id="detail-category" class="detail-category">Category</span>
+                        <h1 id="detail-title" class="detail-title">Destination Name</h1>
+                    </div>
+                    
+                    <p id="detail-desc" class="detail-desc">
+                        Full description will be injected here.
+                    </p>
+
+                    <!-- Fact Strip (Mono UI) -->
+                    <div class="detail-fact-strip">
+                        <div class="fact-item">
+                            <span class="fact-label">Best Season</span>
+                            <span id="fact-season" class="fact-value">WINTER</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Budget Est</span>
+                            <span id="fact-budget" class="fact-value">MID-RANGE</span>
+                        </div>
+                        <div class="fact-item">
+                            <span class="fact-label">Transit Hub</span>
+                            <span id="fact-airport" class="fact-value">LOCAL AIRPORT</span>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Highlights list -->
+                    <div class="highlights-container">
+                        <h2 class="highlights-title">Immersive Highlights</h2>
+                        <ul id="detail-highlights-list" class="detail-highlights">
+                            <!-- Populated dynamically -->
+                        </ul>
+                    </div>
+                </div>
+
+            </article>
+
+            <!-- Album Gallery (Horizontal Scroll) -->
+            <section class="gallery-section" aria-labelledby="gallery-heading">
+                <span class="section-eyebrow">PHOTO ALBUM</span>
+                <h2 id="gallery-heading" class="section-title">Loose Photo Records</h2>
+                <div id="gallery-scroll" class="gallery-scroll">
+                    <!-- Populated dynamically -->
+                </div>
+            </section>
+
+            <!-- Ticket Stub CTA -->
+            <section class="ticket-cta" aria-labelledby="ticket-title">
+                <div class="ticket-body">
+                    <span id="ticket-code" class="ticket-code">TICKET CODE: WS-IND-TRIP</span>
+                    <h2 id="ticket-title" class="ticket-title">Ready to depart?</h2>
+                    <p class="ticket-desc">
+                        Tear this slip and submit it to our routing generator to build a complete custom day-by-day 
+                        itinerary based on this destination, local events, and cultural experiences.
+                    </p>
+                </div>
+                <div class="ticket-stub-end">
+                    <!-- Barcode drawn using thin lines -->
+                    <div class="ticket-barcode" aria-hidden="true">
+                        <div class="barcode-line wide"></div>
+                        <div class="barcode-line thin"></div>
+                        <div class="barcode-line space"></div>
+                        <div class="barcode-line"></div>
+                        <div class="barcode-line wide"></div>
+                        <div class="barcode-line space"></div>
+                        <div class="barcode-line thin"></div>
+                        <div class="barcode-line"></div>
+                        <div class="barcode-line wide"></div>
+                        <div class="barcode-line thin"></div>
+                    </div>
+                    <a id="plan-trip-link" href="" class="btn btn-primary ticket-btn">Plan this trip</a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html" class="footer-link">ALL DESTINATIONS</a></li>
+                        <li><a href="plan.html" class="footer-link">ITINERARY BUILDER</a></li>
+                        <li><a href="about.html" class="footer-link">FIELD NOTES ABOUT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Journal</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">EDITORIAL CODE</a></li>
+                        <li><a href="about.html" class="footer-link">OUR TEAM</a></li>
+                        <li><a href="about.html" class="footer-link">STAMP PERMITS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter email for field logs" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <span>© 2026 WANDERSOUL INC. ALL STAMPS RESERVED.</span>
+                <span>COORDINATES: 20.5937° N, 78.9629° E</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="detail.js"></script>
+</body>
+</html>

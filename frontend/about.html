@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about WanderSoul's mission of promoting authentic, crowd-free cultural tourism and sustainable travel.">
+    <title>WanderSoul — About & Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-48);
+            padding: var(--space-32) 0;
+        }
+        @media (min-width: 768px) {
+            .about-layout {
+                grid-template-columns: 1.2fr 0.8fr;
+            }
+        }
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-20);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+            margin-top: var(--space-20);
+            font-family: var(--font-meta);
+            font-size: var(--fs-13);
+        }
+        .team-member {
+            border: var(--border-hairline);
+            padding: var(--space-12);
+            background: rgba(28, 43, 57, 0.01);
+        }
+        .team-role {
+            opacity: 0.6;
+            text-transform: uppercase;
+        }
+        .team-name {
+            font-weight: 600;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-20);
+            border: var(--border-hairline);
+            padding: var(--space-24);
+            position: relative;
+        }
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            border: 1px dashed var(--line);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="index.html" class="logo-link" aria-label="WanderSoul Home">
+                <span class="logo-symbol" aria-hidden="true">✦</span>
+                <span class="logo-text">WanderSoul</span>
+            </a>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                    <li><a href="plan.html" class="nav-link">Plan a Trip</a></li>
+                    <li><a href="about.html" class="nav-link active">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container" role="main">
+        <div class="about-layout">
+            
+            <!-- Left Page: The Mission & Editorial Code -->
+            <section class="about-text" aria-labelledby="about-title">
+                <span class="section-eyebrow">OUR MISSION</span>
+                <h1 id="about-title" class="detail-title">Journaling the road less traveled.</h1>
+                
+                <p class="detail-desc">
+                    WanderSoul was established to document and promote local, high-quality, sustainable travel across the 
+                    subcontinent. Our core thesis is that true travel is an act of reading a landscape, not consuming 
+                    sightseeing boxes.
+                </p>
+
+                <p class="detail-desc">
+                    Every entry in our database is selected based on three criteria: historical significance, local community 
+                    engagement, and environmental footprint. We strictly filter out heavily commercialized tourist loops in 
+                    favor of heritage clusters, traditional arts, and family-run stays.
+                </p>
+
+                <!-- Plain team listing in Plex Mono -->
+                <div style="margin-top: var(--space-20);">
+                    <h2 class="highlights-title">Field Contributors</h2>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="team-name">Prashant Singh</div>
+                            <div class="team-role">Lead Editor & Explorer</div>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-name">Devika Sen</div>
+                            <div class="team-role">Cultural Anthropologist</div>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-name">Amit Kumar</div>
+                            <div class="team-role">Heritage Coordinator</div>
+                        </div>
+                        <div class="team-member">
+                            <div class="team-name">Zara Varma</div>
+                            <div class="team-role">Sustainability Analyst</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Page: Contact Stub -->
+            <section aria-labelledby="contact-title">
+                <div class="contact-form">
+                    <span class="section-eyebrow" style="margin-bottom: 0;">LOG ENTRY FEEDBACK</span>
+                    <h2 id="contact-title" class="highlights-title">Submit Field Note</h2>
+                    
+                    <form onsubmit="event.preventDefault(); alert('Message logged successfully.'); this.reset();">
+                        <div class="form-group" style="margin-bottom: var(--space-16);">
+                            <label for="contact-name" class="form-label">Name</label>
+                            <input type="text" id="contact-name" class="form-input" required placeholder="e.g. John Doe">
+                        </div>
+                        
+                        <div class="form-group" style="margin-bottom: var(--space-16);">
+                            <label for="contact-email" class="form-label">Email</label>
+                            <input type="email" id="contact-email" class="form-input" required placeholder="e.g. john@example.com">
+                        </div>
+
+                        <div class="form-group" style="margin-bottom: var(--space-20);">
+                            <label for="contact-message" class="form-label">Field Observation / Inquiry</label>
+                            <textarea id="contact-message" class="form-input form-textarea" required placeholder="Describe your observation..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">✦ Submit Dispatch</button>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html" class="footer-link">ALL DESTINATIONS</a></li>
+                        <li><a href="plan.html" class="footer-link">ITINERARY BUILDER</a></li>
+                        <li><a href="about.html" class="footer-link">FIELD NOTES ABOUT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Journal</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">EDITORIAL CODE</a></li>
+                        <li><a href="about.html" class="footer-link">OUR TEAM</a></li>
+                        <li><a href="about.html" class="footer-link">STAMP PERMITS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter email for field logs" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <span>© 2026 WANDERSOUL INC. ALL STAMPS RESERVED.</span>
+                <span>COORDINATES: 20.5937° N, 78.9629° E</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

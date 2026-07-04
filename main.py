@@ -138,9 +138,9 @@ async def health_check():
 
 @app.get("/api/destinations")
 async def list_destinations():
-    """List all destinations in the curated dataset.
+    """List all destinations in the curated dataset with full details.
 
-    Returns the raw dataset for frontend dropdown/filter population.
+    Returns the complete dataset for listing, detail, and filter population.
     """
     destinations = get_destinations()
     return {
@@ -150,13 +150,18 @@ async def list_destinations():
                 "id": d["id"],
                 "name": d["name"],
                 "region": d["region"],
+                "category": d.get("category", "General"),
+                "description": d.get("description", ""),
+                "image_url": d.get("image_url", ""),
                 "tags": d.get("tags", []),
                 "budget_level": d.get("budget_level", "medium"),
                 "best_for_days": d.get("best_for_days", []),
+                "accessibility": d.get("accessibility", "moderate"),
             }
             for d in destinations
         ],
     }
+
 
 
 @app.post("/api/discover", response_model=TravelResponse)

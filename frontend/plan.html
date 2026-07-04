@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Generate a customized travel itinerary and passport-style journal route for your next trip across India.">
+    <title>WanderSoul — Plan a Trip</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="index.html" class="logo-link" aria-label="WanderSoul Home">
+                <span class="logo-symbol" aria-hidden="true">✦</span>
+                <span class="logo-text">WanderSoul</span>
+            </a>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                    <li><a href="plan.html" class="nav-link active">Plan a Trip</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container" role="main">
+        
+        <!-- Boarding Pass Styled Form -->
+        <section class="boarding-pass-card" aria-labelledby="form-heading">
+            <div class="boarding-pass-header">
+                <span class="boarding-pass-logo">✦ WANDERSOUL PASSAGE</span>
+                <span class="boarding-pass-title">BOARDING DOCUMENT — DIRECT ROUTE</span>
+            </div>
+            
+            <form id="itinerary-form" class="boarding-pass-grid" novalidate>
+                
+                <!-- Left Section: Traveler Details -->
+                <div class="boarding-section">
+                    <h2 id="form-heading" class="boarding-section-title">01 / Traveler Details</h2>
+                    
+                    <!-- Search Query -->
+                    <div class="form-group">
+                        <label for="query-input" class="form-label">Desire & Direction</label>
+                        <textarea 
+                            id="query-input" 
+                            name="query" 
+                            class="form-input form-textarea"
+                            placeholder="Describe what you want to experience... (e.g., I want to explore Hampi's ancient ruins and sample local food on a tight budget)"
+                            required
+                            minlength="3"
+                            maxlength="500"
+                        ></textarea>
+                    </div>
+
+                    <!-- Days -->
+                    <div class="form-group">
+                        <label for="days-input" class="form-label">Duration of Voyage</label>
+                        <input 
+                            type="number" 
+                            id="days-input" 
+                            name="days" 
+                            class="form-input" 
+                            value="3" 
+                            min="1" 
+                            max="30" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Budget -->
+                    <div class="form-group">
+                        <label for="budget-select" class="form-label">Fare Class / Budget</label>
+                        <select id="budget-select" name="budget" class="form-input" required>
+                            <option value="low">💰 Budget (Low)</option>
+                            <option value="medium" selected>💳 Mid-Range (Medium)</option>
+                            <option value="high">💎 Comfort (High)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Perforation Divider -->
+                <div class="boarding-perforate" aria-hidden="true"></div>
+
+                <!-- Right Section: Preferences -->
+                <div class="boarding-section">
+                    <h2 class="boarding-section-title">02 / Preferences</h2>
+                    
+                    <!-- Interest stamps -->
+                    <div class="form-group">
+                        <span class="form-label">Interest Stamps</span>
+                        <div class="form-tag-list" role="group" aria-label="Select interest tags">
+                            <div class="stamp-item">
+                                <input type="checkbox" id="pref-heritage" name="interests" value="heritage" class="stamp-checkbox" checked>
+                                <label for="pref-heritage" class="stamp-label" style="--rot: -1.5deg;">🏛️ Heritage</label>
+                            </div>
+                            <div class="stamp-item">
+                                <input type="checkbox" id="pref-culture" name="interests" value="cultural_deep_dive" class="stamp-checkbox">
+                                <label for="pref-culture" class="stamp-label" style="--rot: 2deg;">🎨 Culture</label>
+                            </div>
+                            <div class="stamp-item">
+                                <input type="checkbox" id="pref-nature" name="interests" value="nature" class="stamp-checkbox">
+                                <label for="pref-nature" class="stamp-label" style="--rot: -1deg;">🌿 Nature</label>
+                            </div>
+                            <div class="stamp-item">
+                                <input type="checkbox" id="pref-food" name="interests" value="street-food" class="stamp-checkbox" checked>
+                                <label for="pref-food" class="stamp-label" style="--rot: 1.5deg;">🍜 Food</label>
+                            </div>
+                            <div class="stamp-item">
+                                <input type="checkbox" id="pref-crafts" name="interests" value="crafts" class="stamp-checkbox">
+                                <label for="pref-crafts" class="stamp-label" style="--rot: -2deg;">🏺 Crafts</label>
+                            </div>
+                            <div class="stamp-item">
+                                <input type="checkbox" id="pref-spirituality" name="interests" value="spirituality" class="stamp-checkbox">
+                                <label for="pref-spirituality" class="stamp-label" style="--rot: 1deg;">🕉️ Spiritual</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accessibility -->
+                    <div class="form-group">
+                        <label for="accessibility-select" class="form-label">Mobility Requirements</label>
+                        <select id="accessibility-select" name="accessibility" class="form-input">
+                            <option value="none" selected>No specific requirements</option>
+                            <option value="wheelchair-friendly">♿ Wheelchair-friendly routes</option>
+                            <option value="limited-mobility">🦯 Limited mobility considerations</option>
+                        </select>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submit-btn" class="btn btn-primary" style="margin-top: var(--space-12); align-self: stretch;">
+                        ✦ Register Ticket & Route
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <!-- Loading State -->
+        <div id="itinerary-loading" class="empty-state hidden" style="margin: var(--space-48) 0;">
+            <div class="empty-state-title" id="loading-title">Compiling logs...</div>
+            <p id="loading-desc">Assembling your custom route. Please wait while we process coordinates.</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="itinerary-error" class="empty-state hidden" style="margin: var(--space-48) 0; border-color: var(--seal-red);">
+            <div class="empty-state-title" style="color: var(--seal-red);">Voyage Interrupted</div>
+            <p id="error-message">Something went wrong during routing.</p>
+        </div>
+
+        <!-- Output Itinerary Section (Hidden until generated) -->
+        <section id="itinerary-results" class="itinerary-container hidden" aria-labelledby="itinerary-heading">
+            
+            <div class="itinerary-meta">
+                <span class="section-eyebrow">ROUTING LOG APPROVED</span>
+                <h2 id="itinerary-heading" class="itinerary-title">Your Travel Log</h2>
+                <p id="itinerary-summary" class="detail-desc">
+                    Summary of results.
+                </p>
+            </div>
+
+            <!-- Vertical Day Timeline -->
+            <div id="timeline-flow" class="itinerary-timeline">
+                <!-- Day timeline items will be dynamically injected here -->
+            </div>
+
+            <!-- Story segment -->
+            <div id="story-segment" class="story-box hidden">
+                <h3 class="story-title">📖 Local Lore & Narrative</h3>
+                <p id="story-text" class="story-text">
+                    Story content will be injected here.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html" class="footer-link">ALL DESTINATIONS</a></li>
+                        <li><a href="plan.html" class="footer-link">ITINERARY BUILDER</a></li>
+                        <li><a href="about.html" class="footer-link">FIELD NOTES ABOUT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Journal</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">EDITORIAL CODE</a></li>
+                        <li><a href="about.html" class="footer-link">OUR TEAM</a></li>
+                        <li><a href="about.html" class="footer-link">STAMP PERMITS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter email for field logs" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <span>© 2026 WANDERSOUL INC. ALL STAMPS RESERVED.</span>
+                <span>COORDINATES: 20.5937° N, 78.9629° E</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="plan.js"></script>
+</body>
+</html>

@@ -1,744 +1,1822 @@
-[
-  {
-    "id": "jaipur_01",
-    "name": "Jaipur",
-    "region": "Rajasthan",
-    "country": "India",
-    "type": "city",
-    "tags": ["heritage", "architecture", "crafts", "street-food", "photography"],
-    "budget_level": "low",
-    "best_for_days": [2, 3, 4],
-    "accessibility": "moderate",
-    "description": "The Pink City where every lane tells a story of Rajput grandeur — from the honeycombed facade of Hawa Mahal to the chaotic splendor of Johari Bazaar.",
-    "hidden_gems": [
-      {
-        "name": "Panna Meena ka Kund",
-        "description": "A stunning geometric stepwell hidden behind Amer Fort. No crowds, just you and 400-year-old symmetry carved in stone.",
-        "why_hidden": "Overshadowed by nearby Amer Fort, most tour buses skip this entirely.",
-        "local_tip": "Visit at dawn — the light hits the steps perfectly and you'll have it to yourself."
-      },
-      {
-        "name": "Anokhi Museum of Hand Printing",
-        "description": "Tucked inside a restored haveli in Amber, this tiny museum showcases centuries-old block printing techniques still alive in Rajasthan.",
-        "why_hidden": "Located off the main road near Amer Fort, with minimal signage.",
-        "local_tip": "Ask for the live demonstration — the artisans love showing their craft to genuinely curious visitors."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Teej Festival",
-        "timing": "July-August (monsoon season)",
-        "description": "Women dress in green, ride decorated swings, and celebrate the monsoon with folk songs. The city procession is spectacular.",
-        "traveler_relevance": "One of the most photogenic and culturally immersive festivals — locals welcome visitors joining the celebrations."
-      },
-      {
-        "name": "Jaipur Literature Festival",
-        "timing": "January (five days)",
-        "description": "The world's largest free literary festival, held at Diggi Palace. Writers, poets, musicians gather in a cultural carnival.",
-        "traveler_relevance": "Free entry, great for solo travelers — easy to meet people and attend sessions on Indian culture and history."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Block Printing Workshop in Sanganer",
-        "type": "workshop",
-        "description": "Learn traditional Rajasthani block printing from a family that has practiced it for six generations. You'll carve your own block and print fabric to take home.",
-        "budget_estimate": "₹500-800",
-        "booking_tip": "Ask any auto driver for 'Sanganer ka printing wala' — they all know."
-      },
-      {
-        "name": "Chai and Conversation at Tapri Central",
-        "type": "local-hangout",
-        "description": "A rooftop chai café where Jaipur's young creatives gather. Order the saffron chai and you'll end up in a three-hour conversation about everything from Rajput history to Bollywood.",
-        "budget_estimate": "₹100-200",
-        "booking_tip": "No booking needed. Go around 5 PM when the sunset crowd arrives."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Nahargarh Fort",
-        "significance": "Built in 1734, this 'abode of tigers' offers the best panoramic view of Jaipur. The Madhavendra Bhawan inside has interconnected suites built for the king's twelve queens.",
-        "how_to_engage": "Hike up from Jaipur city via the old path (45 mins) instead of driving — the trail passes through forest and old walls with zero other tourists.",
-        "preservation_note": "Well-maintained by Rajasthan archaeology department. Entry fee helps fund ongoing restoration."
-      }
-    ]
-  },
-  {
-    "id": "varanasi_02",
-    "name": "Varanasi",
-    "region": "Uttar Pradesh",
-    "country": "India",
-    "type": "city",
-    "tags": ["spirituality", "heritage", "street-food", "music", "photography"],
-    "budget_level": "low",
-    "best_for_days": [2, 3],
-    "accessibility": "limited",
-    "description": "The oldest living city in the world. Dawn on the Ganges ghats isn't just a sight — it's a sensory avalanche of temple bells, flower garlands, chanting, and wood smoke.",
-    "hidden_gems": [
-      {
-        "name": "Ramnagar Fort Museum",
-        "description": "Across the river from the main ghats, this crumbling fort houses a surreal collection — vintage cars, ivory chess sets, and an astronomical clock from the 1800s.",
-        "why_hidden": "You need to cross the river by boat, which deters most tourists.",
-        "local_tip": "Hire a boatman from Assi Ghat for ₹200 round trip — much cheaper than the tourist boats near Dashashwamedh."
-      },
-      {
-        "name": "Kabir Chaura",
-        "description": "The neighborhood where the poet-saint Kabir lived and wove cloth. A small math (monastery) still preserves his loom and teachings.",
-        "why_hidden": "Deep in the old city maze, no Google Maps pin, ask locals for 'Kabir ka maqam'.",
-        "local_tip": "The morning prayers here are intimate and welcoming — a world away from the tourist-packed Ganga Aarti."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Dev Deepawali",
-        "timing": "November (fifteen days after Diwali)",
-        "description": "The 'Diwali of the Gods' — every ghat is lit with thousands of earthen lamps. The entire riverfront glows amber.",
-        "traveler_relevance": "More magical and less crowded than Diwali itself. Boat rides during the lighting ceremony are unforgettable."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Morning Raga at Assi Ghat",
-        "type": "music",
-        "description": "Classical musicians perform informal morning ragas at the southernmost ghat. Sit on the steps with chai and let centuries-old melodies wash over you.",
-        "budget_estimate": "Free (chai ₹10)",
-        "booking_tip": "Just show up at Assi Ghat between 5:30-7 AM. The musicians are usually near the large peepal tree."
-      },
-      {
-        "name": "Weaving Lane Walk in Sarai Mohana",
-        "type": "walk",
-        "description": "Walk through narrow lanes where Banarasi silk saris are still woven on handlooms. Weavers will show you their intricate craft — some patterns take six months to complete.",
-        "budget_estimate": "Free (guide ₹300 optional)",
-        "booking_tip": "Go early morning when the looms are running. Ask for Mohammed Ansari's workshop — three generations of master weavers."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Sarnath",
-        "significance": "Where Buddha gave his first sermon after enlightenment. The Dhamek Stupa (5th century) and the Ashoka Pillar capital (now India's national emblem) originated here.",
-        "how_to_engage": "Hire a local Buddhist guide (₹500) who can explain the spiritual significance beyond what plaques say. Meditate in the deer park at dusk.",
-        "preservation_note": "UNESCO-monitored. The archaeological museum here houses some of India's most important Buddhist sculptures."
-      }
-    ]
-  },
-  {
-    "id": "hampi_03",
-    "name": "Hampi",
-    "region": "Karnataka",
-    "country": "India",
-    "type": "heritage-village",
-    "tags": ["heritage", "architecture", "adventure", "photography", "budget-travel"],
-    "budget_level": "low",
-    "best_for_days": [2, 3],
-    "accessibility": "moderate",
-    "description": "Surreal boulder-strewn ruins of a 14th-century empire scattered across a landscape that looks like another planet. Budget backpacker paradise.",
-    "hidden_gems": [
-      {
-        "name": "Sanapur Lake",
-        "description": "A turquoise lake surrounded by boulders on the 'hippie side' of the river. Rent a coracle (round basket boat) and float in silence.",
-        "why_hidden": "Across the river from the main ruins, most day-trippers never cross.",
-        "local_tip": "The coracle ride is ₹50 if you negotiate in Kannada. Sunset here is better than anywhere on the ruins side."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Hampi Utsav",
-        "timing": "November (three days)",
-        "description": "A cultural festival that recreates the glory of the Vijayanagara Empire with dance, music, puppet shows, and a grand procession through the ruins.",
-        "traveler_relevance": "The ruins come alive with performances — like a time machine powered by art. Many events are free."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Coracle Ride and Temple Hopping",
-        "type": "adventure",
-        "description": "Cross the Tungabhadra River in a traditional coracle (woven bamboo boat), then rent a bicycle to explore the quieter eastern temples where monkeys outnumber tourists.",
-        "budget_estimate": "₹150-300 for the day",
-        "booking_tip": "The coracle crossing starts at 7 AM from the east bank. Bicycles are rented from shops on Hippie Island."
-      },
-      {
-        "name": "Cooking with a Local Family",
-        "type": "homestay",
-        "description": "Families on the Anegundi side host travelers for a home-cooked Kannada meal. Learn to make jolada roti (sorghum flatbread) on an open fire.",
-        "budget_estimate": "₹200-400",
-        "booking_tip": "Ask at Gopi Guest House — they connect travelers with host families."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Virupaksha Temple",
-        "significance": "Continuously operating since the 7th century — one of India's oldest functioning temples. The temple elephant Lakshmi blesses visitors with her trunk.",
-        "how_to_engage": "Attend the 6:30 AM puja (prayer ceremony) when it's just priests and pilgrims. Offer a coconut and receive prasad (blessed food).",
-        "preservation_note": "UNESCO World Heritage Site. Archaeological Survey of India manages conservation. Many structures still need restoration funding."
-      }
-    ]
-  },
-  {
-    "id": "pondicherry_04",
-    "name": "Pondicherry",
-    "region": "Tamil Nadu",
-    "country": "India",
-    "type": "coastal-town",
-    "tags": ["heritage", "street-food", "spirituality", "cycling", "architecture"],
-    "budget_level": "low",
-    "best_for_days": [2, 3],
-    "accessibility": "good",
-    "description": "A Franco-Tamil time capsule where bougainvillea-draped French colonial streets meet Tamil temple lanes. The only place in India where you can eat a croissant and a dosa on the same street.",
-    "hidden_gems": [
-      {
-        "name": "Serenity Beach Fishing Village",
-        "description": "Just past the touristy beach, a working fishing village where catamarans land their catch at dawn. Buy fish directly and a local family will cook it for you.",
-        "why_hidden": "Tourists stop at the beach; the village is 200 meters further north behind the rocks.",
-        "local_tip": "Arrive by 5:30 AM for the catch landing. Bring cash — the fishermen don't have UPI."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Fête de Pondichéry",
-        "timing": "July 14 (Bastille Day)",
-        "description": "Pondicherry celebrates French National Day with parades, French-Tamil fusion food, and tricolor decorations along the promenade.",
-        "traveler_relevance": "A unique Indo-French cultural mashup you won't find anywhere else on the planet."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Tamil Cooking Class in Heritage Town",
-        "type": "workshop",
-        "description": "Learn to cook a five-dish Tamil thali from a home cook in the Tamil Quarter. Grind your own spices on a stone mortar, roll pappadam by hand, and eat on a banana leaf.",
-        "budget_estimate": "₹600-1000",
-        "booking_tip": "Book through Pondy Cycle Tour — they pair the cooking class with a morning market visit."
-      },
-      {
-        "name": "Dawn Meditation at Matrimandir",
-        "type": "spiritual",
-        "description": "The golden sphere in Auroville offers silent meditation sessions at sunrise. The inner chamber has the world's largest optically perfect crystal globe.",
-        "budget_estimate": "Free (with advance booking)",
-        "booking_tip": "Book 2-3 days in advance at the Auroville Visitor Centre. Concentrating pass requires ID."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "French Quarter (Ville Blanche)",
-        "significance": "One of the best-preserved French colonial districts in Asia. Mustard-yellow villas, wrought-iron balconies, and street names still in French.",
-        "how_to_engage": "Rent a bicycle (₹150/day) and explore the grid of streets between the canal and the sea. Stop at Café des Arts for the full colonial-era ambiance.",
-        "preservation_note": "INTACH (Indian National Trust for Art and Cultural Heritage) actively restores buildings here. Some are being converted to heritage hotels."
-      }
-    ]
-  },
-  {
-    "id": "udaipur_05",
-    "name": "Udaipur",
-    "region": "Rajasthan",
-    "country": "India",
-    "type": "city",
-    "tags": ["heritage", "architecture", "crafts", "photography", "lakes"],
-    "budget_level": "medium",
-    "best_for_days": [2, 3, 4],
-    "accessibility": "moderate",
-    "description": "The City of Lakes — white marble palaces floating on still water, surrounded by Aravalli hills. Romantic, regal, and surprisingly affordable beyond the lakefront tourist strip.",
-    "hidden_gems": [
-      {
-        "name": "Ambrai Ghat",
-        "description": "A quiet ghat on the opposite shore from the City Palace. The reflection of the palace in Lake Pichola at sunset is the most iconic view in Rajasthan — and it's free.",
-        "why_hidden": "Most tourists view the palace from the paid boat ride. The free view from Ambrai is actually better.",
-        "local_tip": "Go to the steps below Ambrai restaurant, not the restaurant itself. Bring chai from the stall at the corner."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Shilpgram Crafts Fair",
-        "timing": "December (ten days)",
-        "description": "Rural artisans from across western India set up a craft village with live demonstrations — pottery, weaving, puppet-making, and folk music every evening.",
-        "traveler_relevance": "Buy directly from artisans at fair prices. The puppet shows and folk music performances are worth the trip alone."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Miniature Painting Lesson",
-        "type": "workshop",
-        "description": "Learn the painstaking art of Mewar miniature painting from a master artist whose family has painted for royalty for eight generations.",
-        "budget_estimate": "₹800-1500",
-        "booking_tip": "Visit the artists' studios in the lanes behind Jagdish Temple. Look for 'Ganesh Handicrafts' — genuine artists, not factory reproductions."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Jagdish Temple",
-        "significance": "A masterpiece of Indo-Aryan architecture from 1651, with intricate carvings depicting scenes from Hindu mythology on every surface.",
-        "how_to_engage": "Attend the evening aarti at 7 PM — the temple fills with incense and devotional music. Non-Hindus are welcome to observe respectfully.",
-        "preservation_note": "Actively maintained by the local community. The carved elephants at the entrance have been restored recently."
-      }
-    ]
-  },
-  {
-    "id": "mcleodganj_06",
-    "name": "McLeodGanj (Dharamshala)",
-    "region": "Himachal Pradesh",
-    "country": "India",
-    "type": "hill-town",
-    "tags": ["spirituality", "trekking", "street-food", "budget-travel", "crafts"],
-    "budget_level": "low",
-    "best_for_days": [2, 3, 4],
-    "accessibility": "limited",
-    "description": "Home of the Dalai Lama and the Tibetan government-in-exile. Where Himalayan trails meet Tibetan momos, and monks in maroon robes share the streets with backpackers.",
-    "hidden_gems": [
-      {
-        "name": "Naddi Village Viewpoint",
-        "description": "A 3km walk from McLeodGanj to a tiny village with a jaw-dropping unobstructed view of the Dhauladhar range. A local tea stall serves chai with the Himalayas as backdrop.",
-        "why_hidden": "Tour groups go to Dal Lake instead, which is underwhelming. Naddi is where the locals go for views.",
-        "local_tip": "Walk, don't drive. The trail through the deodar forest is half the experience."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Losar (Tibetan New Year)",
-        "timing": "February-March",
-        "description": "The Tibetan community celebrates with traditional dances, special foods (khapse pastries), and prayers at the Tsuglagkhang temple complex.",
-        "traveler_relevance": "A rare chance to witness living Tibetan culture outside Tibet. The community is welcoming and the food is incredible."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Tibetan Cooking Class",
-        "type": "workshop",
-        "description": "Learn to make momos (dumplings), thukpa (noodle soup), and butter tea with a Tibetan refugee family. The stories they share over food are as nourishing as the meal.",
-        "budget_estimate": "₹400-600",
-        "booking_tip": "Ask at the Lha Charitable Trust — they run classes that directly support refugee families."
-      },
-      {
-        "name": "Meditation with Monks",
-        "type": "spiritual",
-        "description": "Join a guided meditation session at the Tushita Meditation Centre. Multi-day silent retreats available for those seeking deeper practice.",
-        "budget_estimate": "₹300-500 (donation based)",
-        "booking_tip": "Drop-in sessions on weekday mornings. Retreats book up weeks in advance — check tushita.info."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Tsuglagkhang Complex",
-        "significance": "The Dalai Lama's temple and the spiritual heart of the Tibetan diaspora. Houses important Buddhist relics and a museum documenting Tibet's cultural heritage.",
-        "how_to_engage": "Walk the kora (circumambulation path) with Tibetan pilgrims spinning prayer wheels. Visit the Tibet Museum inside for context on the diaspora's story.",
-        "preservation_note": "Maintained by the Central Tibetan Administration. The Tibet Museum is a crucial archive of Tibetan cultural heritage at risk of erasure."
-      }
-    ]
-  },
-  {
-    "id": "kochi_07",
-    "name": "Kochi (Cochin)",
-    "region": "Kerala",
-    "country": "India",
-    "type": "coastal-city",
-    "tags": ["heritage", "street-food", "performing-arts", "architecture", "cycling"],
-    "budget_level": "low",
-    "best_for_days": [2, 3],
-    "accessibility": "good",
-    "description": "Where Chinese fishing nets, Portuguese churches, Dutch palaces, Jewish synagogues, and Muslim mosques coexist within walking distance — a living museum of India's maritime trade history.",
-    "hidden_gems": [
-      {
-        "name": "Jew Town Spice Markets",
-        "description": "The narrow lane leading to the Paradesi Synagogue is lined with spice warehouses where you can buy cardamom, pepper, and cinnamon straight from the source.",
-        "why_hidden": "Tourists photograph the synagogue and leave. The real experience is in the spice warehouses on either side.",
-        "local_tip": "Ask to see the sorting process — workers hand-grade spices on the warehouse floor, unchanged for centuries."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Kochi-Muziris Biennale",
-        "timing": "December-March (every two years)",
-        "description": "India's largest contemporary art exhibition, spread across warehouses and heritage buildings on Fort Kochi. Free entry, world-class art.",
-        "traveler_relevance": "Art installations in colonial-era buildings — walking through the exhibition is like exploring Kochi's history through a contemporary lens."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Kathakali Performance at Kerala Kathakali Centre",
-        "type": "performing-arts",
-        "description": "Watch the elaborate makeup process (1.5 hours) followed by a full Kathakali dance-drama performance. The facial expressions alone are worth the visit.",
-        "budget_estimate": "₹350",
-        "booking_tip": "Arrive at 5 PM for the makeup session — it's more fascinating than the performance itself."
-      },
-      {
-        "name": "Fort Kochi Heritage Walk",
-        "type": "walk",
-        "description": "A guided walk through 600 years of history — from the Chinese fishing nets to St. Francis Church (where Vasco da Gama was originally buried) to the Dutch Cemetery.",
-        "budget_estimate": "₹200-400",
-        "booking_tip": "The Kerala Tourism walking tours depart from the Chinese fishing nets at 9 AM. Or just walk it yourself with a printed map from the tourist office."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Mattancherry Palace (Dutch Palace)",
-        "significance": "Built by the Portuguese in 1555, renovated by the Dutch, gifted to the Raja of Kochi. The mural paintings inside are some of the finest examples of Kerala temple art.",
-        "how_to_engage": "Spend time with the murals — they depict scenes from the Ramayana with extraordinary detail. No photography allowed, which keeps the experience contemplative.",
-        "preservation_note": "Archaeological Survey of India site. The murals require constant climate-controlled preservation."
-      }
-    ]
-  },
-  {
-    "id": "jodhpur_08",
-    "name": "Jodhpur",
-    "region": "Rajasthan",
-    "country": "India",
-    "type": "city",
-    "tags": ["heritage", "architecture", "street-food", "crafts", "photography"],
-    "budget_level": "low",
-    "best_for_days": [1, 2, 3],
-    "accessibility": "moderate",
-    "description": "The Blue City — a cascade of indigo-washed houses tumbling down from the massive Mehrangarh Fort. The old city is a labyrinth of color, spice, and sound.",
-    "hidden_gems": [
-      {
-        "name": "Stepwell near Toorji Ka Jhalra",
-        "description": "A beautifully restored 18th-century stepwell right in the middle of the old market area. Most people walk past without realizing what's below street level.",
-        "why_hidden": "No signage from the main road. The entrance is through a narrow lane between shops.",
-        "local_tip": "Visit after exploring the market — the cool stone steps are a perfect break from the heat and chaos above."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Rajasthan International Folk Festival (RIFF)",
-        "timing": "October (four days, during Sharad Purnima full moon)",
-        "description": "Musicians from Rajasthan and around the world perform inside Mehrangarh Fort under the full moon. Sufi qawwalis echoing off 500-year-old walls.",
-        "traveler_relevance": "One of the world's top music festivals, set in the most dramatic venue imaginable. Many performances are free."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Spice Market Walk in Nai Sarak",
-        "type": "walk",
-        "description": "Navigate the narrow lanes of Jodhpur's oldest market with a local guide who knows every spice seller by name. Sample mirchi vada (chili fritters) and mawa kachori (sweet pastry) along the way.",
-        "budget_estimate": "₹200-500 including tastings",
-        "booking_tip": "Ask at your guesthouse for a local guide rather than booking a formal tour — you'll get a more authentic experience."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Mehrangarh Fort",
-        "significance": "One of India's largest forts, perched 400 feet above the city. Built in 1459, it's never been conquered. The museum inside is among the best-curated in India.",
-        "how_to_engage": "Rent the audio guide (narrated by the current Maharaja) — it transforms the visit from sightseeing to storytelling. Allow 3-4 hours.",
-        "preservation_note": "The Mehrangarh Museum Trust runs one of India's most successful heritage conservation programs. Revenue funds restoration."
-      }
-    ]
-  },
-  {
-    "id": "meghalaya_09",
-    "name": "Shillong & Cherrapunji",
-    "region": "Meghalaya",
-    "country": "India",
-    "type": "hill-region",
-    "tags": ["nature", "adventure", "indigenous-culture", "trekking", "photography"],
-    "budget_level": "medium",
-    "best_for_days": [3, 4, 5],
-    "accessibility": "limited",
-    "description": "The 'Abode of Clouds' — living root bridges grown over centuries, the wettest place on Earth, and the Khasi matrilineal society where women own property and children take the mother's surname.",
-    "hidden_gems": [
-      {
-        "name": "Nongriat Double-Decker Root Bridge",
-        "description": "A bridge literally grown from the roots of rubber trees by the Khasi people over 150+ years. The trek down 3,500 steps through jungle is as stunning as the bridge itself.",
-        "why_hidden": "The 3,500-step trek deters casual tourists. Only 10-15 visitors on most days.",
-        "local_tip": "Stay overnight at the village below — the bridge at dawn, without any other visitors, is transcendent. Homestays cost ₹500/night."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Nongkrem Dance Festival",
-        "timing": "November (five days)",
-        "description": "The most important Khasi festival — traditional dances, community feasts, and thanksgiving rituals at the sacred grove in Smit village.",
-        "traveler_relevance": "A rare window into Khasi indigenous culture. Visitors are welcome but must dress modestly and follow local customs."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Homestay in a Khasi Village",
-        "type": "homestay",
-        "description": "Stay with a Khasi family and experience the matrilineal way of life. Help harvest betel nuts, learn to cook jadoh (pork rice), and hear stories about root bridge building.",
-        "budget_estimate": "₹500-800/night including meals",
-        "booking_tip": "Contact the Meghalaya Tourism Development Corporation or book through 'By the Way' tours for vetted homestays."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Living Root Bridges of Meghalaya",
-        "significance": "Bio-engineering by the Khasi and Jaintia tribes — tree roots trained over decades to form bridges that strengthen with age. Some are over 500 years old.",
-        "how_to_engage": "Trek with a local Khasi guide who can explain the multi-generational process of growing these bridges. The knowledge is passed orally, not written.",
-        "preservation_note": "Nominated for UNESCO World Heritage status. Climate change and deforestation threaten the younger bridges still being grown."
-      }
-    ]
-  },
-  {
-    "id": "orchha_10",
-    "name": "Orchha",
-    "region": "Madhya Pradesh",
-    "country": "India",
-    "type": "heritage-town",
-    "tags": ["heritage", "architecture", "spirituality", "photography", "budget-travel"],
-    "budget_level": "low",
-    "best_for_days": [1, 2],
-    "accessibility": "moderate",
-    "description": "A forgotten Bundela kingdom where 16th-century palaces and temples sit without fences or ticket counters, surrounded by a sleepy town on the Betwa River. India's best-kept heritage secret.",
-    "hidden_gems": [
-      {
-        "name": "Chaturbhuj Temple Rooftop",
-        "description": "Climb the narrow stairs inside this towering temple to reach the rooftop. The 360-degree view of Orchha's cenotaphs, palaces, and river is staggering — and you'll be alone up there.",
-        "why_hidden": "No signs indicate you can climb to the top. Most visitors look at the exterior and leave.",
-        "local_tip": "Go at sunset. The warm light on the stone and the river below is pure magic."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Ram Raja Temple Evening Aarti",
-        "timing": "Daily at sunset",
-        "description": "The only temple in India where Lord Ram is worshipped as a king. Palace guards in ceremonial dress present arms during the evening prayer — a tradition unchanged for 400 years.",
-        "traveler_relevance": "A daily cultural experience that costs nothing and takes 30 minutes. The ceremonial guard tradition is unique to Orchha."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "River Rafting on the Betwa",
-        "type": "adventure",
-        "description": "Gentle rafting past Orchha's cenotaphs — the view of the royal chattris from the river is how the Bundela kings intended them to be seen.",
-        "budget_estimate": "₹300-500",
-        "booking_tip": "MP Tourism runs the rafting operation. Book at the Sheesh Mahal hotel reception."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Jahangir Mahal",
-        "significance": "Built overnight (according to legend) to welcome Mughal Emperor Jahangir in 1606. A fusion of Hindu and Islamic architecture with 132 rooms.",
-        "how_to_engage": "Explore without a guide first — getting lost inside is the point. Then find the caretaker who lives inside the palace; he knows stories about every room.",
-        "preservation_note": "Recently added to UNESCO Tentative List. Some palace murals are deteriorating and need urgent conservation."
-      }
-    ]
-  },
-  {
-    "id": "alleppey_11",
-    "name": "Alleppey (Alappuzha)",
-    "region": "Kerala",
-    "country": "India",
-    "type": "backwater-town",
-    "tags": ["nature", "street-food", "heritage", "cycling", "photography"],
-    "budget_level": "medium",
-    "best_for_days": [1, 2, 3],
-    "accessibility": "good",
-    "description": "The Venice of the East — a network of palm-fringed canals, lagoons, and rice paddies connected by narrow waterways where life moves at the pace of a slowly paddled canoe.",
-    "hidden_gems": [
-      {
-        "name": "Kuttanad Below-Sea-Level Farming",
-        "description": "One of the few places on Earth where farming happens below sea level. Rice paddies are carved from lake beds using an ancient system of bunds and canals.",
-        "why_hidden": "Houseboat tours stick to the main canals. The farming villages are in the narrower waterways.",
-        "local_tip": "Hire a local punter with a small canoe (₹300/hr) instead of a houseboat — you can navigate the narrow canals where houseboats can't go."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Nehru Trophy Snake Boat Race",
-        "timing": "August (second Saturday)",
-        "description": "The Olympics of Kerala — 100-foot-long snake boats with 100+ rowers racing on Punnamada Lake. Drums, crowds, and adrenaline.",
-        "traveler_relevance": "India's most thrilling sporting spectacle. Arrive early to see the boat blessing ceremonies."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Toddy Shop and Kerala Lunch",
-        "type": "local-hangout",
-        "description": "Eat a Kerala-style fish curry lunch at a canal-side toddy shop (kallu shaap). Palm toddy is fermented coconut sap — mildly alcoholic, absolutely delicious, and impossible to find outside Kerala.",
-        "budget_estimate": "₹200-350",
-        "booking_tip": "No booking needed. Ask any auto driver for 'the best kallu shaap' — they always know."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Alleppey Lighthouse and Coir Museums",
-        "significance": "Alleppey's 19th-century lighthouse and coir (coconut fiber) industry tell the story of Kerala's maritime trade. The coir museum shows how ropes that sailed the world were twisted by hand.",
-        "how_to_engage": "Climb the lighthouse for a panoramic view, then visit the coir museum to see the traditional spinning process still practiced by local families.",
-        "preservation_note": "The lighthouse is maintained by the Indian Coast Guard. The coir industry, once Kerala's largest employer, is being revived through cooperative societies."
-      }
-    ]
-  },
-  {
-    "id": "pushkar_12",
-    "name": "Pushkar",
-    "region": "Rajasthan",
-    "country": "India",
-    "type": "sacred-town",
-    "tags": ["spirituality", "street-food", "photography", "crafts", "budget-travel"],
-    "budget_level": "low",
-    "best_for_days": [1, 2],
-    "accessibility": "moderate",
-    "description": "One of the world's oldest cities, built around a sacred lake in the Thar Desert. A vegetarian holy town with ghats, camels, and a surreal mix of Hindu pilgrims and global backpackers.",
-    "hidden_gems": [
-      {
-        "name": "Savitri Temple Sunrise Trek",
-        "description": "A 45-minute climb up a hill behind the town to a temple dedicated to Goddess Savitri. The view of Pushkar Lake at dawn, with the town still sleeping below, is extraordinary.",
-        "why_hidden": "There's a ropeway now, but walking the old trail gives you solitude and better views from multiple angles.",
-        "local_tip": "Start at 5 AM to reach the top before sunrise. Carry water — there's none on the trail."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Pushkar Camel Fair",
-        "timing": "November (five days around Kartik Purnima)",
-        "description": "The world's largest camel fair — 50,000 camels, horse races, folk performances, and a floating temple ceremony on the sacred lake under the full moon.",
-        "traveler_relevance": "Absolutely unmatched cultural spectacle. The fair grounds become a temporary city. Budget accommodation available in tent camps."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Sunset Aarti at Pushkar Lake",
-        "type": "spiritual",
-        "description": "Join pilgrims for the evening prayer ceremony at the lake's 52 ghats. A Brahmin priest guides the ritual — you'll float flower-and-candle offerings on the sacred water.",
-        "budget_estimate": "₹50-100 (donation to priest)",
-        "booking_tip": "Just walk to any ghat at sunset. Pushkar Ghat and Brahma Ghat have the most atmospheric ceremonies."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Brahma Temple",
-        "significance": "One of very few temples in the world dedicated to Lord Brahma (the creator in Hindu trinity). The red spire and silver turtle on the floor are iconic symbols.",
-        "how_to_engage": "Visit during morning puja when the temple is filled with chanting and incense. Remove shoes well before the entrance as a sign of respect.",
-        "preservation_note": "One of the most sacred sites in Hinduism. Maintained by the local temple trust with community donations."
-      }
-    ]
-  },
-  {
-    "id": "madurai_13",
-    "name": "Madurai",
-    "region": "Tamil Nadu",
-    "country": "India",
-    "type": "temple-city",
-    "tags": ["heritage", "spirituality", "street-food", "architecture", "performing-arts"],
-    "budget_level": "low",
-    "best_for_days": [1, 2, 3],
-    "accessibility": "good",
-    "description": "The 'Athens of the East' — a 2,500-year-old city pulsing with Tamil pride, temple towers dripping with thousands of painted deities, and the best South Indian food you'll ever eat.",
-    "hidden_gems": [
-      {
-        "name": "Thirumalai Nayakkar Mahal Sound & Light Show",
-        "description": "A crumbling 17th-century palace that comes alive at night with a sound and light show narrating Madurai's history. The remaining pillars suggest a grandeur that rivaled European palaces.",
-        "why_hidden": "Everyone goes to Meenakshi Temple and skips the palace, which is a 10-minute walk away.",
-        "local_tip": "The Tamil show (6:45 PM) has more emotional energy than the English one (8 PM). Even if you don't speak Tamil, the visuals and music carry it."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Chithirai Festival",
-        "timing": "April-May (twelve days)",
-        "description": "Madurai's grandest festival — a celestial wedding procession of Goddess Meenakshi through the streets, with chariots, musicians, and the entire city turned out to celebrate.",
-        "traveler_relevance": "The chariot procession is one of India's most visually overwhelming cultural events. Streets become rivers of people, flowers, and music."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Pre-Dawn Temple Visit to Meenakshi Amman",
-        "type": "spiritual",
-        "description": "Enter Meenakshi Temple at 5 AM for the 'Suprabhatam' — the ritual of waking the deities. The temple is nearly empty, and the experience is meditative rather than chaotic.",
-        "budget_estimate": "Free (₹50 for special darshan)",
-        "booking_tip": "Temple opens at 5 AM. Skip the tourist entrance and use the East Tower gate that locals use — shorter queue."
-      },
-      {
-        "name": "Madurai Street Food Trail",
-        "type": "food-walk",
-        "description": "From jigarthanda (a unique cold dessert drink found only in Madurai) to kari dosa (mutton dosa) at midnight stalls near the temple — this city's food culture is legendary.",
-        "budget_estimate": "₹200-400",
-        "booking_tip": "Start at Famous Jigarthanda on East Masi Street, then follow the lanes south toward the temple for the best stalls."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Meenakshi Amman Temple",
-        "significance": "A masterpiece of Dravidian architecture with 14 gopurams (towers) covered in 33,000 painted sculptures. The Hall of a Thousand Pillars is a marvel of acoustic engineering.",
-        "how_to_engage": "Hire a temple guide (₹300) who can explain the mythology behind each sculpture. Try the 'musical pillars' in the Thousand Pillar Hall — each produces a different note when tapped.",
-        "preservation_note": "Continuously maintained by the Hindu Religious and Charitable Endowments Department. Recent restoration cleaned centuries of paint to reveal original stone carvings."
-      }
-    ]
-  },
-  {
-    "id": "zanskar_14",
-    "name": "Zanskar Valley",
-    "region": "Ladakh",
-    "country": "India",
-    "type": "remote-valley",
-    "tags": ["adventure", "spirituality", "trekking", "photography", "indigenous-culture"],
-    "budget_level": "medium",
-    "best_for_days": [5, 7, 10],
-    "accessibility": "limited",
-    "description": "One of the most isolated inhabited valleys on Earth — ancient Buddhist monasteries cling to cliff faces above turquoise rivers in a landscape so vast it rewires your sense of scale.",
-    "hidden_gems": [
-      {
-        "name": "Phugtal Monastery",
-        "description": "A 2,500-year-old monastery built into a massive cave on a cliff face, accessible only by a multi-day trek. Monks here still live as they did centuries ago.",
-        "why_hidden": "Requires a 2-day trek from the nearest road. No motorable access keeps it pristine.",
-        "local_tip": "The monks welcome trekkers to stay overnight. Bring supplies to donate — they have limited access to basic goods."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Karsha Gustor Festival",
-        "timing": "July (two days)",
-        "description": "Masked cham dances performed by monks at Karsha Monastery — the largest in Zanskar. Colorful costumes, drumming, and centuries-old choreography celebrating the triumph of good.",
-        "traveler_relevance": "One of the few remaining authentic Buddhist festivals not diluted by tourism. The entire valley gathers."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Trek the Chadar (Frozen River Walk)",
-        "type": "adventure",
-        "description": "In winter, the Zanskar River freezes solid, creating a natural highway that locals have used for centuries. Walking on the frozen river through gorges is a once-in-a-lifetime experience.",
-        "budget_estimate": "₹15,000-25,000 (guided multi-day trek)",
-        "booking_tip": "Only possible January-February. Must book with licensed local operators — this is a serious trek requiring proper gear and experienced guides."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Karsha Monastery",
-        "significance": "The largest monastery in Zanskar, home to over 100 monks. Founded in the 10th century, it houses ancient manuscripts and Buddhist art that scholars travel across the world to study.",
-        "how_to_engage": "Request permission to attend morning prayers (6 AM). The head monk sometimes offers tea and conversation to respectful visitors.",
-        "preservation_note": "Climate change threatens the valley — glaciers are retreating and flash floods damage infrastructure. The monastery has survived for a millennium but faces new challenges."
-      }
-    ]
-  },
-  {
-    "id": "majuli_15",
-    "name": "Majuli Island",
-    "region": "Assam",
-    "country": "India",
-    "type": "river-island",
-    "tags": ["indigenous-culture", "spirituality", "nature", "crafts", "photography"],
-    "budget_level": "low",
-    "best_for_days": [2, 3],
-    "accessibility": "limited",
-    "description": "The world's largest river island, in the Brahmaputra. Home to Vaishnavite monasteries (satras) where monks preserve dance, music, and mask-making traditions dating back 500 years — and the island is slowly being swallowed by the river.",
-    "hidden_gems": [
-      {
-        "name": "Mishing Tribal Stilt Houses",
-        "description": "The Mishing tribe builds houses on bamboo stilts to survive annual floods. Their rice beer (apong), woven textiles, and hospitality are extraordinary.",
-        "why_hidden": "Most visitors only see the satras. The tribal villages are further inland and require a local connection.",
-        "local_tip": "Ask your guesthouse owner to introduce you to a Mishing family. Arriving with a small gift (fruit or tea) is customary."
-      }
-    ],
-    "local_events": [
-      {
-        "name": "Raas Leela Festival",
-        "timing": "November (full moon night)",
-        "description": "The satras perform elaborate dance-dramas depicting the life of Lord Krishna. Monks in silk costumes, golden crowns, and traditional masks perform through the night.",
-        "traveler_relevance": "A living art form that UNESCO has recognized. The performances are free and held outdoors in the satra courtyards."
-      }
-    ],
-    "cultural_experiences": [
-      {
-        "name": "Mask-Making with Satra Monks",
-        "type": "workshop",
-        "description": "Learn the sacred art of mask-making at Samaguri Satra — monks create elaborate papier-mâché masks of Hindu deities used in Raas Leela performances.",
-        "budget_estimate": "₹200-400 (donation)",
-        "booking_tip": "Visit Samaguri Satra in the morning when the mask-making monks are at work. No formal booking needed — they teach anyone who shows genuine interest."
-      }
-    ],
-    "heritage_sites": [
-      {
-        "name": "Vaishnavite Satras of Majuli",
-        "significance": "Founded by the 15th-century saint Srimanta Sankardev, these monastery-villages are living repositories of Assamese neo-Vaishnavite culture — dance, music, literature, and philosophy.",
-        "how_to_engage": "Visit at least three satras to understand the variety: Kamalabari (dance), Samaguri (masks), and Auniati (artifacts and manuscripts).",
-        "preservation_note": "Majuli has lost 50% of its area to river erosion since 1950. Some satras have relocated. The island's cultural heritage and the communities that maintain it are in existential danger."
-      }
-    ]
-  }
-]
+{
+  "destinations": [
+    {
+      "id": "hampi",
+      "name": "Hampi",
+      "state": "Karnataka",
+      "category": "Heritage & UNESCO",
+      "description": "Ruins of the Vijayanagara Empire scattered across a boulder-strewn landscape.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Hampi%20virupaksha%20temple.jpg",
+      "tags": [
+        "heritage",
+        "cultural_deep_dive"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        2,
+        3
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Sanapur Lake",
+          "description": "A turquoise lake surrounded by boulders on the 'hippie side' of the river. Rent a coracle (round basket boat) and float in silence.",
+          "why_hidden": "Across the river from the main ruins, most day-trippers never cross.",
+          "local_tip": "The coracle ride is ₹50 if you negotiate in Kannada. Sunset here is better than anywhere on the ruins side."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Hampi Utsav",
+          "timing": "November (three days)",
+          "description": "A cultural festival that recreates the glory of the Vijayanagara Empire with dance, music, puppet shows, and a grand procession through the ruins.",
+          "traveler_relevance": "The ruins come alive with performances — like a time machine powered by art. Many events are free."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Coracle Ride and Temple Hopping",
+          "type": "adventure",
+          "description": "Cross the Tungabhadra River in a traditional coracle (woven bamboo boat), then rent a bicycle to explore the quieter eastern temples where monkeys outnumber tourists.",
+          "budget_estimate": "₹150-300 for the day",
+          "booking_tip": "The coracle crossing starts at 7 AM from the east bank. Bicycles are rented from shops on Hippie Island."
+        },
+        {
+          "name": "Cooking with a Local Family",
+          "type": "homestay",
+          "description": "Families on the Anegundi side host travelers for a home-cooked Kannada meal. Learn to make jolada roti (sorghum flatbread) on an open fire.",
+          "budget_estimate": "₹200-400",
+          "booking_tip": "Ask at Gopi Guest House — they connect travelers with host families."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Virupaksha Temple",
+          "significance": "Continuously operating since the 7th century — one of India's oldest functioning temples. The temple elephant Lakshmi blesses visitors with her trunk.",
+          "how_to_engage": "Attend the 6:30 AM puja (prayer ceremony) when it's just priests and pilgrims. Offer a coconut and receive prasad (blessed food).",
+          "preservation_note": "UNESCO World Heritage Site. Archaeological Survey of India manages conservation. Many structures still need restoration funding."
+        }
+      ]
+    },
+    {
+      "id": "varanasi",
+      "name": "Varanasi",
+      "state": "Uttar Pradesh",
+      "category": "Spiritual & Ghats",
+      "description": "One of the world's oldest living cities, famous for its sacred ghats on the Ganges.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Ganga%20Aarti%20at%20Dashashwamedh%20Ghat%20Varanasi.jpg",
+      "tags": [
+        "spiritual",
+        "cultural_deep_dive"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        2,
+        3
+      ],
+      "accessibility": "limited",
+      "hidden_gems": [
+        {
+          "name": "Ramnagar Fort Museum",
+          "description": "Across the river from the main ghats, this crumbling fort houses a surreal collection — vintage cars, ivory chess sets, and an astronomical clock from the 1800s.",
+          "why_hidden": "You need to cross the river by boat, which deters most tourists.",
+          "local_tip": "Hire a boatman from Assi Ghat for ₹200 round trip — much cheaper than the tourist boats near Dashashwamedh."
+        },
+        {
+          "name": "Kabir Chaura",
+          "description": "The neighborhood where the poet-saint Kabir lived and wove cloth. A small math (monastery) still preserves his loom and teachings.",
+          "why_hidden": "Deep in the old city maze, no Google Maps pin, ask locals for 'Kabir ka maqam'.",
+          "local_tip": "The morning prayers here are intimate and welcoming — a world away from the tourist-packed Ganga Aarti."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Dev Deepawali",
+          "timing": "November (fifteen days after Diwali)",
+          "description": "The 'Diwali of the Gods' — every ghat is lit with thousands of earthen lamps. The entire riverfront glows amber.",
+          "traveler_relevance": "More magical and less crowded than Diwali itself. Boat rides during the lighting ceremony are unforgettable."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Morning Raga at Assi Ghat",
+          "type": "music",
+          "description": "Classical musicians perform informal morning ragas at the southernmost ghat. Sit on the steps with chai and let centuries-old melodies wash over you.",
+          "budget_estimate": "Free (chai ₹10)",
+          "booking_tip": "Just show up at Assi Ghat between 5:30-7 AM. The musicians are usually near the large peepal tree."
+        },
+        {
+          "name": "Weaving Lane Walk in Sarai Mohana",
+          "type": "walk",
+          "description": "Walk through narrow lanes where Banarasi silk saris are still woven on handlooms. Weavers will show you their intricate craft — some patterns take six months to complete.",
+          "budget_estimate": "Free (guide ₹300 optional)",
+          "booking_tip": "Go early morning when the looms are running. Ask for Mohammed Ansari's workshop — three generations of master weavers."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Sarnath",
+          "significance": "Where Buddha gave his first sermon after enlightenment. The Dhamek Stupa (5th century) and the Ashoka Pillar capital (now India's national emblem) originated here.",
+          "how_to_engage": "Hire a local Buddhist guide (₹500) who can explain the spiritual significance beyond what plaques say. Meditate in the deer park at dusk.",
+          "preservation_note": "UNESCO-monitored. The archaeological museum here houses some of India's most important Buddhist sculptures."
+        }
+      ]
+    },
+    {
+      "id": "hawa-mahal",
+      "name": "Hawa Mahal, Jaipur",
+      "state": "Rajasthan",
+      "category": "Heritage & Palaces",
+      "description": "The iconic 'Palace of Winds' with its honeycomb facade of 953 windows.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Hawa%20Mahal%20Jaipur.jpg",
+      "tags": [
+        "heritage",
+        "low_budget"
+      ],
+      "budget_level": "low",
+      "best_for_days": [
+        2,
+        3,
+        4
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Panna Meena ka Kund",
+          "description": "A stunning geometric stepwell hidden behind Amer Fort. No crowds, just you and 400-year-old symmetry carved in stone.",
+          "why_hidden": "Overshadowed by nearby Amer Fort, most tour buses skip this entirely.",
+          "local_tip": "Visit at dawn — the light hits the steps perfectly and you'll have it to yourself."
+        },
+        {
+          "name": "Anokhi Museum of Hand Printing",
+          "description": "Tucked inside a restored haveli in Amber, this tiny museum showcases centuries-old block printing techniques still alive in Rajasthan.",
+          "why_hidden": "Located off the main road near Amer Fort, with minimal signage.",
+          "local_tip": "Ask for the live demonstration — the artisans love showing their craft to genuinely curious visitors."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Teej Festival",
+          "timing": "July-August (monsoon season)",
+          "description": "Women dress in green, ride decorated swings, and celebrate the monsoon with folk songs. The city procession is spectacular.",
+          "traveler_relevance": "One of the most photogenic and culturally immersive festivals — locals welcome visitors joining the celebrations."
+        },
+        {
+          "name": "Jaipur Literature Festival",
+          "timing": "January (five days)",
+          "description": "The world's largest free literary festival, held at Diggi Palace. Writers, poets, musicians gather in a cultural carnival.",
+          "traveler_relevance": "Free entry, great for solo travelers — easy to meet people and attend sessions on Indian culture and history."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Block Printing Workshop in Sanganer",
+          "type": "workshop",
+          "description": "Learn traditional Rajasthani block printing from a family that has practiced it for six generations. You'll carve your own block and print fabric to take home.",
+          "budget_estimate": "₹500-800",
+          "booking_tip": "Ask any auto driver for 'Sanganer ka printing wala' — they all know."
+        },
+        {
+          "name": "Chai and Conversation at Tapri Central",
+          "type": "local-hangout",
+          "description": "A rooftop chai café where Jaipur's young creatives gather. Order the saffron chai and you'll end up in a three-hour conversation about everything from Rajput history to Bollywood.",
+          "budget_estimate": "₹100-200",
+          "booking_tip": "No booking needed. Go around 5 PM when the sunset crowd arrives."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Nahargarh Fort",
+          "significance": "Built in 1734, this 'abode of tigers' offers the best panoramic view of Jaipur. The Madhavendra Bhawan inside has interconnected suites built for the king's twelve queens.",
+          "how_to_engage": "Hike up from Jaipur city via the old path (45 mins) instead of driving — the trail passes through forest and old walls with zero other tourists.",
+          "preservation_note": "Well-maintained by Rajasthan archaeology department. Entry fee helps fund ongoing restoration."
+        }
+      ]
+    },
+    {
+      "id": "pushkar",
+      "name": "Pushkar",
+      "state": "Rajasthan",
+      "category": "Fairs & Pilgrimage",
+      "description": "Holy town famed for its lake, Brahma temple, and the annual camel fair.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Pushkar%20Camel%20Fair.jpg",
+      "tags": [
+        "festival",
+        "cultural_deep_dive"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Savitri Temple Sunrise Trek",
+          "description": "A 45-minute climb up a hill behind the town to a temple dedicated to Goddess Savitri. The view of Pushkar Lake at dawn, with the town still sleeping below, is extraordinary.",
+          "why_hidden": "There's a ropeway now, but walking the old trail gives you solitude and better views from multiple angles.",
+          "local_tip": "Start at 5 AM to reach the top before sunrise. Carry water — there's none on the trail."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Pushkar Camel Fair",
+          "timing": "November (five days around Kartik Purnima)",
+          "description": "The world's largest camel fair — 50,000 camels, horse races, folk performances, and a floating temple ceremony on the sacred lake under the full moon.",
+          "traveler_relevance": "Absolutely unmatched cultural spectacle. The fair grounds become a temporary city. Budget accommodation available in tent camps."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Sunset Aarti at Pushkar Lake",
+          "type": "spiritual",
+          "description": "Join pilgrims for the evening prayer ceremony at the lake's 52 ghats. A Brahmin priest guides the ritual — you'll float flower-and-candle offerings on the sacred water.",
+          "budget_estimate": "₹50-100 (donation to priest)",
+          "booking_tip": "Just walk to any ghat at sunset. Pushkar Ghat and Brahma Ghat have the most atmospheric ceremonies."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Brahma Temple",
+          "significance": "One of very few temples in the world dedicated to Lord Brahma (the creator in Hindu trinity). The red spire and silver turtle on the floor are iconic symbols.",
+          "how_to_engage": "Visit during morning puja when the temple is filled with chanting and incense. Remove shoes well before the entrance as a sign of respect.",
+          "preservation_note": "One of the most sacred sites in Hinduism. Maintained by the local temple trust with community donations."
+        }
+      ]
+    },
+    {
+      "id": "kerala-backwaters",
+      "name": "Kerala Backwaters",
+      "state": "Kerala",
+      "category": "Nature & Waterways",
+      "description": "A network of lagoons, lakes, and canals navigated by traditional houseboats.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Kerala%20Backwaters.jpg",
+      "tags": [
+        "nature",
+        "relaxation"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2,
+        3
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Kuttanad Below-Sea-Level Farming",
+          "description": "One of the few places on Earth where farming happens below sea level. Rice paddies are carved from lake beds using an ancient system of bunds and canals.",
+          "why_hidden": "Houseboat tours stick to the main canals. The farming villages are in the narrower waterways.",
+          "local_tip": "Hire a local punter with a small canoe (₹300/hr) instead of a houseboat — you can navigate the narrow canals where houseboats can't go."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Nehru Trophy Snake Boat Race",
+          "timing": "August (second Saturday)",
+          "description": "The Olympics of Kerala — 100-foot-long snake boats with 100+ rowers racing on Punnamada Lake. Drums, crowds, and adrenaline.",
+          "traveler_relevance": "India's most thrilling sporting spectacle. Arrive early to see the boat blessing ceremonies."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Toddy Shop and Kerala Lunch",
+          "type": "local-hangout",
+          "description": "Eat a Kerala-style fish curry lunch at a canal-side toddy shop (kallu shaap). Palm toddy is fermented coconut sap — mildly alcoholic, absolutely delicious, and impossible to find outside Kerala.",
+          "budget_estimate": "₹200-350",
+          "booking_tip": "No booking needed. Ask any auto driver for 'the best kallu shaap' — they always know."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Alleppey Lighthouse and Coir Museums",
+          "significance": "Alleppey's 19th-century lighthouse and coir (coconut fiber) industry tell the story of Kerala's maritime trade. The coir museum shows how ropes that sailed the world were twisted by hand.",
+          "how_to_engage": "Climb the lighthouse for a panoramic view, then visit the coir museum to see the traditional spinning process still practiced by local families.",
+          "preservation_note": "The lighthouse is maintained by the Indian Coast Guard. The coir industry, once Kerala's largest employer, is being revived through cooperative societies."
+        }
+      ]
+    },
+    {
+      "id": "meghalaya",
+      "name": "Living Root Bridges, Meghalaya",
+      "state": "Meghalaya",
+      "category": "Nature & Tribal Culture",
+      "description": "Bio-engineered bridges grown from rubber tree roots by the Khasi and Jaintia tribes.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Double%20Decker%20Root%20Bridge.jpg",
+      "tags": [
+        "nature",
+        "offbeat",
+        "tribal_culture"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        3,
+        4,
+        5
+      ],
+      "accessibility": "limited",
+      "hidden_gems": [
+        {
+          "name": "Nongriat Double-Decker Root Bridge",
+          "description": "A bridge literally grown from the roots of rubber trees by the Khasi people over 150+ years. The trek down 3,500 steps through jungle is as stunning as the bridge itself.",
+          "why_hidden": "The 3,500-step trek deters casual tourists. Only 10-15 visitors on most days.",
+          "local_tip": "Stay overnight at the village below — the bridge at dawn, without any other visitors, is transcendent. Homestays cost ₹500/night."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Nongkrem Dance Festival",
+          "timing": "November (five days)",
+          "description": "The most important Khasi festival — traditional dances, community feasts, and thanksgiving rituals at the sacred grove in Smit village.",
+          "traveler_relevance": "A rare window into Khasi indigenous culture. Visitors are welcome but must dress modestly and follow local customs."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Homestay in a Khasi Village",
+          "type": "homestay",
+          "description": "Stay with a Khasi family and experience the matrilineal way of life. Help harvest betel nuts, learn to cook jadoh (pork rice), and hear stories about root bridge building.",
+          "budget_estimate": "₹500-800/night including meals",
+          "booking_tip": "Contact the Meghalaya Tourism Development Corporation or book through 'By the Way' tours for vetted homestays."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Living Root Bridges of Meghalaya",
+          "significance": "Bio-engineering by the Khasi and Jaintia tribes — tree roots trained over decades to form bridges that strengthen with age. Some are over 500 years old.",
+          "how_to_engage": "Trek with a local Khasi guide who can explain the multi-generational process of growing these bridges. The knowledge is passed orally, not written.",
+          "preservation_note": "Nominated for UNESCO World Heritage status. Climate change and deforestation threaten the younger bridges still being grown."
+        }
+      ]
+    },
+    {
+      "id": "rann-of-kutch",
+      "name": "Rann of Kutch",
+      "state": "Gujarat",
+      "category": "Desert & Festivals",
+      "description": "A vast white salt marsh that hosts the vibrant Rann Utsav festival.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/White%20Rann%20of%20Kutch.jpg",
+      "tags": [
+        "festival",
+        "offbeat"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        2,
+        3,
+        4
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Kalo Dungar (Black Hill)",
+          "description": "The highest point in Kutch, offering panoramic views of the salt desert and the India-Pakistan border.",
+          "why_hidden": "Located far from the main tourist tent cities, requiring a private vehicle.",
+          "local_tip": "Visit at sunset when the sky turns deep red against the white horizon."
+        },
+        {
+          "name": "Nirona Village Crafts",
+          "description": "A small village where local artisans practice Rogan art (oil-based painting on fabric), lacquer work, and bell-making.",
+          "why_hidden": "Not advertised on standard tourist itineraries.",
+          "local_tip": "Ask to visit the home of the Khatri family, the sole keepers of Rogan art."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Rann Utsav",
+          "timing": "November to February",
+          "description": "A three-month-long celebration of music, dance, and culture on the white sands.",
+          "traveler_relevance": "Perfect for solo travelers to experience Kutchi hospitality and culture under the full moon."
+        },
+        {
+          "name": "Dattatreya Temple Fair",
+          "timing": "December",
+          "description": "A local religious fair at Kalo Dungar where wild jackals are fed sacred prasad.",
+          "traveler_relevance": "Highly unique cultural event showcasing the harmony between humans and wildlife."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Weaving Workshop with Vankar Artisans",
+          "type": "workshop",
+          "description": "Learn the traditional Kutchi weaving technique from a local artisan family.",
+          "budget_estimate": "₹500-800",
+          "booking_tip": "Book through the local NGO Khamir."
+        },
+        {
+          "name": "Traditional Bhunga Stay",
+          "type": "homestay",
+          "description": "Stay in a traditional mud-and-thatch circular hut designed to withstand earthquakes.",
+          "budget_estimate": "₹1500-2500",
+          "booking_tip": "Stay with local families in Hodka village."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Prag Mahal and Aina Mahal",
+          "significance": "19th-century Italian Gothic and 18th-century European-style palaces in Bhuj.",
+          "how_to_engage": "Explore the mirror hall and climb the bell tower for a view of Bhuj.",
+          "preservation_note": "Maintained by a private trust, needs better conservation funding."
+        }
+      ]
+    },
+    {
+      "id": "khajuraho",
+      "name": "Khajuraho Temples",
+      "state": "Madhya Pradesh",
+      "category": "Heritage & UNESCO",
+      "description": "UNESCO World Heritage temple complex renowned for intricate medieval sculpture.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Kandariya%20Mahadev%20Temple%202.jpg",
+      "tags": [
+        "heritage",
+        "cultural_deep_dive"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        2,
+        3
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Raneh Falls & Ken Gharial Sanctuary",
+          "description": "A stunning canyon of crystalline granite in various colors, housing gharials.",
+          "why_hidden": "Overshadowed by the temple complexes.",
+          "local_tip": "Hire a local guide to spot the gharials sunbathing."
+        },
+        {
+          "name": "Chausath Yogini Temple",
+          "description": "The oldest surviving temple in Khajuraho, built of granite blocks and dedicated to 64 yoginis.",
+          "why_hidden": "Located slightly away from the main Western Group.",
+          "local_tip": "Best visited in the early morning for peaceful contemplation."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Khajuraho Dance Festival",
+          "timing": "February",
+          "description": "A week-long festival of classical Indian dances performed against the backdrop of illuminated temples.",
+          "traveler_relevance": "A spectacular cultural immersion that is completely free to watch."
+        },
+        {
+          "name": "Maha Shivratri Celebration",
+          "timing": "February-March",
+          "description": "Large religious gathering at the Matangeshwar Temple, featuring traditional hymns and fairs.",
+          "traveler_relevance": "Get there early to witness the massive crowd bathing the lingam."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Pottery Session at Bundelkhand Art Pottery",
+          "type": "workshop",
+          "description": "Try your hand at making traditional clay pots with local master craftsmen.",
+          "budget_estimate": "₹200-400",
+          "booking_tip": "Located near the Jain group of temples."
+        },
+        {
+          "name": "Bundelkhandi Thali Cooking Session",
+          "type": "workshop",
+          "description": "Learn to cook local vegetarian dishes like Delta Bafla and seasonal vegetables.",
+          "budget_estimate": "₹400-600",
+          "booking_tip": "Ask at your guesthouse for local home cooking classes."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Western Group of Temples",
+          "significance": "UNESCO World Heritage site famous for its Nagara-style architecture and erotic sculptures.",
+          "how_to_engage": "Rent an audio guide or hire an ASI-certified guide to understand the deep symbolism.",
+          "preservation_note": "Excellently preserved by the Archaeological Survey of India."
+        }
+      ]
+    },
+    {
+      "id": "tirupati",
+      "name": "Tirumala Tirupati",
+      "state": "Andhra Pradesh",
+      "category": "Spiritual & Pilgrimage",
+      "description": "One of the world's most visited pilgrimage sites, home to the Venkateswara Temple.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Sri%20Govinda%20Raja%20Swamy%20Temple%20in%20Tirupati.jpg",
+      "tags": [
+        "spiritual",
+        "low_budget",
+        "short_time"
+      ],
+      "budget_level": "low",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Silathoranam",
+          "description": "A natural stone arch that is a rare geological monument, believed to be 1.5 billion years old.",
+          "why_hidden": "Often skipped by pilgrims focused solely on temple darshan.",
+          "local_tip": "Walk here early in the morning when the Tirumala forest air is crisp."
+        },
+        {
+          "name": "Talakona Waterfall",
+          "description": "The highest waterfall in Andhra Pradesh, located inside Sri Venkateswara National Park.",
+          "why_hidden": "45km outside town, requiring a dedicated trip.",
+          "local_tip": "Great spot for canopy walks and viewing rare butterflies."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Srivari Brahmotsavam",
+          "timing": "September-October",
+          "description": "A grand nine-day festival attracting millions, featuring spectacular processions of deity mounts.",
+          "traveler_relevance": "An unparalleled display of grand Hindu rituals and massive public devotion."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Ladavar Vendi Prasadam Distribution",
+          "type": "local-hangout",
+          "description": "Witness the massive scale of making and distributing the legendary Tirupati Laddu.",
+          "budget_estimate": "₹50-100",
+          "booking_tip": "Simply purchase additional laddu tokens during ticket booking."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Sri Venkateswara Temple",
+          "significance": "One of the most visited religious shrines in the world, built in Dravidian architecture.",
+          "how_to_engage": "Book Special Entry Darshan tickets online months in advance.",
+          "preservation_note": "Excellently managed and preserved by Tirumala Tirupati Devasthanams (TTD)."
+        }
+      ]
+    },
+    {
+      "id": "tawang",
+      "name": "Tawang Monastery",
+      "state": "Arunachal Pradesh",
+      "category": "Spiritual & Himalayan",
+      "description": "India's largest Buddhist monastery, perched high in the Eastern Himalayas.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Tawang%20Monastery.jpg",
+      "tags": [
+        "spiritual",
+        "adventure"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        3,
+        4,
+        5
+      ],
+      "accessibility": "limited",
+      "hidden_gems": [
+        {
+          "name": "Urgelling Monastery",
+          "description": "The birthplace of the 6th Dalai Lama, a quiet, peaceful monastery surrounded by prayer flags.",
+          "why_hidden": "Overshadowed by the massive main Tawang Monastery.",
+          "local_tip": "Spend time talking to the single resident monk who maintains the sacred tree."
+        },
+        {
+          "name": "Sangetsar Lake (Madhuri Lake)",
+          "description": "A high-altitude lake formed by an earthquake, filled with upright dead trees rising from the water.",
+          "why_hidden": "Requires a special military permit and is located 35km from Tawang.",
+          "local_tip": "Try the hot momos and tea sold by the Indian Army post near the lake."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Torgya Festival",
+          "timing": "January",
+          "description": "A three-day monastic festival held at Tawang Monastery featuring sacred mask dances (Cham).",
+          "traveler_relevance": "Incredibly vibrant festival showcasing Monpa tribe culture and Tibetan Buddhist rituals."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Monpa Village Homestay",
+          "type": "homestay",
+          "description": "Stay in a traditional stone house, eat butter tea, and learn about the Monpa lifestyle.",
+          "budget_estimate": "₹1000-1500",
+          "booking_tip": "Look for homestay options in Kitpi or Lhou village."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Tawang Monastery (Galden Namgey Lhatse)",
+          "significance": "The largest monastery in India and second largest in the world, founded in 1680-1681.",
+          "how_to_engage": "Attend the morning prayers and visit the monastery museum of old scriptures.",
+          "preservation_note": "Well preserved by the resident monks and Buddhist community."
+        }
+      ]
+    },
+    {
+      "id": "kaziranga",
+      "name": "Kaziranga National Park",
+      "state": "Assam",
+      "category": "Wildlife & Nature",
+      "description": "UNESCO site and last major refuge of the one-horned rhinoceros.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Rhino%20at%20Kaziranga%20National%20Park.JPG",
+      "tags": [
+        "wildlife",
+        "nature"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        2,
+        3
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Kakochang Waterfalls",
+          "description": "A beautiful waterfall cascading amidst rubber and coffee plantations.",
+          "why_hidden": "Most tourists only do wildlife safaris and skip the surroundings.",
+          "local_tip": "Pack a picnic and go after the monsoon when the falls are lush."
+        },
+        {
+          "name": "Kaziranga Orchid and Biodiversity Park",
+          "description": "A huge park conserving native orchids, traditional bamboo, and medicinal plants.",
+          "why_hidden": "Overshadowed by the national park tours.",
+          "local_tip": "Don't miss the traditional Assamese folk dance performed every evening."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Bihu Festival",
+          "timing": "April, January, October",
+          "description": "Assam's most important festival, celebrated with rhythmic folk dances and local feasts.",
+          "traveler_relevance": "Excellent opportunity to witness Assamese community dances and sample traditional pitha."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Assamese Thali Experience",
+          "type": "food-tour",
+          "description": "Enjoy a traditional Assamese meal consisting of Khar, Tenga fish curry, and local herbs.",
+          "budget_estimate": "₹200-400",
+          "booking_tip": "Try the local restaurants in Kohora or Jakhalabandha."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Kaziranga National Park",
+          "significance": "UNESCO World Heritage site home to two-thirds of the world's great one-horned rhinoceroses.",
+          "how_to_engage": "Take a jeep or elephant safari to witness the rich biodiversity.",
+          "preservation_note": "Strongly protected, though threatened by annual monsoon floods of the Brahmaputra."
+        }
+      ]
+    },
+    {
+      "id": "bodh-gaya",
+      "name": "Mahabodhi Temple, Bodh Gaya",
+      "state": "Bihar",
+      "category": "Spiritual & UNESCO",
+      "description": "The site where Buddha attained enlightenment beneath the Bodhi Tree.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Mahabodhi%20Temple.jpg",
+      "tags": [
+        "spiritual",
+        "heritage"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Dungeshwari Cave Temples",
+          "description": "Caves where Gautama Buddha meditated for six years practicing extreme asceticism before attaining enlightenment.",
+          "why_hidden": "Located 12km from Bodh Gaya, requiring a rickshaw ride.",
+          "local_tip": "Hire a guide to show you the emaciated Buddha statue inside the cave."
+        },
+        {
+          "name": "Sujata Kuti",
+          "description": "A stupa dedicated to the milkmaid Sujata, who offered Buddha rice pudding, ending his extreme fasting.",
+          "why_hidden": "Across the Phalgu river, receiving fewer visitors.",
+          "local_tip": "Walk across the seasonal riverbed during the dry season for a peaceful walk."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Buddha Jayanti",
+          "timing": "May (Full Moon)",
+          "description": "Celebration of Buddha's birth, enlightenment, and death, with prayers, processions, and temple decorations.",
+          "traveler_relevance": "The most spiritual time to visit, with monks from all over the world chanting beneath the Bodhi tree."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Meditation Session at Root Institute",
+          "type": "workshop",
+          "description": "Participate in guided Buddhist meditation and introductory philosophy classes.",
+          "budget_estimate": "Free (Donation-based)",
+          "booking_tip": "Check their schedule online; drop-in sessions are usually available."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Mahabodhi Temple Complex",
+          "significance": "UNESCO World Heritage site containing the direct descendant of the Bodhi tree under which Buddha sat.",
+          "how_to_engage": "Walk clockwise around the stupa, observe pilgrims, and join the silent meditation groups.",
+          "preservation_note": "Maintained in excellent condition by the Mahabodhi Temple Management Committee."
+        }
+      ]
+    },
+    {
+      "id": "chitrakote-falls",
+      "name": "Chitrakote Falls",
+      "state": "Chhattisgarh",
+      "category": "Nature & Waterfalls",
+      "description": "India's widest waterfall, often called the 'Niagara Falls of India'.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Chitrakot%20waterfalls.JPG",
+      "tags": [
+        "nature",
+        "offbeat"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Kotumsar Cave",
+          "description": "A deep limestone cave famous for its unique stalactites and stalagmites, as well as blind cave fish.",
+          "why_hidden": "Located in Kanger Valley National Park, far from main tourist centers.",
+          "local_tip": "Ensure you hire a guide with a proper torch at the cave entrance."
+        },
+        {
+          "name": "Kanger Dhara Waterfall",
+          "description": "A peaceful step waterfall surrounded by dense teak forest, perfect for quiet sitting.",
+          "why_hidden": "Overshadowed by the majestic Chitrakote Falls.",
+          "local_tip": "Go early in the morning to hear the birds and avoid local school picnic groups."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Bastar Dussehra",
+          "timing": "September-October",
+          "description": "A unique 75-day festival celebrated by the local tribal communities, dedicated to Goddess Danteshwari.",
+          "traveler_relevance": "Unlike regular Dussehra, this is a tribal gathering celebrating nature and local royalty."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Bell Metal Craft (Dhokra) Workshop",
+          "type": "workshop",
+          "description": "Learn the ancient lost-wax casting technique used by the Bastar tribes for 4000 years.",
+          "budget_estimate": "₹400-700",
+          "booking_tip": "Visit Kondagaon village, the hub of Bastar handicrafts."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Danteshwari Temple",
+          "significance": "14th-century temple built by the Chalukyas, one of the 51 Shakti Peethas.",
+          "how_to_engage": "Observe the ancient Dravidian style architecture and respect the strict traditional dress code.",
+          "preservation_note": "A living heritage site, well preserved and maintained by the local temple trust."
+        }
+      ]
+    },
+    {
+      "id": "basilica-bom-jesus",
+      "name": "Basilica of Bom Jesus",
+      "state": "Goa",
+      "category": "Heritage & UNESCO",
+      "description": "UNESCO-listed baroque church holding the relics of St. Francis Xavier.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Basilica%20of%20Bom%20Jesus%2C%20Old%20Goa%2C%20India.JPG",
+      "tags": [
+        "heritage",
+        "cultural_deep_dive"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Divar Island",
+          "description": "A sleepy island on the Mandovi river with Portuguese style villas and paddy fields.",
+          "why_hidden": "Most tourists stay on the beaches and miss this peaceful riverine culture.",
+          "local_tip": "Take the free government ferry from Ribandar and rent a bicycle on the island."
+        },
+        {
+          "name": "Reis Magos Fort",
+          "description": "A beautifully restored fort overlooking Old Goa and the sea, older than Fort Aguada.",
+          "why_hidden": "Restored later, it receives a fraction of the crowds of other Goa forts.",
+          "local_tip": "Check out the Mario Miranda cartoon gallery housed inside the fort walls."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Feast of St. Francis Xavier",
+          "timing": "December 3rd",
+          "description": "A grand festival celebrating the patron saint of Goa, with open-air masses and a giant fair.",
+          "traveler_relevance": "The most culturally significant day in Old Goa, filled with spiritual energy and local street food."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Latin Quarter Heritage Walk",
+          "type": "nature-walk",
+          "description": "Walk through Fontainhas, the old Portuguese quarter of Panaji, with its brightly colored houses.",
+          "budget_estimate": "₹300-500",
+          "booking_tip": "Look for local walking tour collectives or guide associations."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Basilica of Bom Jesus",
+          "significance": "UNESCO World Heritage site containing the mortal remains of St. Francis Xavier.",
+          "how_to_engage": "Attend the morning church service or hire a local guide to explain the gold altars.",
+          "preservation_note": "Managed by the Archdiocese of Goa, facing some weather erosion challenges."
+        }
+      ]
+    },
+    {
+      "id": "sultanpur",
+      "name": "Sultanpur National Park",
+      "state": "Haryana",
+      "category": "Wildlife & Birding",
+      "description": "A haven for migratory birds just outside Delhi's urban sprawl.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Sultanpur%20Bird%20Sanctuary%2C%20Haryana..JPG",
+      "tags": [
+        "wildlife",
+        "low_budget"
+      ],
+      "budget_level": "low",
+      "best_for_days": [
+        1
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Farrukhnagar Fort",
+          "description": "An 18th-century octagonal fort town built by a Baloch ruler, featuring a spectacular stepwell.",
+          "why_hidden": "Mostly in ruins and skipped by visitors who only go to the bird sanctuary.",
+          "local_tip": "Visit the Ghaus Ali Shah Baoli (stepwell) and notice the carvings in the chambers."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Migratory Bird Arrival Fair",
+          "timing": "December-January",
+          "description": "A seasonal gathering of birdwatchers and naturalists to catalog Siberian crane sightings.",
+          "traveler_relevance": "Excellent for solo travelers wanting to learn about bird ecology and photography tips."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Guided Birdwatching Walk",
+          "type": "nature-walk",
+          "description": "Walk along the 4km circular trail around the lake with a local naturalist.",
+          "budget_estimate": "₹150-300",
+          "booking_tip": "Hire a guide at the park entrance gate."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Sultanpur Lake & Sanctuary",
+          "significance": "A Ramsar site protecting over 250 species of resident and migratory birds.",
+          "how_to_engage": "Walk quietly along the path and use the hideouts and watchtowers.",
+          "preservation_note": "Well managed by Haryana Forest Department, seasonal water scarcity is a concern."
+        }
+      ]
+    },
+    {
+      "id": "spiti-valley",
+      "name": "Spiti Valley",
+      "state": "Himachal Pradesh",
+      "category": "Himalayan & Adventure",
+      "description": "A high-altitude cold desert valley dotted with ancient Buddhist monasteries.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Spiti%20River%20cable%20crossing%20%28tuin%29%20near%20Soshuna%2C%20Spiti%20Valley%2C%20Himachal%20Pradesh%2C%20India%2001.jpg",
+      "tags": [
+        "adventure",
+        "offbeat"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "accessibility": "limited",
+      "hidden_gems": [
+        {
+          "name": "Dhankar Lake Trek",
+          "description": "A steep 1.5-hour hike above Dhankar Monastery leading to a high-altitude green lake.",
+          "why_hidden": "The altitude makes it a physically challenging trek that casual tourists avoid.",
+          "local_tip": "Start before 8 AM to avoid the harsh mountain sun and carry plenty of water."
+        },
+        {
+          "name": "Demul Village",
+          "description": "A tiny, isolated village powered entirely by solar energy, sitting at 4,400 meters.",
+          "why_hidden": "Off the main road between Kaza and Tabo.",
+          "local_tip": "Spend a night here to experience the village homestay rotation system."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Guchen Festival",
+          "timing": "February",
+          "description": "A winter festival celebrated by monasteries with mask dances to ward off evil spirits.",
+          "traveler_relevance": "Very cold but incredibly raw, traditional cultural festival with almost zero tourists."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Buddhist Monastery Chanting Session",
+          "type": "local-hangout",
+          "description": "Sit quietly in the prayer hall of Key Monastery during the monks' morning chants.",
+          "budget_estimate": "Free (Donations welcome)",
+          "booking_tip": "Arrive by 6 AM and ask politely at the guest reception."
+        },
+        {
+          "name": "Spitian Seabuckthorn Tea Session",
+          "type": "workshop",
+          "description": "Learn how the local women harvest wild seabuckthorn berries and brew the vitamin-rich tea.",
+          "budget_estimate": "₹100-200",
+          "booking_tip": "Available in most homestays in Kibber or Langza."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Tabo Monastery",
+          "significance": "Founded in 996 AD, it is the oldest continuously functioning Buddhist monastery in India.",
+          "how_to_engage": "Explore the mud brick temples and view the 1000-year-old murals inside the dark chambers.",
+          "preservation_note": "Protected by the ASI, photography inside the main temple is strictly forbidden."
+        }
+      ]
+    },
+    {
+      "id": "betla",
+      "name": "Betla National Park",
+      "state": "Jharkhand",
+      "category": "Wildlife & Forests",
+      "description": "One of India's earliest tiger reserves, rich in sal forests and wildlife.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Betla%20National%20Park.jpg",
+      "tags": [
+        "wildlife",
+        "offbeat"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        2,
+        3
+      ],
+      "accessibility": "limited",
+      "hidden_gems": [
+        {
+          "name": "Palamau Forts",
+          "description": "Two ruined 16th-century forts built by the Chero kings deep inside the forest.",
+          "why_hidden": "Submerged in dense forest with no motorable road, requiring a short trek.",
+          "local_tip": "Go with a forest guard as wild elephants frequently cross near the ruins."
+        },
+        {
+          "name": "Suga Bandh Waterfall",
+          "description": "A beautiful rocky gorge on the North Koel River, ideal for quiet listening.",
+          "why_hidden": "Away from the main Betla gate, visited mostly by locals.",
+          "local_tip": "Visit during winter when the river water turns clear blue."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Karma Festival",
+          "timing": "August-September",
+          "description": "A tribal harvest festival celebrating the worship of Karma Devta, the god of youth and destiny.",
+          "traveler_relevance": "Highly vibrant dance and musical performances by the local Oraon and Munda tribes."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Munda Tribal Village Walk",
+          "type": "nature-walk",
+          "description": "Walk through local villages and see the mud houses painted with animal patterns.",
+          "budget_estimate": "₹200-400",
+          "booking_tip": "Ask local guesthouse managers to arrange a village guide."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Betla National Park Forest",
+          "significance": "One of India's first national parks to be placed under Project Tiger in 1974.",
+          "how_to_engage": "Take a morning forest jeep safari to spot gaur, langurs, and elephants.",
+          "preservation_note": "Suffers from low tourist funding but has excellent bio-preservation."
+        }
+      ]
+    },
+    {
+      "id": "ajanta-ellora",
+      "name": "Ajanta & Ellora Caves",
+      "state": "Maharashtra",
+      "category": "Heritage & UNESCO",
+      "description": "Rock-cut cave complexes with masterful Buddhist, Hindu, and Jain art.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Aerial%20view%20of%20Ellora%20Caves%2C%20Maharashtra.jpg",
+      "tags": [
+        "heritage",
+        "cultural_deep_dive"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        2,
+        3
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Ajanta Viewpoint",
+          "description": "A lookout cliff across the ravine offering a horse-shoe panoramic view of all the Ajanta caves.",
+          "why_hidden": "Most tourists enter directly through the main gate and skip the viewpoint climb.",
+          "local_tip": "Start your day here and walk down the steep stone path directly into Cave 8."
+        },
+        {
+          "name": "Ghrishneshwar Jyotirlinga Temple",
+          "description": "An ancient red-basalt Hindu temple located just 1km from Ellora Caves.",
+          "why_hidden": "Overshadowed by the massive Kailash Temple in Ellora.",
+          "local_tip": "Men must enter the inner sanctum bare-chested; try to go in the afternoon."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Ellora Ajanta International Festival",
+          "timing": "October-November",
+          "description": "Three days of classical music and dance inside the illuminated Soneri Mahal in Aurangabad.",
+          "traveler_relevance": "Combines legendary performances with historical settings under the night sky."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Himroo Weaving Demonstration",
+          "type": "workshop",
+          "description": "Watch local weavers make Himroo silk shawls using traditional Persian-influenced patterns.",
+          "budget_estimate": "Free (Buying products is optional)",
+          "booking_tip": "Visit the Himroo showroom and workshop in Aurangabad city."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Kailash Temple (Cave 16, Ellora)",
+          "significance": "The largest monolithic rock-cut structure in the world, carved out of a single volcanic basalt cliff.",
+          "how_to_engage": "Spend at least 2 hours walking around the lower galleries and climbing the side paths.",
+          "preservation_note": "Generally well-preserved but vulnerable to the monsoon acid rains."
+        }
+      ]
+    },
+    {
+      "id": "golden-temple",
+      "name": "Golden Temple, Amritsar",
+      "state": "Punjab",
+      "category": "Spiritual & Pilgrimage",
+      "description": "The holiest Gurdwara of Sikhism, famed for its gold-plated sanctum and langar.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Golden%20Temple%20of%20Amritsar%2C%20Punjab%2C%20India.JPG",
+      "tags": [
+        "spiritual",
+        "low_budget",
+        "short_time"
+      ],
+      "budget_level": "low",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Pul Kanjari",
+          "description": "A small historical outpost on the Indo-Pak border built by Maharaja Ranjit Singh, featuring a pool and temple.",
+          "why_hidden": "35km from Amritsar, right on the border fence.",
+          "local_tip": "Combine this with the Wagah Border ceremony trip."
+        },
+        {
+          "name": "Ram Bagh Gardens & Summer Palace Museum",
+          "description": "Maharaja Ranjit Singh's summer palace, situated in a sprawling garden.",
+          "why_hidden": "Tucked away in the older part of town, ignored for the Golden Temple.",
+          "local_tip": "Walk through the garden in the afternoon when local elders sit to debate politics."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Guru Nanak Gurpurab",
+          "timing": "November (Full Moon)",
+          "description": "Birth anniversary of Guru Nanak, celebrated with massive processions, fireworks, and deepavali-like lights.",
+          "traveler_relevance": "An emotional and spiritual highlight, with the entire lake floating with oil lamps."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Langar Volunteer Service",
+          "type": "local-hangout",
+          "description": "Help peel vegetables, roll rotis, or wash plates in the mega-kitchen serving 100,000 people daily.",
+          "budget_estimate": "Free",
+          "booking_tip": "No booking needed. Walk into the kitchen complex and ask any volunteer."
+        },
+        {
+          "name": "Amritsari Kulcha Food Crawl",
+          "type": "food-tour",
+          "description": "Taste wood-fired, ghee-soaked flatbreads in the narrow streets of the old city.",
+          "budget_estimate": "₹80-150",
+          "booking_tip": "Ask locals for 'Maqbool Road kulcha' or 'Bhai Kulwant Singh'."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Harmandir Sahib (Golden Temple)",
+          "significance": "The holiest shrine of Sikhism, symbolizing human equality and peace.",
+          "how_to_engage": "Sit by the pool of nectar (Amrit Sarovar) and listen to continuous live Shabad Kirtan chanting.",
+          "preservation_note": "Impeccably clean, managed entirely by volunteers and the SGPC."
+        }
+      ]
+    },
+    {
+      "id": "konark",
+      "name": "Konark Sun Temple",
+      "state": "Odisha",
+      "category": "Heritage & UNESCO",
+      "description": "A 13th-century temple shaped like a colossal chariot dedicated to the Sun God.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Sun%20Temple%20at%20Konark%2C%20Odisha%2C%20India.JPG",
+      "tags": [
+        "heritage",
+        "cultural_deep_dive"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Ramachandi Temple & Beach",
+          "description": "A beautiful temple located at the confluence of the Kushabhadra River and the Bay of Bengal.",
+          "why_hidden": "7km away, most tourists just visit the Sun Temple and leave.",
+          "local_tip": "Rent a local motorboat to ride on the calm river lagoon."
+        },
+        {
+          "name": "Kuruma Buddhist Site",
+          "description": "An ancient 9th-century Buddhist monastery ruin with a large water tank.",
+          "why_hidden": "8km inland, down a dirt road with no signage.",
+          "local_tip": "Look for the unique brick alignments and the statue of Avalokitesvara."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Konark Dance Festival",
+          "timing": "December 1st-5th",
+          "description": "Five days of classical Indian dance performances with the illuminated Sun Temple as a backdrop.",
+          "traveler_relevance": "A high-profile cultural event showcasing Odissi, Kathak, and Bharatanatyam."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Stone Carving Workshop in Chaurasi",
+          "type": "workshop",
+          "description": "Try stone chisel work with local artisans who carry on the lineage of the Sun Temple builders.",
+          "budget_estimate": "₹300-600",
+          "booking_tip": "Ask at the Konark museum office for local artist contacts."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Konark Sun Temple",
+          "significance": "13th-century chariot temple, a masterpiece of Kalinga architecture and UNESCO site.",
+          "how_to_engage": "Study the 24 stone-carved sundial wheels and look for the detailed war horses.",
+          "preservation_note": "Severely eroded by sea air; the main hall was filled with sand in 1903 to prevent collapse."
+        }
+      ]
+    },
+    {
+      "id": "meenakshi-temple",
+      "name": "Meenakshi Temple, Madurai",
+      "state": "Tamil Nadu",
+      "category": "Spiritual & Heritage",
+      "description": "A historic Dravidian temple famed for its towering, sculpture-covered gopurams.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Meenakshi%20Temple%2C%20Madurai%2C%20Tamil%20Nadu%2C%20India%2001.JPG",
+      "tags": [
+        "spiritual",
+        "heritage"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2,
+        3
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Thirumalai Nayakkar Mahal Sound & Light Show",
+          "description": "A crumbling 17th-century palace that comes alive at night with a sound and light show narrating Madurai's history. The remaining pillars suggest a grandeur that rivaled European palaces.",
+          "why_hidden": "Everyone goes to Meenakshi Temple and skips the palace, which is a 10-minute walk away.",
+          "local_tip": "The Tamil show (6:45 PM) has more emotional energy than the English one (8 PM). Even if you don't speak Tamil, the visuals and music carry it."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Chithirai Festival",
+          "timing": "April-May (twelve days)",
+          "description": "Madurai's grandest festival — a celestial wedding procession of Goddess Meenakshi through the streets, with chariots, musicians, and the entire city turned out to celebrate.",
+          "traveler_relevance": "The chariot procession is one of India's most visually overwhelming cultural events. Streets become rivers of people, flowers, and music."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Pre-Dawn Temple Visit to Meenakshi Amman",
+          "type": "spiritual",
+          "description": "Enter Meenakshi Temple at 5 AM for the 'Suprabhatam' — the ritual of waking the deities. The temple is nearly empty, and the experience is meditative rather than chaotic.",
+          "budget_estimate": "Free (₹50 for special darshan)",
+          "booking_tip": "Temple opens at 5 AM. Skip the tourist entrance and use the East Tower gate that locals use — shorter queue."
+        },
+        {
+          "name": "Madurai Street Food Trail",
+          "type": "food-walk",
+          "description": "From jigarthanda (a unique cold dessert drink found only in Madurai) to kari dosa (mutton dosa) at midnight stalls near the temple — this city's food culture is legendary.",
+          "budget_estimate": "₹200-400",
+          "booking_tip": "Start at Famous Jigarthanda on East Masi Street, then follow the lanes south toward the temple for the best stalls."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Meenakshi Amman Temple",
+          "significance": "A masterpiece of Dravidian architecture with 14 gopurams (towers) covered in 33,000 painted sculptures. The Hall of a Thousand Pillars is a marvel of acoustic engineering.",
+          "how_to_engage": "Hire a temple guide (₹300) who can explain the mythology behind each sculpture. Try the 'musical pillars' in the Thousand Pillar Hall — each produces a different note when tapped.",
+          "preservation_note": "Continuously maintained by the Hindu Religious and Charitable Endowments Department. Recent restoration cleaned centuries of paint to reveal original stone carvings."
+        }
+      ]
+    },
+    {
+      "id": "rumtek",
+      "name": "Rumtek Monastery",
+      "state": "Sikkim",
+      "category": "Spiritual & Himalayan",
+      "description": "The largest monastery in Sikkim and seat-in-exile of the Karmapa lineage.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Entrance%20of%20Rumtek%20Monastery%2C%20Sikkim.jpg",
+      "tags": [
+        "spiritual",
+        "adventure"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Rey Monastery",
+          "description": "A small, old Nyingma monastery tucked away in a cardamom forest near Rumtek.",
+          "why_hidden": "Most tourists only go to the main Rumtek Monastery and skip this quiet spot.",
+          "local_tip": "Walk the forest trail connecting Rey and Rumtek villages for peaceful birdwatching."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Guthok Chaam Dances",
+          "timing": "February (Tibetan Year End)",
+          "description": "Lamas wearing giant, frightening paper-mache masks perform courtyard dances representing the victory of good over evil.",
+          "traveler_relevance": "Spectacular photography opportunities and immersive local Buddhist atmosphere."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Tibetan Paper Making Demonstration",
+          "type": "workshop",
+          "description": "Watch paper being made from the bark of the local Argeli shrub using traditional wooden screens.",
+          "budget_estimate": "Free (Products available for sale)",
+          "booking_tip": "Located at the handicraft center near the main monastery entrance."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Rumtek Monastery (Dharma Chakra Centre)",
+          "significance": "The largest monastery in Sikkim, built in the 1960s to mirror the Kagyu headquarters in Tibet.",
+          "how_to_engage": "Spin the rows of copper prayer wheels and view the golden stupa holding the relics of the 16th Karmapa.",
+          "preservation_note": "Heavily guarded by military due to a sect dispute over succession, but welcoming to tourists."
+        }
+      ]
+    },
+    {
+      "id": "loktak-lake",
+      "name": "Loktak Lake",
+      "state": "Manipur",
+      "category": "Nature & Wetlands",
+      "description": "The largest freshwater lake in Northeast India, famous for its floating phumdis.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Loktak%20Lake%2CManipur%2CIndia%2001.jpg",
+      "tags": [
+        "nature",
+        "offbeat",
+        "wildlife"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        2,
+        3
+      ],
+      "accessibility": "limited",
+      "hidden_gems": [
+        {
+          "name": "Karang Island",
+          "description": "A small rocky hill island inside the lake, home to a close-knit fishing community.",
+          "why_hidden": "Requires taking a local wooden motorboat and has no hotels.",
+          "local_tip": "Climb to the hill temple for a 360-degree view of the circular fish traps."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Sangai Festival",
+          "timing": "November",
+          "description": "Manipur's grandest festival celebrating local arts, handlooms, and indigenous polo.",
+          "traveler_relevance": "Excellent to see traditional Manipuri dance and local martial arts (Thang-Ta)."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Homestay on a Floating Phumdi",
+          "type": "homestay",
+          "description": "Stay in a traditional thatch hut built on the floating biomass islands, and go night fishing.",
+          "budget_estimate": "₹1200-1800",
+          "booking_tip": "Arrange directly with local fishermen at Moirang town."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Keibul Lamjao National Park",
+          "significance": "The world's only floating national park, protecting the critically endangered Sangai (brow-antlered deer).",
+          "how_to_engage": "Rent a traditional dug-out canoe at dawn to glide quietly through the water reed paths.",
+          "preservation_note": "Endangered by water level changes from the nearby Loktak hydroelectric project."
+        }
+      ]
+    },
+    {
+      "id": "vantawng-falls",
+      "name": "Vantawng Falls",
+      "state": "Mizoram",
+      "category": "Nature & Waterfalls",
+      "description": "The highest waterfall in Mizoram, cascading through dense forested hills.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Vantawng%20waterfall%2C%20Mizoram.JPG",
+      "tags": [
+        "nature",
+        "offbeat"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "limited",
+      "hidden_gems": [
+        {
+          "name": "Tuirihiau Falls",
+          "description": "A beautiful waterfall unique because you can walk behind the curtain of water inside a cave-like recess.",
+          "why_hidden": "Just upstream from Vantawng, but lacks clear footpaths.",
+          "local_tip": "Wear shoes with excellent grip as the rocks behind the waterfall are always wet."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Anthurium Festival",
+          "timing": "September",
+          "description": "A tourist festival celebrating local flower cultivation, with traditional Mizo dance and games.",
+          "traveler_relevance": "Vibrant, friendly local gathering showcasing Mizo bamboo dance (Cheraw)."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Mizo Traditional Weaving Class",
+          "type": "workshop",
+          "description": "Learn the patterns and colors of the Mizo Puan (traditional wrap-around skirt).",
+          "budget_estimate": "₹300-500",
+          "booking_tip": "Ask local guesthouse hosts in nearby Thenzawl town, a famous weaving center."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Vantawng Falls Viewpoint",
+          "significance": "Mizoram's highest waterfall, plunging 750 feet into a dense bamboo valley.",
+          "how_to_engage": "Observe from the wooden viewing deck; look for the patterns of water flow against the basalt rock.",
+          "preservation_note": "surrounded by pristine tropical forests, maintained by the State Tourism Department."
+        }
+      ]
+    },
+    {
+      "id": "hornbill-festival",
+      "name": "Hornbill Festival, Kohima",
+      "state": "Nagaland",
+      "category": "Tribal Culture & Festivals",
+      "description": "The 'Festival of Festivals' showcasing the traditions of Nagaland's Naga tribes.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Hornbill%20Festival%2CNagaland.jpg",
+      "tags": [
+        "tribal_culture",
+        "offbeat",
+        "festival"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        3,
+        4,
+        5
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Khonoma Green Village",
+          "description": "A 700-year-old Angami Naga village famous for its terraced fields and leading the country in community-led conservation.",
+          "why_hidden": "Located 20km from Kohima, requiring a steep, bumpy drive.",
+          "local_tip": "Hire a village elder as a guide to learn about historical battles fought against the British."
+        },
+        {
+          "name": "Dzükou Valley Trek",
+          "description": "A high-altitude valley famous for its undulating green hills and endemic lilies.",
+          "why_hidden": "Requires a strenuous 4-hour hike from Jakhama or Viswema.",
+          "local_tip": "Carry a warm sleeping bag and stay in the community dormitory at the top."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Hornbill Festival",
+          "timing": "December 1st-10th",
+          "description": "The ultimate gathering of Nagaland's 17 major tribes at Kisama Heritage Village, featuring warrior dances and food stalls.",
+          "traveler_relevance": "The most spectacular tribal cultural festival in Asia, perfect for solo travelers."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Naga Rice Beer Tasting and Smoked Pork Cooking",
+          "type": "food-tour",
+          "description": "Learn how the Angami prepare smoked meats and brew traditional rice beer (Zutho).",
+          "budget_estimate": "₹300-600",
+          "booking_tip": "Visit the morungs (communal huts) in Kisama during the festival."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Kohima War Cemetery",
+          "significance": "A memorial dedicated to Commonwealth soldiers who died in the Battle of Kohima in WWII.",
+          "how_to_engage": "Read the famous epitaph: 'When you go home, tell them of us and say, for your tomorrow, we gave our today.'",
+          "preservation_note": "Impeccably maintained by the Commonwealth War Graves Commission."
+        }
+      ]
+    },
+    {
+      "id": "ujjayanta-palace",
+      "name": "Ujjayanta Palace",
+      "state": "Tripura",
+      "category": "Heritage & Museums",
+      "description": "The former royal palace of Tripura, now the state's largest museum.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Ujjayanta%20Palace%20as%20seen%20from%20the%20Rajbari%20Lakes.jpg",
+      "tags": [
+        "heritage",
+        "cultural_deep_dive"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Neermahal (Water Palace)",
+          "description": "A spectacular royal palace built in the middle of Rudrasagar Lake, combining Hindu and Islamic styles.",
+          "why_hidden": "50km south of Agartala, requiring a boat ride.",
+          "local_tip": "Take the public boat from Rajghat rather than a private charter to save money."
+        },
+        {
+          "name": "Kasba Kali Bari Temple",
+          "description": "A 15th-century temple situated on a hill right on the India-Bangladesh border fence.",
+          "why_hidden": "Located 30km away, with restricted border zone access.",
+          "local_tip": "Go during the weekly border Haat (market) to see traders from both countries."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Kharchi Puja",
+          "timing": "July",
+          "description": "A week-long festival worshipping fourteen dynasty deities, featuring tribal rituals and a massive fair.",
+          "traveler_relevance": "Deeply sacred Tripura festival combining royal and tribal customs."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Tripura Tribal Craft and Bamboo Workshop",
+          "type": "workshop",
+          "description": "Learn to weave bamboo storage boxes and fans with local artisans.",
+          "budget_estimate": "₹200-400",
+          "booking_tip": "Visit the state cottage industries center in Agartala city."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Ujjayanta Palace Complex",
+          "significance": "Built in 1901 by Maharaja Radha Kishore Manikya, featuring Mughal gardens and Neoclassical domes.",
+          "how_to_engage": "Explore the extensive museum exhibits showing Northeast history and culture.",
+          "preservation_note": "Restored and converted into a state museum in 2013, well maintained."
+        }
+      ]
+    },
+    {
+      "id": "charminar",
+      "name": "Charminar, Hyderabad",
+      "state": "Telangana",
+      "category": "Heritage & Landmarks",
+      "description": "The iconic 16th-century mosque-monument and symbol of Hyderabad.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Charminar%2C%20Hyderabad.JPG",
+      "tags": [
+        "heritage",
+        "short_time",
+        "low_budget"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Badshahi Ashurkhana",
+          "description": "A Shia house of mourning built in 1594, famous for its colorful Persian enamel tile-mosaic work.",
+          "why_hidden": "Tucked away in the narrow alleys of the old city with minimal signage.",
+          "local_tip": "Look for the custodian who can explain the history of the tiles imported from Persia."
+        },
+        {
+          "name": "Paigah Tombs",
+          "description": "Beautiful tombs of the noble Paigah family, featuring intricate lime mortar (Stucco) carvings and marble screens.",
+          "why_hidden": "Located in a residential area, off the main tourist track.",
+          "local_tip": "Visit in the late afternoon when the sunlight filters through the marble screens."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Laad Bazaar Eid Shopping Gathering",
+          "timing": "Ramadan Season",
+          "description": "The street around Charminar turns into a 24-hour festival of lights, perfumes, and bangle shopping.",
+          "traveler_relevance": "Unparalleled street energy, local food, and cultural photography."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Lac Bangle Making Demonstration",
+          "type": "workshop",
+          "description": "Watch artisans shape hot lacquer resin and embed glass beads into bangles.",
+          "budget_estimate": "Free (Purchasing bangles is cheap)",
+          "booking_tip": "Walk into the narrow workshops of Laad Bazaar."
+        },
+        {
+          "name": "Irani Chai and Osmania Biscuits at Nimrah Café",
+          "type": "local-hangout",
+          "description": "Sit by the window overlooking Charminar, sipping sweet tea and eating baked biscuits.",
+          "budget_estimate": "₹50-100",
+          "booking_tip": "No booking. Go early morning (6 AM) for a quiet table."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Charminar Mosque-Monument",
+          "significance": "Built in 1591 to commemorate the end of a plague, it is Hyderabad's primary historical landmark.",
+          "how_to_engage": "Climb the spiral staircase to the upper balcony for a view of the crowded bazaar.",
+          "preservation_note": "Suffering from traffic pollution; under active conservation by the ASI."
+        }
+      ]
+    },
+    {
+      "id": "valley-of-flowers",
+      "name": "Valley of Flowers",
+      "state": "Uttarakhand",
+      "category": "Nature & UNESCO",
+      "description": "A UNESCO-listed high-altitude Himalayan valley carpeted with alpine wildflowers.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Valley%20of%20flowers%20uttaranchal%20full%20view.JPG",
+      "tags": [
+        "nature",
+        "adventure"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        3,
+        4
+      ],
+      "accessibility": "limited",
+      "hidden_gems": [
+        {
+          "name": "Ghangaria Waterfall",
+          "description": "A roaring waterfall located in the pine forests just before the base camp of Ghangaria.",
+          "why_hidden": "Hikers are usually in a rush to reach the village and skip the forest trails.",
+          "local_tip": "Sit by the wooden bridge over the Lakshman Ganga to rest your legs."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Hemkund Sahib Pilgrimage Gathering",
+          "timing": "July-August",
+          "description": "Sikh pilgrims from around the world climb to the high-altitude lake of Hemkund Sahib.",
+          "traveler_relevance": "Very inspiring display of faith; pilgrims help clean trails and run free tea stalls."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Langar Service at Ghangaria Gurdwara",
+          "type": "local-hangout",
+          "description": "Eat a hot meal of dal and roti served by volunteers in the mountain wilderness.",
+          "budget_estimate": "Free (Donations accepted)",
+          "booking_tip": "Open to all, simply walk into the gurdwara dining hall."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Valley of Flowers National Park",
+          "significance": "UNESCO World Heritage high-altitude alpine meadow famous for its endemic flora.",
+          "how_to_engage": "Walk slowly, stay on the path, and do not pick any flowers or leave plastic.",
+          "preservation_note": "Strictly regulated; closed during winter, only open from June to October."
+        }
+      ]
+    },
+    {
+      "id": "darjeeling",
+      "name": "Darjeeling Tea Gardens",
+      "state": "West Bengal",
+      "category": "Nature & Hill Stations",
+      "description": "Misty Himalayan hill station famous for its tea estates and toy train.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/TEA%20GARDENS%20DARJEELING.jpg",
+      "tags": [
+        "nature",
+        "relaxation"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        2,
+        3
+      ],
+      "accessibility": "moderate",
+      "hidden_gems": [
+        {
+          "name": "Tinchuley Village",
+          "description": "A small eco-friendly farming hamlet offering majestic views of Mount Kanchenjunga.",
+          "why_hidden": "30km from Darjeeling town, keeping it free of crowds.",
+          "local_tip": "Visit the local orange orchards and orange juice processing huts."
+        },
+        {
+          "name": "Old Ghoom Monastery Library",
+          "description": "Housed inside Darjeeling's oldest monastery, containing ancient Buddhist manuscripts.",
+          "why_hidden": "Most tourists only take photos of the big statue outside and miss the library room.",
+          "local_tip": "Ask the librarian nicely to show you the woodblock-printed Tibetan texts."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Darjeeling Tea Festival",
+          "timing": "November-December",
+          "description": "Celebration of the harvest with tea tasting sessions, local music, and food stalls.",
+          "traveler_relevance": "Perfect for tasting premium First Flush teas and meeting local growers."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Tea Plucking and Tasting Workshop",
+          "type": "workshop",
+          "description": "Join local estate workers in the fields, learn to pluck 'two leaves and a bud,' and taste the different varieties.",
+          "budget_estimate": "₹400-800",
+          "booking_tip": "Book via Happy Valley Tea Estate, close to the town center."
+        },
+        {
+          "name": "Momo Making Class with a Tibetan Family",
+          "type": "workshop",
+          "description": "Learn to make the spicy paste, fold the dough, and steam traditional Tibetan momos.",
+          "budget_estimate": "₹500-700",
+          "booking_tip": "Available through local homestays in Ghoom or Darjeeling."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Darjeeling Himalayan Railway",
+          "significance": "UNESCO World Heritage narrow-gauge steam toy train built between 1879 and 1881.",
+          "how_to_engage": "Book the steam engine 'Joy Ride' from Darjeeling to Ghoom loop in advance.",
+          "preservation_note": "Maintained by Indian Railways, but struggles with seasonal landslide damage."
+        }
+      ]
+    },
+    {
+      "id": "taj-mahal",
+      "name": "Taj Mahal",
+      "state": "Uttar Pradesh",
+      "category": "Heritage & UNESCO",
+      "description": "The Mughal marble mausoleum and India's most iconic monument to eternal love.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Taj%20Mahal%2C%20Agra%2C%20India.jpg",
+      "tags": [
+        "heritage",
+        "cultural_deep_dive"
+      ],
+      "budget_level": "medium",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Mehtab Bagh (Moonlight Garden)",
+          "description": "A charbagh garden complex located across the Yamuna River, perfectly aligned with the Taj Mahal.",
+          "why_hidden": "Most tourists only enter the main Taj complex and skip the river view.",
+          "local_tip": "Go at sunset for a reflecting view of the monument without any crowds."
+        },
+        {
+          "name": "Agra Fort Secret Passages Tour",
+          "description": "The underground maze of tunnels and royal bathing chambers inside the Agra Fort.",
+          "why_hidden": "Requires a special guide as these areas are usually locked behind gates.",
+          "local_tip": "Ask registered guides at the fort entrance about access to the underground stepwells."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Taj Mahotsav",
+          "timing": "February 18th-27th",
+          "description": "A 10-day festival near the eastern gate of the Taj celebrating arts, crafts, and food from all over India.",
+          "traveler_relevance": "Excellent to see folk dance performances and buy crafts directly from village artisans."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Pietra Dura (Parchinkari) Inlay Workshop",
+          "type": "workshop",
+          "description": "Watch descendants of the Taj craftsmen cut and polish semi-precious stones to inlay into marble.",
+          "budget_estimate": "Free (Demonstration only)",
+          "booking_tip": "Visit the family workshops in the Taj Ganj neighborhood."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Taj Mahal",
+          "significance": "UNESCO World Heritage site and global symbol of Mughal architecture, built by Shah Jahan.",
+          "how_to_engage": "Enter through the West Gate at sunrise when the marble turns soft pink and crowds are thinnest.",
+          "preservation_note": "Highly protected; electric vehicles only within 500m of the site to prevent yellowing of the marble."
+        }
+      ]
+    },
+    {
+      "id": "mysore-palace",
+      "name": "Mysore Palace",
+      "state": "Karnataka",
+      "category": "Heritage & Palaces",
+      "description": "A grand Indo-Saracenic palace, the former seat of the Wadiyar dynasty, lit up nightly.",
+      "image_url": "https://en.wikipedia.org/wiki/Special:FilePath/Mysore%20Palace%20Mysore.jpg",
+      "tags": [
+        "heritage",
+        "low_budget"
+      ],
+      "budget_level": "low",
+      "best_for_days": [
+        1,
+        2
+      ],
+      "accessibility": "good",
+      "hidden_gems": [
+        {
+          "name": "Keshava Temple, Somnathpur",
+          "description": "A breathtaking 13th-century Hoysala temple covered in detailed carvings, shaped like a star.",
+          "why_hidden": "35km outside Mysore, receiving far fewer visitors.",
+          "local_tip": "Examine the ceiling panels representing the lotus blooming stages."
+        },
+        {
+          "name": "Devaraja Market Spice Walk",
+          "description": "A historic, chaotic bazaar filled with heaps of colorful kumkum powder, local jasmine, and essential oils.",
+          "why_hidden": "Located in the busy city center, tourists sometimes skip it to avoid the crowd.",
+          "local_tip": "Buy high-quality sandalwood perfume oil and local banana varieties."
+        }
+      ],
+      "local_events": [
+        {
+          "name": "Mysuru Dasara",
+          "timing": "September-October",
+          "description": "A 10-day state festival celebrating the victory of Chamundeshwari over Mahishasura, featuring a procession of elephants.",
+          "traveler_relevance": "The palace is lit up with 100,000 lightbulbs every night during the festival."
+        }
+      ],
+      "cultural_experiences": [
+        {
+          "name": "Mysore Painting Workshop",
+          "type": "workshop",
+          "description": "Learn the traditional painting style using gesso paste and gold foil under local guidance.",
+          "budget_estimate": "₹400-800",
+          "booking_tip": "Classes are held near the Jaganmohan Palace gallery."
+        },
+        {
+          "name": "Ashtanga Yoga Class",
+          "type": "workshop",
+          "description": "Take a yoga class in Gokulam, the world center for Mysore-style Ashtanga yoga.",
+          "budget_estimate": "₹300-500",
+          "booking_tip": "Gokulam yoga shalas welcome drop-in visitors for afternoon sessions."
+        }
+      ],
+      "heritage_sites": [
+        {
+          "name": "Amba Vilas Palace (Mysore Palace)",
+          "significance": "An Indo-Saracenic palace built in 1912, the former seat of the Wadiyar dynasty.",
+          "how_to_engage": "Rent the official audio guide; visit on Sunday evening (7-8 PM) when it is illuminated.",
+          "preservation_note": "Excellently maintained, shoe storage is regulated before entering the palace halls."
+        }
+      ]
+    }
+  ],
+  "total_states_covered": 28,
+  "total_destinations": 31
+}

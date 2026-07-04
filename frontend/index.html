@@ -3,229 +3,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WanderSoul — Discover authentic cultural experiences and hidden gems across India. AI-powered travel companion for budget-conscious solo travelers.">
-    <title>WanderSoul — Discover Culture, Not Crowds</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="WanderSoul — A physical travel journal brought online. Discover handpicked destinations, hidden gems, and authentic cultural experiences across India.">
+    <title>WanderSoul — Three weeks. Five states. Zero itinerary regrets.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Skip Navigation -->
+    <!-- Skip to main content link for keyboard navigation -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header -->
     <header class="header" role="banner">
         <div class="container">
-            <div class="header-brand">
-                <h1 class="logo">
-                    <span class="logo-icon" aria-hidden="true">✦</span>
-                    WanderSoul
-                </h1>
-                <p class="tagline">Discover Culture, Not Crowds</p>
-            </div>
+            <a href="index.html" class="logo-link" aria-label="WanderSoul Home">
+                <span class="logo-symbol" aria-hidden="true">✦</span>
+                <span class="logo-text">WanderSoul</span>
+            </a>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+                    <li><a href="plan.html" class="nav-link">Plan a Trip</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main id="main-content" class="main" role="main">
-        <div class="container">
+    <main id="main-content" role="main">
 
-            <!-- Hero Section -->
-            <section class="hero" aria-labelledby="hero-heading">
-                <h2 id="hero-heading" class="hero-title">
-                    Find your next <span class="text-gradient">cultural adventure</span>
-                </h2>
-                <p class="hero-subtitle">
-                    AI-powered destination discovery for solo travelers who want authentic 
-                    experiences over tourist traps. Tell us what moves you.
-                </p>
-            </section>
-
-            <!-- Discovery Form -->
-            <section class="form-section" aria-labelledby="form-heading">
-                <h2 id="form-heading" class="sr-only">Plan Your Discovery</h2>
-                <form id="discovery-form" class="discovery-form glass-card" novalidate>
-                    
-                    <div class="form-grid">
-                        <!-- Query Input -->
-                        <div class="form-group form-group-full">
-                            <label for="query-input" class="form-label">
-                                What are you looking for?
-                            </label>
-                            <textarea 
-                                id="query-input" 
-                                name="query" 
-                                class="form-input form-textarea"
-                                placeholder="e.g. I want to explore hidden temples and street food in Rajasthan on a tight budget..."
-                                rows="3"
-                                required
-                                minlength="3"
-                                maxlength="500"
-                                aria-describedby="query-help"
-                            ></textarea>
-                            <small id="query-help" class="form-help">
-                                Describe your ideal trip — the more detail, the better our AI recommendations.
-                            </small>
-                        </div>
-
-                        <!-- Budget Select -->
-                        <div class="form-group">
-                            <label for="budget-select" class="form-label">Budget Level</label>
-                            <select id="budget-select" name="budget" class="form-input form-select" required>
-                                <option value="low">💰 Budget (₹1k-5k/day)</option>
-                                <option value="medium">💳 Mid-range (₹5k-15k/day)</option>
-                                <option value="high">💎 Comfort (₹15k+/day)</option>
-                            </select>
-                        </div>
-
-                        <!-- Days Input -->
-                        <div class="form-group">
-                            <label for="days-input" class="form-label">Days Available</label>
-                            <input 
-                                type="number" 
-                                id="days-input" 
-                                name="days" 
-                                class="form-input"
-                                value="3"
-                                min="1"
-                                max="30"
-                                required
-                                aria-describedby="days-help"
-                            >
-                            <small id="days-help" class="form-help">1 to 30 days</small>
-                        </div>
-
-                        <!-- Interests -->
-                        <div class="form-group form-group-full">
-                            <fieldset class="interests-fieldset">
-                                <legend class="form-label">Your Interests</legend>
-                                <div class="interests-grid" role="group" aria-label="Select your interests">
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="heritage" class="sr-only">
-                                        <span class="tag-label">🏛️ Heritage</span>
-                                    </label>
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="street-food" class="sr-only">
-                                        <span class="tag-label">🍜 Street Food</span>
-                                    </label>
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="spirituality" class="sr-only">
-                                        <span class="tag-label">🕉️ Spirituality</span>
-                                    </label>
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="crafts" class="sr-only">
-                                        <span class="tag-label">🎨 Crafts</span>
-                                    </label>
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="photography" class="sr-only">
-                                        <span class="tag-label">📸 Photography</span>
-                                    </label>
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="adventure" class="sr-only">
-                                        <span class="tag-label">🧗 Adventure</span>
-                                    </label>
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="performing-arts" class="sr-only">
-                                        <span class="tag-label">🎭 Performing Arts</span>
-                                    </label>
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="nature" class="sr-only">
-                                        <span class="tag-label">🌿 Nature</span>
-                                    </label>
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="trekking" class="sr-only">
-                                        <span class="tag-label">🥾 Trekking</span>
-                                    </label>
-                                    <label class="interest-tag">
-                                        <input type="checkbox" name="interests" value="cycling" class="sr-only">
-                                        <span class="tag-label">🚲 Cycling</span>
-                                    </label>
-                                </div>
-                            </fieldset>
-                        </div>
-
-                        <!-- Accessibility -->
-                        <div class="form-group form-group-full">
-                            <label for="accessibility-select" class="form-label">
-                                Accessibility Needs
-                            </label>
-                            <select id="accessibility-select" name="accessibility" class="form-input form-select">
-                                <option value="none">No specific requirements</option>
-                                <option value="wheelchair-friendly">♿ Wheelchair-friendly routes</option>
-                                <option value="limited-mobility">🦯 Limited mobility considerations</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <!-- Submit Button -->
-                    <button type="submit" id="submit-btn" class="btn btn-primary">
-                        <span class="btn-text">✦ Discover My Journey</span>
-                        <span class="btn-loading" aria-hidden="true">
-                            <span class="spinner"></span>
-                            Discovering...
-                        </span>
-                    </button>
-                </form>
-            </section>
-
-            <!-- Results Section -->
-            <section id="results-section" class="results-section hidden" aria-labelledby="results-heading" aria-live="polite">
-                <h2 id="results-heading" class="results-title">Your Cultural Journey</h2>
-                <p id="results-summary" class="results-summary"></p>
-
-                <!-- Result Tabs -->
-                <nav class="results-tabs" role="tablist" aria-label="Result categories">
-                    <button role="tab" class="tab-btn active" id="tab-destinations" aria-controls="panel-destinations" aria-selected="true">
-                        🏛️ Destinations
-                    </button>
-                    <button role="tab" class="tab-btn" id="tab-gems" aria-controls="panel-gems" aria-selected="false">
-                        💎 Hidden Gems
-                    </button>
-                    <button role="tab" class="tab-btn" id="tab-heritage" aria-controls="panel-heritage" aria-selected="false">
-                        🏰 Heritage
-                    </button>
-                    <button role="tab" class="tab-btn" id="tab-events" aria-controls="panel-events" aria-selected="false">
-                        🎪 Events
-                    </button>
-                    <button role="tab" class="tab-btn" id="tab-experiences" aria-controls="panel-experiences" aria-selected="false">
-                        🤝 Experiences
-                    </button>
-                    <button role="tab" class="tab-btn" id="tab-story" aria-controls="panel-story" aria-selected="false">
-                        📖 Story
-                    </button>
-                </nav>
-
-                <!-- Tab Panels -->
-                <div id="panel-destinations" role="tabpanel" aria-labelledby="tab-destinations" class="tab-panel active"></div>
-                <div id="panel-gems" role="tabpanel" aria-labelledby="tab-gems" class="tab-panel hidden"></div>
-                <div id="panel-heritage" role="tabpanel" aria-labelledby="tab-heritage" class="tab-panel hidden"></div>
-                <div id="panel-events" role="tabpanel" aria-labelledby="tab-events" class="tab-panel hidden"></div>
-                <div id="panel-experiences" role="tabpanel" aria-labelledby="tab-experiences" class="tab-panel hidden"></div>
-                <div id="panel-story" role="tabpanel" aria-labelledby="tab-story" class="tab-panel hidden"></div>
-            </section>
-
-            <!-- Error State -->
-            <div id="error-state" class="error-state glass-card hidden" role="alert">
-                <span class="error-icon" aria-hidden="true">⚠️</span>
-                <p id="error-message" class="error-text"></p>
-                <button id="retry-btn" class="btn btn-secondary" type="button">Try Again</button>
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-image-wrap">
+                <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Hawa_Mahal_East_flank_Jaipur_%28crop%29.jpg" 
+                    alt="The intricate pink sandstone facade of the Hawa Mahal in Jaipur, Rajasthan" 
+                    class="hero-img"
+                    width="1200"
+                    height="800"
+                >
             </div>
+            <div class="hero-content">
+                <h1 id="hero-title" class="hero-title">Three weeks. Five states. Zero itinerary regrets.</h1>
+                <p class="hero-desc">
+                    WanderSoul is a digital travel journal of authentic, low-crowd cultural discoveries across India. 
+                    No tourist-trap sightseeing loops, just real connections to the heritage, crafts, and kitchens of the subcontinent.
+                </p>
+                <a href="destinations.html" class="btn btn-primary">See all experiences</a>
+            </div>
+        </section>
 
+        <!-- Boarding Pass Strip -->
+        <div class="boarding-strip" aria-label="Travel statistics summary">
+            <div class="container">
+                <div class="boarding-pass">
+                    <div class="boarding-item">
+                        <span class="boarding-label">Document Code</span>
+                        <span class="boarding-value">WS-IND-2026</span>
+                    </div>
+                    <div class="boarding-divider" aria-hidden="true"></div>
+                    <div class="boarding-item">
+                        <span class="boarding-label">Curated Database</span>
+                        <span class="boarding-value">31 Destinations</span>
+                    </div>
+                    <div class="boarding-divider" aria-hidden="true"></div>
+                    <div class="boarding-item">
+                        <span class="boarding-label">Regions Covered</span>
+                        <span class="boarding-value">28 States & Territories</span>
+                    </div>
+                    <div class="boarding-divider" aria-hidden="true"></div>
+                    <div class="boarding-item">
+                        <span class="boarding-label">Experience Scope</span>
+                        <span class="boarding-value">Budget to Comfort</span>
+                    </div>
+                    <div class="boarding-divider" aria-hidden="true"></div>
+                    <div class="boarding-item">
+                        <span class="boarding-label">Status</span>
+                        <span class="boarding-value" style="color: var(--success);">● Active Gate</span>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Featured Section -->
+        <section class="section" aria-labelledby="featured-title">
+            <div class="container">
+                <span class="section-eyebrow">EDITORIAL SELECTION</span>
+                <h2 id="featured-title" class="section-title">Field Notes & Curated Crossings</h2>
+                
+                <div class="editorial-grid">
+                    <!-- Large Card ( कर्नाटक / Karnataka ) -->
+                    <article class="editorial-card large" onclick="window.location.href='detail.html?id=hampi'" aria-labelledby="card-hampi-title">
+                        <div class="card-img-wrap">
+                            <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Hampi_virupaksha_temple.jpg" 
+                                alt="The ancient Virupaksha temple tower standing tall over the boulder-strewn landscape of Hampi" 
+                                class="card-img"
+                                width="800"
+                                height="500"
+                            >
+                            <div class="stamp-badge" aria-hidden="true">
+                                <span class="stamp-text">KA-03</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta-row">KARNATAKA · HERITAGE & UNESCO · MID-RANGE</div>
+                            <h3 id="card-hampi-title" class="card-title">The Boulder-Strewn Empire of Hampi</h3>
+                            <p class="card-desc">
+                                Walk the ruins of the Vijayanagara Empire, where ancient stone temples stand amidst massive granite boulders and lush banana plantations along the Tungabhadra River.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 ( उत्तर प्रदेश / Uttar Pradesh ) -->
+                    <article class="editorial-card" onclick="window.location.href='detail.html?id=varanasi'" aria-labelledby="card-varanasi-title">
+                        <div class="card-img-wrap">
+                            <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/d/da/Varanasi_-_Ghat_on_Ganges.jpg" 
+                                alt="Morning light shining on the ghats of Varanasi along the Ganges river with boats floating" 
+                                class="card-img"
+                                width="400"
+                                height="250"
+                            >
+                            <div class="stamp-badge" aria-hidden="true">
+                                <span class="stamp-text">UP-02</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta-row">UTTAR PRADESH · CULTURAL & SPIRITUAL · BUDGET</div>
+                            <h3 id="card-varanasi-title" class="card-title">Varanasi's Sacred Shores</h3>
+                            <p class="card-desc">
+                                Witness life and death on the historic stone steps along the sacred Ganges river, where music, incense, and chants echo at dawn.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 ( मेघालय / Meghalaya ) -->
+                    <article class="editorial-card" onclick="window.location.href='detail.html?id=meghalaya'" aria-labelledby="card-meghalaya-title">
+                        <div class="card-img-wrap">
+                            <img 
+                                src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Double-decker_living_root_bridge_near_Nongriat_village.jpg" 
+                                alt="The famous double-decker living root bridge in Nongriat, Meghalaya, woven from rubber tree roots" 
+                                class="card-img"
+                                width="400"
+                                height="250"
+                            >
+                            <div class="stamp-badge" aria-hidden="true">
+                                <span class="stamp-text">ML-09</span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta-row">MEGHALAYA · NATURE & TREKKING · MID-RANGE</div>
+                            <h3 id="card-meghalaya-title" class="card-title">The Living Root Bridges</h3>
+                            <p class="card-desc">
+                                Hike down steep valley steps to witness ancient suspension bridges grown organically by the Khasi people from living tree roots.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sequence Section -->
+        <section class="section" aria-labelledby="sequence-title">
+            <div class="container">
+                <span class="section-eyebrow">METHOD OF PASSAGE</span>
+                <h2 id="sequence-title" class="section-title">How to Plan by Mood</h2>
+                
+                <div class="seq-grid">
+                    <div class="seq-item">
+                        <span class="seq-eyebrow">STEP 01 — RECORD INTENT</span>
+                        <h3 class="seq-title">Describe Your Vision</h3>
+                        <p class="seq-desc">
+                            Input a natural description of what you are seeking — whether it's wandering through ancient stone arches or tasting hot spiced street dishes.
+                        </p>
+                    </div>
+                    <div class="seq-item">
+                        <span class="seq-eyebrow">STEP 02 — SELECT PREFERENCES</span>
+                        <h3 class="seq-title">Set Your Envelope</h3>
+                        <p class="seq-desc">
+                            Adjust constraints for your trip length, accessibility requirements, and budget limits to keep the itinerary realistic.
+                        </p>
+                    </div>
+                    <div class="seq-item">
+                        <span class="seq-eyebrow">STEP 03 — TEAR THE STUB</span>
+                        <h3 class="seq-title">Retrieve Your Ticket</h3>
+                        <p class="seq-desc">
+                            Receive a customized day-by-day sequence containing local events, hidden spots, and historical contexts formatted like an offline journal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
-            <p>
-                Built with ❤️ for authentic cultural discovery. 
-                <span class="footer-powered">Powered by GenAI</span>
-            </p>
+            <div class="footer-grid">
+                <!-- Col 1: Explore -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html" class="footer-link">ALL DESTINATIONS</a></li>
+                        <li><a href="plan.html" class="footer-link">ITINERARY BUILDER</a></li>
+                        <li><a href="about.html" class="footer-link">FIELD NOTES ABOUT</a></li>
+                    </ul>
+                </div>
+                <!-- Col 2: Company -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Journal</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">EDITORIAL CODE</a></li>
+                        <li><a href="about.html" class="footer-link">OUR TEAM</a></li>
+                        <li><a href="about.html" class="footer-link">STAMP PERMITS</a></li>
+                    </ul>
+                </div>
+                <!-- Col 3: Newsletter -->
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input 
+                            type="email" 
+                            id="newsletter-email" 
+                            class="newsletter-input" 
+                            placeholder="Enter email for field logs" 
+                            required
+                        >
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <span>© 2026 WANDERSOUL INC. ALL STAMPS RESERVED.</span>
+                <span>COORDINATES: 20.5937° N, 78.9629° E</span>
+            </div>
         </div>
     </footer>
 
-    <script src="app.js"></script>
 </body>
 </html>

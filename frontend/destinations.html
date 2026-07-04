@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse and filter handpicked cultural destinations across India. Find hidden spots, heritage sites, and local experiences.">
+    <title>WanderSoul — Curated Destinations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <a href="index.html" class="logo-link" aria-label="WanderSoul Home">
+                <span class="logo-symbol" aria-hidden="true">✦</span>
+                <span class="logo-text">WanderSoul</span>
+            </a>
+            <nav role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
+                    <li><a href="plan.html" class="nav-link">Plan a Trip</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="container" role="main">
+        <div class="list-layout">
+            
+            <!-- Filters Sidebar -->
+            <aside class="filter-sidebar" aria-label="Filter destinations">
+                
+                <!-- Region Filter -->
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Zone Stamp</h3>
+                    <div class="stamp-list" role="group" aria-label="Filter by region">
+                        <div class="stamp-item">
+                            <input type="checkbox" id="region-north" value="North" class="stamp-checkbox">
+                            <label for="region-north" class="stamp-label" style="--rot: -1.5deg;">North</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="region-south" value="South" class="stamp-checkbox">
+                            <label for="region-south" class="stamp-label" style="--rot: 2deg;">South</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="region-east" value="East" class="stamp-checkbox">
+                            <label for="region-east" class="stamp-label" style="--rot: -1deg;">East</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="region-west" value="West" class="stamp-checkbox">
+                            <label for="region-west" class="stamp-label" style="--rot: 1.5deg;">West</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="region-northeast" value="Northeast" class="stamp-checkbox">
+                            <label for="region-northeast" class="stamp-label" style="--rot: -2deg;">Northeast</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="region-central" value="Central" class="stamp-checkbox">
+                            <label for="region-central" class="stamp-label" style="--rot: 1deg;">Central</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Budget Filter -->
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Budget Stamp</h3>
+                    <div class="stamp-list" role="group" aria-label="Filter by budget">
+                        <div class="stamp-item">
+                            <input type="checkbox" id="budget-low" value="low" class="stamp-checkbox">
+                            <label for="budget-low" class="stamp-label" style="--rot: -2deg;">Budget</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="budget-medium" value="medium" class="stamp-checkbox">
+                            <label for="budget-medium" class="stamp-label" style="--rot: 1deg;">Mid-Range</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="budget-high" value="high" class="stamp-checkbox">
+                            <label for="budget-high" class="stamp-label" style="--rot: -1deg;">Comfort</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trip Length -->
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Duration Stamp</h3>
+                    <div class="stamp-list" role="group" aria-label="Filter by trip length">
+                        <div class="stamp-item">
+                            <input type="checkbox" id="days-short" value="short" class="stamp-checkbox">
+                            <label for="days-short" class="stamp-label" style="--rot: 1.5deg;">1-2 Days</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="days-med" value="medium" class="stamp-checkbox">
+                            <label for="days-med" class="stamp-label" style="--rot: -1.5deg;">3-4 Days</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="days-long" value="long" class="stamp-checkbox">
+                            <label for="days-long" class="stamp-label" style="--rot: 2deg;">5+ Days</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interests -->
+                <div class="filter-group">
+                    <h3 class="filter-group-title">Interest Stamp</h3>
+                    <div class="stamp-list" role="group" aria-label="Filter by interests">
+                        <div class="stamp-item">
+                            <input type="checkbox" id="int-heritage" value="heritage" class="stamp-checkbox">
+                            <label for="int-heritage" class="stamp-label" style="--rot: -1deg;">🏛️ Heritage</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="int-culture" value="cultural_deep_dive" class="stamp-checkbox">
+                            <label for="int-culture" class="stamp-label" style="--rot: 1.5deg;">🎨 Culture</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="int-nature" value="nature" class="stamp-checkbox">
+                            <label for="int-nature" class="stamp-label" style="--rot: -2deg;">🌿 Nature</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="int-food" value="street-food" class="stamp-checkbox">
+                            <label for="int-food" class="stamp-label" style="--rot: 1deg;">🍜 Food</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="int-arts" value="performing-arts" class="stamp-checkbox">
+                            <label for="int-arts" class="stamp-label" style="--rot: -1.5deg;">🎭 Arts</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="int-crafts" value="crafts" class="stamp-checkbox">
+                            <label for="int-crafts" class="stamp-label" style="--rot: 2deg;">🏺 Crafts</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="int-spirituality" value="spirituality" class="stamp-checkbox">
+                            <label for="int-spirituality" class="stamp-label" style="--rot: -1deg;">🕉️ Spiritual</label>
+                        </div>
+                        <div class="stamp-item">
+                            <input type="checkbox" id="int-adventure" value="adventure" class="stamp-checkbox">
+                            <label for="int-adventure" class="stamp-label" style="--rot: 1.5deg;">🧗 Adventure</label>
+                        </div>
+                    </div>
+                </div>
+
+            </aside>
+
+            <!-- Results Section -->
+            <section class="results-content" aria-labelledby="results-title">
+                <div class="results-header">
+                    <div id="results-count" class="results-count" aria-live="polite">Loading entries...</div>
+                    <div class="sort-control">
+                        Sort by: 
+                        <button id="sort-name" class="sort-link active">Name</button> | 
+                        <button id="sort-region" class="sort-link">Region</button>
+                    </div>
+                </div>
+
+                <div id="destinations-grid" class="destinations-grid">
+                    <!-- Cards will be dynamically injected here -->
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="destinations.html" class="footer-link">ALL DESTINATIONS</a></li>
+                        <li><a href="plan.html" class="footer-link">ITINERARY BUILDER</a></li>
+                        <li><a href="about.html" class="footer-link">FIELD NOTES ABOUT</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Journal</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html" class="footer-link">EDITORIAL CODE</a></li>
+                        <li><a href="about.html" class="footer-link">OUR TEAM</a></li>
+                        <li><a href="about.html" class="footer-link">STAMP PERMITS</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <label for="newsletter-email" class="sr-only">Email Address</label>
+                        <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter email for field logs" required>
+                        <button type="submit" class="btn btn-secondary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <span>© 2026 WANDERSOUL INC. ALL STAMPS RESERVED.</span>
+                <span>COORDINATES: 20.5937° N, 78.9629° E</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="destinations.js"></script>
+</body>
+</html>
