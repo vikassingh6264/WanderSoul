@@ -1,13 +1,231 @@
-<!-- WanderSoul Frontend — placeholder, built in Step 5 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WanderSoul — Discover authentic cultural experiences and hidden gems across India. AI-powered travel companion for budget-conscious solo travelers.">
     <title>WanderSoul — Discover Culture, Not Crowds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>WanderSoul</h1>
-    <p>Frontend will be built in Step 5.</p>
+
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-brand">
+                <h1 class="logo">
+                    <span class="logo-icon" aria-hidden="true">✦</span>
+                    WanderSoul
+                </h1>
+                <p class="tagline">Discover Culture, Not Crowds</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main" role="main">
+        <div class="container">
+
+            <!-- Hero Section -->
+            <section class="hero" aria-labelledby="hero-heading">
+                <h2 id="hero-heading" class="hero-title">
+                    Find your next <span class="text-gradient">cultural adventure</span>
+                </h2>
+                <p class="hero-subtitle">
+                    AI-powered destination discovery for solo travelers who want authentic 
+                    experiences over tourist traps. Tell us what moves you.
+                </p>
+            </section>
+
+            <!-- Discovery Form -->
+            <section class="form-section" aria-labelledby="form-heading">
+                <h2 id="form-heading" class="sr-only">Plan Your Discovery</h2>
+                <form id="discovery-form" class="discovery-form glass-card" novalidate>
+                    
+                    <div class="form-grid">
+                        <!-- Query Input -->
+                        <div class="form-group form-group-full">
+                            <label for="query-input" class="form-label">
+                                What are you looking for?
+                            </label>
+                            <textarea 
+                                id="query-input" 
+                                name="query" 
+                                class="form-input form-textarea"
+                                placeholder="e.g. I want to explore hidden temples and street food in Rajasthan on a tight budget..."
+                                rows="3"
+                                required
+                                minlength="3"
+                                maxlength="500"
+                                aria-describedby="query-help"
+                            ></textarea>
+                            <small id="query-help" class="form-help">
+                                Describe your ideal trip — the more detail, the better our AI recommendations.
+                            </small>
+                        </div>
+
+                        <!-- Budget Select -->
+                        <div class="form-group">
+                            <label for="budget-select" class="form-label">Budget Level</label>
+                            <select id="budget-select" name="budget" class="form-input form-select" required>
+                                <option value="low">💰 Budget (₹1k-5k/day)</option>
+                                <option value="medium">💳 Mid-range (₹5k-15k/day)</option>
+                                <option value="high">💎 Comfort (₹15k+/day)</option>
+                            </select>
+                        </div>
+
+                        <!-- Days Input -->
+                        <div class="form-group">
+                            <label for="days-input" class="form-label">Days Available</label>
+                            <input 
+                                type="number" 
+                                id="days-input" 
+                                name="days" 
+                                class="form-input"
+                                value="3"
+                                min="1"
+                                max="30"
+                                required
+                                aria-describedby="days-help"
+                            >
+                            <small id="days-help" class="form-help">1 to 30 days</small>
+                        </div>
+
+                        <!-- Interests -->
+                        <div class="form-group form-group-full">
+                            <fieldset class="interests-fieldset">
+                                <legend class="form-label">Your Interests</legend>
+                                <div class="interests-grid" role="group" aria-label="Select your interests">
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="heritage" class="sr-only">
+                                        <span class="tag-label">🏛️ Heritage</span>
+                                    </label>
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="street-food" class="sr-only">
+                                        <span class="tag-label">🍜 Street Food</span>
+                                    </label>
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="spirituality" class="sr-only">
+                                        <span class="tag-label">🕉️ Spirituality</span>
+                                    </label>
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="crafts" class="sr-only">
+                                        <span class="tag-label">🎨 Crafts</span>
+                                    </label>
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="photography" class="sr-only">
+                                        <span class="tag-label">📸 Photography</span>
+                                    </label>
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="adventure" class="sr-only">
+                                        <span class="tag-label">🧗 Adventure</span>
+                                    </label>
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="performing-arts" class="sr-only">
+                                        <span class="tag-label">🎭 Performing Arts</span>
+                                    </label>
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="nature" class="sr-only">
+                                        <span class="tag-label">🌿 Nature</span>
+                                    </label>
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="trekking" class="sr-only">
+                                        <span class="tag-label">🥾 Trekking</span>
+                                    </label>
+                                    <label class="interest-tag">
+                                        <input type="checkbox" name="interests" value="cycling" class="sr-only">
+                                        <span class="tag-label">🚲 Cycling</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <!-- Accessibility -->
+                        <div class="form-group form-group-full">
+                            <label for="accessibility-select" class="form-label">
+                                Accessibility Needs
+                            </label>
+                            <select id="accessibility-select" name="accessibility" class="form-input form-select">
+                                <option value="none">No specific requirements</option>
+                                <option value="wheelchair-friendly">♿ Wheelchair-friendly routes</option>
+                                <option value="limited-mobility">🦯 Limited mobility considerations</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" id="submit-btn" class="btn btn-primary">
+                        <span class="btn-text">✦ Discover My Journey</span>
+                        <span class="btn-loading" aria-hidden="true">
+                            <span class="spinner"></span>
+                            Discovering...
+                        </span>
+                    </button>
+                </form>
+            </section>
+
+            <!-- Results Section -->
+            <section id="results-section" class="results-section hidden" aria-labelledby="results-heading" aria-live="polite">
+                <h2 id="results-heading" class="results-title">Your Cultural Journey</h2>
+                <p id="results-summary" class="results-summary"></p>
+
+                <!-- Result Tabs -->
+                <nav class="results-tabs" role="tablist" aria-label="Result categories">
+                    <button role="tab" class="tab-btn active" id="tab-destinations" aria-controls="panel-destinations" aria-selected="true">
+                        🏛️ Destinations
+                    </button>
+                    <button role="tab" class="tab-btn" id="tab-gems" aria-controls="panel-gems" aria-selected="false">
+                        💎 Hidden Gems
+                    </button>
+                    <button role="tab" class="tab-btn" id="tab-heritage" aria-controls="panel-heritage" aria-selected="false">
+                        🏰 Heritage
+                    </button>
+                    <button role="tab" class="tab-btn" id="tab-events" aria-controls="panel-events" aria-selected="false">
+                        🎪 Events
+                    </button>
+                    <button role="tab" class="tab-btn" id="tab-experiences" aria-controls="panel-experiences" aria-selected="false">
+                        🤝 Experiences
+                    </button>
+                    <button role="tab" class="tab-btn" id="tab-story" aria-controls="panel-story" aria-selected="false">
+                        📖 Story
+                    </button>
+                </nav>
+
+                <!-- Tab Panels -->
+                <div id="panel-destinations" role="tabpanel" aria-labelledby="tab-destinations" class="tab-panel active"></div>
+                <div id="panel-gems" role="tabpanel" aria-labelledby="tab-gems" class="tab-panel hidden"></div>
+                <div id="panel-heritage" role="tabpanel" aria-labelledby="tab-heritage" class="tab-panel hidden"></div>
+                <div id="panel-events" role="tabpanel" aria-labelledby="tab-events" class="tab-panel hidden"></div>
+                <div id="panel-experiences" role="tabpanel" aria-labelledby="tab-experiences" class="tab-panel hidden"></div>
+                <div id="panel-story" role="tabpanel" aria-labelledby="tab-story" class="tab-panel hidden"></div>
+            </section>
+
+            <!-- Error State -->
+            <div id="error-state" class="error-state glass-card hidden" role="alert">
+                <span class="error-icon" aria-hidden="true">⚠️</span>
+                <p id="error-message" class="error-text"></p>
+                <button id="retry-btn" class="btn btn-secondary" type="button">Try Again</button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p>
+                Built with ❤️ for authentic cultural discovery. 
+                <span class="footer-powered">Powered by GenAI</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
